@@ -1,0 +1,4409 @@
+{
+	//系统自定义
+		"单if语句":{
+			"prefix":"if",
+			"body":[
+				"if $1 then",
+				"$2",
+				"end",
+			],
+			"description": "系统:单if条件语句\n"
+		},
+		"单ifelse":{
+			"prefix":"ifelse",
+			"body": [
+				"if $1 then",
+				"$2",
+				"else",
+				"$3",
+				"end"
+			],
+			"description": "系统:单ifelse条件语句\n"
+		},
+		"单elseif":{
+			"prefix":"elseif",
+			"body": [
+				"elseif $1 then",
+			],
+			"description": "系统:只有elseif条件语句\n"
+		},
+		"for语句":{
+			"prefix":"for",
+			"body": [
+				"for i=1, $1 do",
+				"$2",
+				"end"
+			],
+			"description": "系统:for语句\n"
+		},
+		"fork语句":{
+			"prefix":"fork",
+			"body": [
+				"for k, v in pairs ($1) do",
+				"$2",
+				"end"
+			],
+			"description": "系统:for语句\n"
+		},	
+		"for_语句":{
+			"prefix":"for_",
+			"body": [
+				"for _, v in pairs ($1) do",
+				"$2",
+				"end"
+			],
+			"description": "系统:for_语句\n"
+		},
+		"while语句":{
+			"prefix":"while",
+			"body": [
+				"while $1",
+				"do",
+				"$2",
+				"end"
+			],
+			"description": "系统:while语句\n"
+		},
+		"repeat语句":{
+			"prefix":"repeat",
+			"body": [
+				"repeat",
+				"$1",
+				"until $2"
+			],
+			"description": "系统:repeat语句\n"
+		},
+		//table
+		"table.foreach":{
+			"prefix":"table.foreach",
+			"body": [
+				"table.foreach($1)"
+			],
+			"description": "语法:table.foreach(tab,func)\n例:table.foreach(t1, function(i, v) print(i, v) end)\n详:table.foreach可以循环索引\n"
+		},	
+		"table.foreachi":{
+			"prefix":"table.foreachi",
+			"body": [
+				"table.foreachi($1)"
+			],
+			"description": "语法:table.foreachi(tab,func)\n例:table.foreachi(t1, function(i, v) print(i, v) end)\n详:table.foreach可以循环索引\n"
+		},
+		"table.sort":{
+			"prefix":"table.sort",
+			"body": [
+				"table.sort($1)"
+			],
+			"description": "语法:table.sort(tab,func)\n例:table.sort(t1, function(i, v) print(i, v) end)\n详:table.foreach可以循环索引\n"
+		},
+		"table.remove":{
+			"prefix":"table.remove",
+			"body": [
+				"table.remove($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},	
+		"table.maxn":{
+			"prefix":"table.maxn",
+			"body": [
+				"table.maxn($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"table.getn":{
+			"prefix":"table.getn",
+			"body": [
+				"table.getn($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"table.setn":{
+			"prefix":"table.setn",
+			"body": [
+				"table.setn($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"table.concat":{
+			"prefix":"table.concat",
+			"body": [
+				"table.concat($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"table.insert":{
+			"prefix":"table.insert",
+			"body": [
+				"table.insert($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		//string
+		"string.find":{
+			"prefix":"string.find",
+			"body": [
+				"string.find($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"string.lower":{
+			"prefix":"string.lower",
+			"body": [
+				"string.lower($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"string.format":{
+			"prefix":"string.format",
+			"body": [
+				"string.format($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"string.rep":{
+			"prefix":"string.rep",
+			"body": [
+				"string.rep($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"string.gsub":{
+			"prefix":"string.gsub",
+			"body": [
+				"string.gsub($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"string.len":{
+			"prefix":"string.len",
+			"body": [
+				"string.len($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"string.gmatch":{
+			"prefix":"string.gmatch",
+			"body": [
+				"string.gmatch($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"string.dump":{
+			"prefix":"string.dump",
+			"body": [
+				"string.dump($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"string.match":{
+			"prefix":"string.match",
+			"body": [
+				"string.match($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"string.reverse":{
+			"prefix":"string.len",
+			"body": [
+				"string.reverse($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"string.byte":{
+			"prefix":"string.byte",
+			"body": [
+				"string.byte($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"string.char":{
+			"prefix":"string.char",
+			"body": [
+				"string.char($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"string.upper":{
+			"prefix":"string.upper",
+			"body": [
+				"string.upper($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"string.gfind":{
+			"prefix":"string.gfind",
+			"body": [
+				"string.gfind($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"string.sub":{
+			"prefix":"string.sub",
+			"body": [
+				"string.sub($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"string.trim":{
+			"prefix":"string.trim",
+			"body": [
+				"string.trim($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"string.split":{
+			"prefix":"string.split",
+			"body": [
+				"string.split($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"string.indexOf":{
+			"prefix":"string.indexOf",
+			"body": [
+				"string.indexOf($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"string.left":{
+			"prefix":"string.left",
+			"body": [
+				"string.left($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"string.right":{
+			"prefix":"string.right",
+			"body": [
+				"string.right($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"string.mid":{
+			"prefix":"string.mid",
+			"body": [
+				"string.mid($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"string.ord":{
+			"prefix":"string.ord",
+			"body": [
+				"string.ord($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"string.chr":{
+			"prefix":"string.chr",
+			"body": [
+				"string.chr($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"string.replace":{
+			"prefix":"string.replace",
+			"body": [
+				"string.replace($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		//package
+		"package.preload":{
+			"prefix":"package.preload",
+			"body": [
+				"package.preload($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"package.loadlib":{
+			"prefix":"package.loadlib",
+			"body": [
+				"package.loadlib($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"package.loaded":{
+			"prefix":"package.loaded",
+			"body": [
+				"package.loaded($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"package.loaders":{
+			"prefix":"package.loaders",
+			"body": [
+				"package.loaders($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"package.cpath":{
+			"prefix":"package.cpath",
+			"body": [
+				"package.cpath($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"package.config":{
+			"prefix":"package.config",
+			"body": [
+				"package.config($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"package.path":{
+			"prefix":"package.path",
+			"body": [
+				"package.path($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"package.seeall":{
+			"prefix":"package.seeall",
+			"body": [
+				"package.seeall($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		//OS
+		"os.exit":{
+			"prefix":"os.exit",
+			"body": [
+				"os.exit($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"os.setlocale":{
+			"prefix":"os.setlocale",
+			"body": [
+				"os.setlocale($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"os.date":{
+			"prefix":"os.date",
+			"body": [
+				"os.date($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"os.getenv":{
+			"prefix":"os.getenv",
+			"body": [
+				"os.getenv($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"os.difftime":{
+			"prefix":"os.difftime",
+			"body": [
+				"os.difftime($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"os.remove":{
+			"prefix":"os.remove",
+			"body": [
+				"os.remove($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"os.time":{
+			"prefix":"os.time",
+			"body": [
+				"os.time($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"os.clock":{
+			"prefix":"os.clock",
+			"body": [
+				"os.clock($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"os.tmpname":{
+			"prefix":"os.tmpname",
+			"body": [
+				"os.tmpname($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"os.rename":{
+			"prefix":"os.rename",
+			"body": [
+				"os.rename($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"os.execute":{
+			"prefix":"os.execute",
+			"body": [
+				"os.execute($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},	
+		//IO
+		"io.lines":{
+			"prefix":"io.lines",
+			"body": [
+				"io.lines($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"io.write":{
+			"prefix":"io.write",
+			"body": [
+				"io.write($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"io.close":{
+			"prefix":"io.close",
+			"body": [
+				"io.close($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"io.flush":{
+			"prefix":"io.flush",
+			"body": [
+				"io.flush($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"io.open":{
+			"prefix":"io.open",
+			"body": [
+				"io.open($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"io.output":{
+			"prefix":"io.output",
+			"body": [
+				"io.output($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"io.type":{
+			"prefix":"io.type",
+			"body": [
+				"io.type($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"io.read":{
+			"prefix":"io.read",
+			"body": [
+				"io.read($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"io.stderr":{
+			"prefix":"io.stderr",
+			"body": [
+				"io.stderr($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"io.stdin":{
+			"prefix":"io.stdin",
+			"body": [
+				"io.stdin($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"io.input":{
+			"prefix":"io.input",
+			"body": [
+				"io.input($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"io.stdout":{
+			"prefix":"io.stdout",
+			"body": [
+				"io.stdout($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"io.popen":{
+			"prefix":"io.popen",
+			"body": [
+				"io.popen($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"io.tmpfile":{
+			"prefix":"io.tmpfile",
+			"body": [
+				"io.tmpfile($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		//DEBUG
+		"debug.getupvalue":{
+			"prefix":"debug.getupvalue",
+			"body": [
+				"debug.getupvalue($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"debug.debug":{
+			"prefix":"debug.debug",
+			"body": [
+				"debug.debug($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"debug.sethook":{
+			"prefix":"debug.sethook",
+			"body": [
+				"debug.sethook($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"debug.getmetatable":{
+			"prefix":"debug.getmetatable",
+			"body": [
+				"debug.getmetatable($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"debug.gethook":{
+			"prefix":"debug.gethook",
+			"body": [
+				"debug.gethook($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"debug.setmetatable":{
+			"prefix":"debug.setmetatable",
+			"body": [
+				"debug.setmetatable($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"debug.setlocal":{
+			"prefix":"debug.setlocal",
+			"body": [
+				"debug.setlocal($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"debug.traceback":{
+			"prefix":"debug.traceback",
+			"body": [
+				"debug.traceback($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"debug.setfenv":{
+			"prefix":"debug.setfenv",
+			"body": [
+				"debug.setfenv($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"debug.getinfo":{
+			"prefix":"debug.getinfo",
+			"body": [
+				"debug.getinfo($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"debug.setupvalue":{
+			"prefix":"debug.setupvalue",
+			"body": [
+				"debug.setupvalue($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"debug.getlocal":{
+			"prefix":"debug.getlocal",
+			"body": [
+				"debug.getlocal($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"debug.getregistry":{
+			"prefix":"debug.getregistry",
+			"body": [
+				"debug.getregistry($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"debug.getfenv":{
+			"prefix":"debug.getfenv",
+			"body": [
+				"debug.getfenv($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		//MATH
+		"math.log":{
+			"prefix":"math.log",
+			"body": [
+				"math.log($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.max":{
+			"prefix":"math.max",
+			"body": [
+				"math.max($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.acos":{
+			"prefix":"math.acos",
+			"body": [
+				"math.acos($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.huge":{
+			"prefix":"math.huge",
+			"body": [
+				"math.huge($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.ldexp":{
+			"prefix":"math.ldexp",
+			"body": [
+				"math.ldexp($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.pi":{
+			"prefix":"math.pi",
+			"body": [
+				"math.pi($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.cos":{
+			"prefix":"math.cos",
+			"body": [
+				"math.cos($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.tanh":{
+			"prefix":"math.tanh",
+			"body": [
+				"math.tanh($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.pow":{
+			"prefix":"math.pow",
+			"body": [
+				"math.pow($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.deg":{
+			"prefix":"math.deg",
+			"body": [
+				"math.deg($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.tan":{
+			"prefix":"math.tan",
+			"body": [
+				"math.tan($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.cosh":{
+			"prefix":"math.cosh",
+			"body": [
+				"math.cosh($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.sinh":{
+			"prefix":"math.sinh",
+			"body": [
+				"math.sinh($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.random":{
+			"prefix":"math.random",
+			"body": [
+				"math.random($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.randomseed":{
+			"prefix":"math.randomseed",
+			"body": [
+				"math.randomseed($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.frexp":{
+			"prefix":"math.frexp",
+			"body": [
+				"math.frexp($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.ceil":{
+			"prefix":"math.ceil",
+			"body": [
+				"math.ceil($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.floor":{
+			"prefix":"math.floor",
+			"body": [
+				"math.floor($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.rad":{
+			"prefix":"math.rad",
+			"body": [
+				"math.rad($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.abs":{
+			"prefix":"math.abs",
+			"body": [
+				"math.abs($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.sqrt":{
+			"prefix":"math.sqrt",
+			"body": [
+				"math.sqrt($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.modf":{
+			"prefix":"math.modf",
+			"body": [
+				"math.modf($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.asin":{
+			"prefix":"math.asin",
+			"body": [
+				"math.asin($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.min":{
+			"prefix":"math.min",
+			"body": [
+				"math.min($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.mod":{
+			"prefix":"math.mod",
+			"body": [
+				"math.mod($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.fmod":{
+			"prefix":"math.fmod",
+			"body": [
+				"math.lfmodog($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.log10":{
+			"prefix":"math.log10",
+			"body": [
+				"math.log($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.atan2":{
+			"prefix":"math.atan2",
+			"body": [
+				"math.atan2($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.atan":{
+			"prefix":"math.atan",
+			"body": [
+				"math.atan($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.exp":{
+			"prefix":"math.exp",
+			"body": [
+				"math.exp($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"math.sin":{
+			"prefix":"math.sin",
+			"body": [
+				"math.sin($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		//coroutine
+		"coroutine.resume":{
+			"prefix":"coroutine.resume",
+			"body": [
+				"coroutine.resume($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},
+		"coroutine.yield":{
+			"prefix":"coroutine.yield",
+			"body": [
+				"coroutine.yield($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},	
+		"coroutine.status":{
+			"prefix":"coroutine.status",
+			"body": [
+				"coroutine.status($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},	
+		"coroutine.wrap":{
+			"prefix":"coroutine.wrap",
+			"body": [
+				"coroutine.wrap($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},	
+		"coroutine.create":{
+			"prefix":"coroutine.create",
+			"body": [
+				"coroutine.create($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},	
+		"coroutine.running":{
+			"prefix":"coroutine.running",
+			"body": [
+				"coroutine.running($1)"
+			],
+			"description": "语法:\n例:\n详:\n"
+		},		
+		//json
+		"json.encode":{
+			"prefix":"json.encode",
+			"body": [
+				"json.encode($1)"
+			],
+			"description": "语法:\n例:\n详:将lua对象转换成json\n"
+		},		
+		"json.decode":{
+			"prefix":"json.decode",
+			"body": [
+				"json.decode($1)"
+			],
+			"description": "语法:\n例:\n详:将json转换成lua对象\n"
+		},
+		//神途提供的
+		"Print":{
+			"prefix":"lualib:Print",
+			"body": [
+				"lualib:Print(\"$1\")"
+			],
+			"description": "语法:void Print(string str)\n例:lualib:Print(\"内容\")\n详:记录类型为INF的日志\n"
+		},	
+		"Debug":{
+			"prefix":"lualib:Debug",
+			"body": [
+				"lualib:Debug(\"$1\")"
+			],
+			"description": "语法:void Debug(string str)\n例:lualib:Debug(\"日志内容\")\n详:记录类型为DBG的日志\n"
+		},	
+		"Warn":{
+			"prefix":"lualib:Warn",
+			"body": [
+				"lualib:Warn(\"$1\")"
+			],
+			"description": "语法:void Warn(string str)\n例:lualib:Warn(\"日志内容\")\n详:记录类型为WRN的日志\n"
+		},
+		"Error":{
+			"prefix":"lualib:Error",
+			"body": [
+				"lualib:Error(\"$1\")"
+			],
+			"description": "语法:void Error(string str)\n例:lualib:Error(\"日志内容\")\n详:记录类型为CRI的日志\n"
+		},
+		"Time2Str":{
+			"prefix":"lualib:Time2Str",
+			"body": [
+				"lualib:Time2Str(\"%Y-%m-%d %H:%M\",$1)"
+			],
+			"description": "语法:string Time2Str(时间格式:Y-m-d,时间:秒)\n例:local time=lualib:GetAllTime()\nlualib:Time2Str(\"%Y--%m-%d %H:%M\")\n详:将数值型时间转换成字符串时间(UTC)\n"
+		},
+		"GetAllDays":{
+			"prefix":"lualib:GetAllDays",
+			"body": [
+				"lualib:GetAllDays($1)"
+			],
+			"description": "语法:uint32 GetAllDays(时间:秒 0=现在时间)\n例:lualib:GetAllDays(0)\n详:取得1970年1月1日0时0分0到现在经过的天数(UTC)\n"
+		},	
+		"GetAllWeeks":{
+			"prefix":"lualib:GetAllWeeks",
+			"body": [
+				"lualib:GetAllWeeks($1)"
+			],
+			"description": "语法:uint32 GetAllWeeks(时间:秒 0=现在时间)\n例:lualib:GetAllWeeks(0)\n详:取得1970年1月1日0时0分0到现在经过的周数(UTC)\n"
+		},	
+		"GetAllMonths":{
+			"prefix":"lualib:GetAllMonths",
+			"body": [
+				"lualib:GetAllMonths($1)"
+			],
+			"description": "语法:uint32 GetAllMonths(时间:秒 0=现在时间)\n例:lualib:GetAllMonths(0)\n详:取得1970年1月1日0时0分0到现在经过的月数(UTC)\n"
+		},
+		"GetAllYears":{
+			"prefix":"lualib:GetAllYears",
+			"body": [
+				"lualib:GetAllYears($1)"
+			],
+			"description": "语法:uint32 GetAllYears(时间:秒 0=现在时间)\n例:lualib:GetAllYears(0)\n详:取得1970年1月1日0时0分0到现在经过的年数(UTC)\n"
+		},
+		"GetAllTime":{
+			"prefix":"lualib:GetAllTime",
+			"body": [
+				"lualib:GetAllTime()"
+			],
+			"description": "语法:uint32 GetAllTime(void)\n例:lualib:GetAllTime()\n详:取得1970年1月1日0时0分0到现在经过的秒数(UTC)\n"
+		},
+		"GetAllTimeMs":{
+			"prefix":"lualib:GetAllTimeMs",
+			"body": [
+				"lualib:GetAllTimeMs()"
+			],
+			"description": "语法:double GetAllTimeMs(void)\n例:lualib:GetAllTimeMs()\n详:取得1970年1月1日0时0分0到现在经过的毫秒数(UTC)\n"
+		},
+		"GetYear":{
+			"prefix":"lualib:GetYear",
+			"body": [
+				"lualib:GetYear($1)"
+			],
+			"description": "语法:uint32[1900-~] GetYear(时间:秒 0=现在时间)\n例:lualib:GetYear()\n详:取得指定时间值的年\n"
+		},
+		"GetMonth":{
+			"prefix":"lualib:GetMonth",
+			"body": [
+				"lualib:GetMonth($1)"
+			],
+			"description": "语法:uint32[1-12] GetMonth(时间:秒 0=现在时间)\n例:lualib:GetMonth()\n详:取得指定时间值的月\n"
+		},
+		"GetDay":{
+			"prefix":"lualib:GetDay",
+			"body": [
+				"lualib:GetDay($1)"
+			],
+			"description": "语法:uint32[1-31] GetDay(时间:秒 0=现在时间)\n例:lualib:GetDay()\n详:取得指定时间值的天\n"
+		},
+		"GetWeek":{
+			"prefix":"lualib:GetWeek",
+			"body": [
+				"lualib:GetWeek($1)"
+			],
+			"description": "语法:uint32[0-6] GetWeek(时间:秒 0=现在时间)\n例:lualib:GetWeek()\n详:取得指定时间值的周\n"
+		},
+		"SetInt":{
+			"prefix":"lualib:SetInt",
+			"body": [
+				"lualib:SetInt($1)"
+			],
+			"description": "语法:bool SetInt(string 对象的GUID(玩家,英雄,怪物,NPC,物品,地图,系统,行会),string 变量名,int32 变量值)\n例:lualib:SetInt(player,\"变量名\",10)\n详:在对象实体上存储整型数值变量,当对象是玩家时变量会自动保存到数据库中\n"
+		},
+		"SetStr":{
+			"prefix":"lualib:SetStr",
+			"body": [
+				"lualib:SetStr($1)"
+			],
+			"description": "语法:bool SetStr(string 对象的GUID(玩家,英雄,怪物,NPC,物品,地图,系统,行会),string 变量名,string 变量值)\n例:lualib:SetInt(player,\"变量名\",\"字符串\")\n详:在对象实体上存储整字符串变量,当对象是玩家时变量会自动保存到数据库中\n"
+		},
+		"GetInt":{
+			"prefix":"lualib:GetInt",
+			"body": [
+				"lualib:GetInt($1)"
+			],
+			"description": "语法:Int GetInt(string 对象的GUID(玩家,英雄,怪物,NPC,物品,地图,系统,行会),string 变量名,string 变量值)\n例:lualib:GetStr(player,\"变量名\")\n详:取得对象实体上存储的数型变量\n"
+		},
+		"GetStr":{
+			"prefix":"lualib:GetStr",
+			"body": [
+				"lualib:GetStr($1)"
+			],
+			"description": "语法:string GetStr(string 对象的GUID(玩家,英雄,怪物,NPC,物品,地图,系统,行会),string 变量名,string 变量值)\n例:lualib:GetStr(player,\"变量名\")\n详:取得对象实体上存储的字符型变量\n"
+		},
+		"NotifyVar":{
+			"prefix":"lualib:NotifyVar",
+			"body": [
+				"lualib:NotifyVar($1)"
+			],
+			"description": "语法:void NotifyVar(string 对象的GUID(玩家,怪物,NPC,物品),string 变量名)\n例:lualib:NotifyVar(player,\"变量名\")\n详:向游戏客户端发送变量通知,具体功能由客户端自行解析\n"
+		},
+		"SysMsg_SendTopMsg":{
+			"prefix":"lualib:SysMsg_SendTopMsg",
+			"body": [
+				"lualib:SysMsg_SendTopMsg($1)"
+			],
+			"description": "语法:void SysMsg_SendTopMsg(uint8 消息滚动次数, string 消息内容)\n例:lualib:SysMsg_SendTopMsg(1,\"消息内容\")\n详:发送客户端顶部消息\n"
+		},
+		"SysMsg_SendCenterMsg":{
+			"prefix":"lualib:SysMsg_SendCenterMsg",
+			"body": [
+				"lualib:SysMsg_SendCenterMsg($1)"
+			],
+			"description": "语法:void SysMsg_SendCenterMsg(uint8 消息类型0=自己 1=所有人 2=行会 3=队伍 4=当前, string 消息内容, string 玩家GUID.类型为组队和行会时必填否则默认\"\")\n例:lualib:SysMsg_SendCenterMsg(1,\"消息内容\")\n详:发送客户端中部消息\n"
+		},
+		"SysMsg_SendBroadcastMsg":{
+			"prefix":"lualib:SysMsg_SendBroadcastMsg",
+			"body": [
+				"lualib:SysMsg_SendBroadcastMsg($1)"
+			],
+			"description": "语法:void SysMsg_SendBroadcastMsg(string 消息类型, string 消息内容)\n例:lualib:SysMsg_SendBroadcastMsg(\"消息内容\",\"广播标题\")\n详:发送客户端底部广播消息\n"
+		},
+		"SysMsg_SendRoleTalk":{
+			"prefix":"lualib:SysMsg_SendRoleTalk",
+			"body": [
+				"lualib:SysMsg_SendRoleTalk($1)"
+			],
+			"description": "语法:bool SysMsg_SendRoleTalk(string 角色的GUID 玩家 怪物 NPC, string 消息内容)\n例:lualib:SysMsg_SendRoleTalk(monster,\"消息内容\")\n详:发送角色当前说话通知\n"
+		},
+		"SysMsg_SendGuildMsg":{
+			"prefix":"lualib:SysMsg_SendGuildMsg",
+			"body": [
+				"lualib:SysMsg_SendGuildMsg($1)"
+			],
+			"description": "语法:bool SysMsg_SendGuildMsg(string 行会的GUID, string 消息内容)\n例:lualib:SysMsg_SendGuildMsg(family_guid,\"消息内容\")\n详:发送客户端底部公会消息\n"
+		},
+		"SysMsg_SendMapMsg":{
+			"prefix":"lualib:SysMsg_SendMapMsg",
+			"body": [
+				"lualib:SysMsg_SendMapMsg($1)"
+			],
+			"description": "语法:bool SysMsg_SendMapMsg(string 地图的GUID, string 消息内容)\n例:lualib:SysMsg_SendMapMsg(map,\"消息内容\")\n详:发送客户端底部地图消息\n"
+		},
+		"InputDlg":{
+			"prefix":"lualib:InputDlg",
+			"body": [
+				"lualib:InputDlg($1)"
+			],
+			"description": "语法:bool InputDlg(string 玩家的GUID, uint32 输入框ID任填唯一,string 输入框内容,uint32 超时时间:秒, uint8 输入框长度, string 回调函数, string 参数)\n例: lualib:SysMsg_SendInputDlg(player,3,\"请输入所要赠送的玩家昵称\",45,14, \"CallBack\", \"\")\n详:通知客户端显示输入框.回调函数:void CallBack(UINT32 ID, string player, string input, string param)\n"
+		},
+		"MsgBox":{
+			"prefix":"lualib:MsgBox",
+			"body": [
+				"lualib:MsgBox($1)"
+			],
+			"description": "语法:bool MsgBox(string 玩家的GUID,strig 消息框内容)\n例: lualib:MsgBox(player,\"消息内容\")\n详:通知客户端显示消息框\n"
+		},
+		"WebBox":{
+			"prefix":"lualib:WebBox",
+			"body": [
+				"lualib:WebBox($1)"
+			],
+			"description": "语法:bool WebBox(string 玩家的GUID,strig 弹出的IE框所使用的URL)\n例: lualib:WebBox(player,\"http://www.baidu.com\")\n详:发送显示Web页面框通知\n"
+		},
+		"WebBoxEx":{
+			"prefix":"lualib:WebBoxEx",
+			"body": [
+				"lualib:WebBoxEx($1)"
+			],
+			"description": "语法:void WebBoxEx(string 玩家的GUID,strig 标题,string URL,string param)\n例: lualib:WebBoxEx(player,\"title\",\"http://www.baidu.com\",\"参数\")\n详:暂时用不到这个功能\n"
+		},
+		"SysMsg_SendBroadcastColor":{
+			"prefix":"lualib:SysMsg_SendBroadcastColor",
+			"body": [
+				"lualib:SysMsg_SendBroadcastColor($1)"
+			],
+			"description": "语法:void SysMsg_SendBroadcastColor(string 消息内容, strig 广播标题,int32 前景颜色,int32 背景颜色)\n例: lualib:SysMsg_SendBroadcastColor(\"内容\",\"标题\",1,12)\n详:发送客户端底部广播消息1 = 黄色 2 = 红色 3 = 粉红 4 = 蓝色 5 = 浅蓝 6 = 深粉 7 = 白色 8 = 深蓝 9 = 亮蓝 10 = 深黄 11 = 透明 12 = 黑色 13 = 绿色\n"
+		},
+		"SysMsg_SendBottomColor":{
+			"prefix":"lualib:SysMsg_SendBottomColor",
+			"body": [
+				"lualib:SysMsg_SendBottomColor($1)"
+			],
+			"description": "语法:void SysMsg_SendBottomColor(string 玩家GUID, strig 消息内容,int32 前景颜色,int32 背景颜色)\n例: lualib:SysMsg_SendBottomColor(player,\"标题\",1,12)\n详:发送客户端底部广播消息1 = 黄色 2 = 红色 3 = 粉红 4 = 蓝色 5 = 浅蓝 6 = 深粉 7 = 白色 8 = 深蓝 9 = 亮蓝 10 = 深黄 11 = 透明 12 = 黑色 13 = 绿色\n"
+		},
+		"SysMsg_SendTopColor":{
+			"prefix":"lualib:SysMsg_SendTopColor",
+			"body": [
+				"lualib:SysMsg_SendTopColor($1)"
+			],
+			"description": "语法:void SysMsg_SendTopColor(uint8 滚动次数, strig 消息内容,int32 前景颜色,int32 背景颜色)\n例: lualib:SysMsg_SendTopColor(3,\"内容\",1,12)\n详:发送客户端底部广播消息1 = 黄色 2 = 红色 3 = 粉红 4 = 蓝色 5 = 浅蓝 6 = 深粉 7 = 白色 8 = 深蓝 9 = 亮蓝 10 = 深黄 11 = 透明 12 = 黑色 13 = 绿色\n"
+		},
+		"Name":{
+			"prefix":"lualib:Name",
+			"body": [
+				"lualib:Name($1)"
+			],
+			"description": "语法:string Name(string 对象的GUID)\n例: lualib:Name(player)\n详:对象的Name,如果对象不存在返回\"\"\n根据对象GUID取得对应的Name,对象可以是玩家、怪物、NPC、地图、行会、物品\n"
+		},
+		"KeyName":{
+			"prefix":"lualib:KeyName",
+			"body": [
+				"lualib:KeyName($1)"
+			],
+			"description": "语法:string KeyName(string 对象的GUID)\n例: lualib:KeyName(player)\n详:对象的KeyName,如果对象不存在返回\"\"\n根据对象GUID取得对象的KeyName,对象可以是玩家、怪物、NPC、地图、行会、物品\n"
+		},
+		"X":{
+			"prefix":"lualib:X",
+			"body": [
+				"lualib:X($1)"
+			],
+			"description": "语法:uint16 X(string 对象的GUID)\n例: lualib:X(player)\n详:取得对象的X坐标\n对象的GUID,可以是玩家、怪物、NPC、物品\n"
+		},
+		"Y":{
+			"prefix":"lualib:Y",
+			"body": [
+				"lualib:Y($1)"
+			],
+			"description": "语法:unit16 Y(string 对象的GUID)\n例: lualib:Y(player)\n详:取得对象的Y坐标\n对象的GUID,可以是玩家、怪物、NPC、物品\n"
+		},
+		"Distance":{
+			"prefix":"lualib:Distance",
+			"body": [
+				"lualib:Distance($1)"
+			],
+			"description": "语法:unit16 Distance(string 对象的GUID,string 对象的GUID)\n例: lualib:Distance(player,monster)\n详:取得对象间的距离\n对象的GUID,可以是玩家、怪物、NPC、物品\n"
+		},
+		"MapGuid":{
+			"prefix":"lualib:MapGuid",
+			"body": [
+				"lualib:MapGuid($1)"
+			],
+			"description": "语法:string MapGuid(string 对象的GUID)\n例: lualib:MapGuid(player)\n详:\n取得对象当前地图的GUID\n对象的GUID,可以是玩家、怪物、NPC、物品\n对象当前地图的GUID,出错返回\"\"\n"
+		},
+		"AddBuff":{
+			"prefix":"lualib:AddBuff",
+			"body": [
+				"lualib:AddBuff($1)"
+			],
+			"description": "语法:bool AddBuff(string 对象的GUID)\n例: lualib:AddBuff(player)\n详:对象当前地图的GUID,出错返回\"\"\n取得对象当前地图的GUID\n对象的GUID,可以是玩家、怪物、NPC、物品\n"
+		},
+		"AddBuff2":{
+			"prefix":"lualib:AddBuff2",
+			"body": [
+				"lualib:AddBuff2($1)"
+			],
+			"description": "语法:bool AddBuff2(string 对象的GUID,string 对象的BUFF,string BuffKeyname,string buff对应的技能key,uint32 buff的持续时间,单位:秒,int32 Att1值)\n例: lualib:AddBuff2(player)\n详:给角色添加BUFF\n"
+		},
+		"AddBuffEx":{
+			"prefix":"lualib:AddBuffEx",
+			"body": [
+				"lualib:AddBuffEx($1)"
+			],
+			"description": "语法:bool AddBuffEx(string 对象的GUID,string BuffKeyname,unit32 buff持续时间,单位:秒,int32 Att1值)\n例: lualib:AddBuffEx(player,\"加攻\",0,10)\n详:给角色添加BUFF\n"
+		},
+		"DelBuff":{
+			"prefix":"lualib:DelBuff",
+			"body": [
+				"lualib:DelBuff($1)"
+			],
+			"description": "语法:bool DelBuff(string 对象的GUID,string BuffKeyname)\n例: lualib:DelBuff(player,\"加攻\")\n详:删除角色BUFF\n"
+		},
+		"HasBuff":{
+			"prefix":"lualib:HasBuff",
+			"body": [
+				"lualib:HasBuff($1)"
+			],
+			"description": "语法:bool HasBuff(string 对象的GUID,string BuffKeyname)\n例: lualib:HasBuff(player,\"加攻\")\n详:判断角色是否拥有BUFF\n"
+		},
+		"Kill":{
+			"prefix":"lualib:Kill",
+			"body": [
+				"lualib:Kill($1)"
+			],
+			"description": "语法:bool Kill(string 对象的GUID)\n例: lualib:Kill(player)\n详:立即杀死角色\n 角色的GUID,角色可以为玩家、怪物、NPC"
+		},
+		"AddSkill":{
+			"prefix":"lualib:AddSkill",
+			"body": [
+				"lualib:AddSkill($1)"
+			],
+			"description": "语法:bool AddSkill(string 对象的GUID,string 技能的KeyName)\n例: lualib:AddSkill(player,\"开天\")\n详:给角色添加技能\n 角色的GUID,角色可以为玩家、怪物、NPC"
+		},
+		"HasSkill":{
+			"prefix":"lualib:HasSkill",
+			"body": [
+				"lualib:HasSkill($1)"
+			],
+			"description": "语法:bool HasSkill(string 对象的GUID,string 技能的KeyName,bool 是否判断技能)\n例: lualib:AddSkill(player,\"开天\",true)\n详:判断角色是否拥有技能\n 角色的GUID,角色可以为玩家、怪物、NPC"
+		},
+		"SetPanelSize":{
+			"prefix":"lualib:SetPanelSize",
+			"body": [
+				"lualib:SetPanelSize($1)"
+			],
+			"description": "语法:bool SetPanelSize(string 对象的GUID,uint16 宽度, uint16 高度)\n例: lualib:SetPanelSize(player,100,80)\n详:设置角色NPC面板的size\n角色的GUID,角色可以为玩家、怪物、NPC"
+		},
+		"SendRoleHPNtf":{
+			"prefix":"lualib:SendRoleHPNtf",
+			"body": [
+				"lualib:SendRoleHPNtf($1)"
+			],
+			"description": "语法:bool SendRoleHPNtf(string 对象的GUID)\n例: lualib:SendRoleHPNtf(player)\n详:向周围通知角色血量\n角色的GUID,角色只能是玩家或怪物"
+		},
+		"Camp":{
+			"prefix":"lualib:Camp",
+			"body": [
+				"lualib:Camp($1)"
+			],
+			"description": "语法:int32 Camp(string 对象的GUID)\n例: lualib:Camp(player)\n详:取得角色的阵营\n角色可以为玩家、怪物、NPC"
+		},
+		"SetCamp":{
+			"prefix":"lualib:SetCamp",
+			"body": [
+				"lualib:SetCamp($1)"
+			],
+			"description": "语法:void SetCamp(string 对象的GUID,int32 阵营值)\n例: lualib:SetCamp(player,1)\n详:取得角色的阵营\n角色可以为玩家、怪物、NPC"
+		},
+		"Player_GetAccountID":{
+			"prefix":"lualib:Player_GetAccountID",
+			"body": [
+				"lualib:Player_GetAccountID($1)"
+			],
+			"description": "语法:string Player_GetAccountID(string 玩家的GUID)\n例: lualib:Player_GetAccountID(player)\n详:取得玩家的帐号ID.\n过期"
+		},
+		"Player_GetServantCount":{
+			"prefix":"lualib:Player_GetServantCount",
+			"body": [
+				"lualib:Player_GetServantCount($1)"
+			],
+			"description": "语法:int Player_GetServantCount(string 玩家的GUID)\n例: lualib:Player_GetServantCount(player)\n详:取得玩家的随从的数量"
+		},
+		"Player_GetServantList":{
+			"prefix":"lualib:Player_GetServantList",
+			"body": [
+				"lualib:Player_GetServantList($1)"
+			],
+			"description": "语法:table Player_GetServantList(string 玩家的GUID)\n例: lualib:Player_GetServantCount(player)\n详:取得玩家的随从的GUID列表"
+		},
+		"Player_IsServantNear":{
+			"prefix":"lualib:Player_IsServantNear",
+			"body": [
+				"lualib:Player_IsServantNear($1)"
+			],
+			"description": "语法:bool Player_IsServantNear(string 玩家的GUID,string 随从的GUID)\n例: lualib:Player_IsServantNear(player,mon)\n详:判断玩家的随从是不是在附近"
+		},
+		"Player_GetAttackMode":{
+			"prefix":"lualib:Player_GetAttackMode",
+			"body": [
+				"lualib:Player_GetAttackMode($1)"
+			],
+			"description": "语法:int32 Player_GetAttackMode(string 玩家的GUID)\n例: lualib:Player_GetAttackMode(player)\n详:取得玩家的攻击模式\n出错返回-1.攻击模式, 0 = 全体 1 = 和平 2 = 编组 3 = 行会 4 = 善恶 5 = 联盟 6 = 阵营\n"
+		},
+		"ItemCountByKey":{
+			"prefix":"lualib:ItemCountByKey",
+			"body": [
+				"lualib:ItemCountByKey($1)"
+			],
+			"description": "语法:int32 ItemCountByKey(string 玩家的GUID,string keyname,bool 背包,bool 仓库,bool,高仓,uint8 绑定类型)\n例: lualib:ItemCountByKey(player,true,false,false,0)\n详:取得玩家的物品数量\n过期\n"
+		},	
+		"BagSize":{
+			"prefix":"lualib:BagSize",
+			"body": [
+				"lualib:BagSize($1)"
+			],
+			"description": "语法:int32 BagSize(string 玩家的GUID,string keyname,bool 背包,bool 仓库,bool,高仓)\n例: lualib:BagSize(player,true,false,false)\n详:取得玩家包裹大小.GetBagSizeEx的别名.\n包裹大小,出错返回-1\n"
+		},	
+		"BagFree":{
+			"prefix":"lualib:BagFree",
+			"body": [
+				"lualib:BagFree($1)"
+			],
+			"description": "语法:int32 BagFree(string 玩家的GUID,string keyname,bool 背包,bool 仓库,bool,高仓)\n例: lualib:BagFree(player,true,false,false)\n详:取得玩家包裹大小.GetBagSizeEx的别名.\n包裹大小,出错返回-1\n"
+		},	
+		"AccountName":{
+			"prefix":"lualib:AccountName",
+			"body": [
+				"lualib:AccountName($1)"
+			],
+			"description": "语法:string AccountName(string 玩家的GUID)\n例: lualib:AccountName(player)\n详:取得玩家的帐号名\n"
+		},	
+		"Ip":{
+			"prefix":"lualib:Ip",
+			"body": [
+				"lualib:Ip($1)"
+			],
+			"description": "语法:string Ip(string 玩家的GUID)\n例: lualib:Ip(player)\n详:取得玩家的IP字符串\n返:玩家的IP字符串,如果玩家不存在返回\"\"\n"
+		},
+		"Name2Guid":{
+			"prefix":"lualib:Name2Guid",
+			"body": [
+				"lualib:Name2Guid($1)"
+			],
+			"description": "语法:string Name2Guid(string 玩家的Name)\n例: lualib:Name2Guid(playername)\n详:根据玩家的Name找到该玩家,玩家必须在线\n返:玩家的GUID,如果玩家不存在返回\"\"\n"
+		},
+		"GuildGuid":{
+			"prefix":"lualib:GuildGuid",
+			"body": [
+				"lualib:GuildGuid($1)"
+			],
+			"description": "语法:string GuildGuid(string 玩家的GUID)\n例: lualib:GuildGuid(player)\n详:取得玩家所属行会的GUID\n返:玩家行会的GUID,出错返回\"\"\n"
+		},
+		"ReliveMapGuid":{
+			"prefix":"lualib:ReliveMapGuid",
+			"body": [
+				"lualib:ReliveMapGuid($1)"
+			],
+			"description": "语法:string ReliveMapGuid(string 玩家的GUID)\n例: lualib:ReliveMapGuid(player)\n详:取得玩家复活地图的GUID\n返:对象复活地图的GUID,出错返回\"\"\n"
+		},
+		"Player_GetGuildCtrb":{
+			"prefix":"lualib:Player_GetGuildCtrb",
+			"body": [
+				"lualib:Player_GetGuildCtrb($1)"
+			],
+			"description": "语法:int Player_GetGuildCtrb(string 玩家的GUID)\n例: lualib:Player_GetGuildCtrb(player)\n详:取得玩家的行会贡献度\n返:行会贡献度,出错返回0\n"
+		},
+		"Player_ReCalGuildCtrb":{
+			"prefix":"lualib:Player_ReCalGuildCtrb",
+			"body": [
+				"lualib:Player_ReCalGuildCtrb($1)"
+			],
+			"description": "语法:bool Player_ReCalGuildCtrb(string 玩家的GUID,int32 大于0原追加,小于0原减少)\n例: lualib:Player_ReCalGuildCtrb(player)\n详:调整玩家的行会贡献度\n返:bool\n"
+		},
+		"Player_GetTeamGuid":{
+			"prefix":"lualib:Player_GetTeamGuid",
+			"body": [
+				"lualib:Player_GetTeamGuid($1)"
+			],
+			"description": "语法:string Player_GetTeamGuid(string 玩家的GUID)\n例: lualib:Player_GetTeamGuid(player)\n详:取得玩家队伍的GUID\n返:玩家队伍的GUID\n"
+		},
+		"Player_GetTeamList":{
+			"prefix":"lualib:Player_GetTeamList",
+			"body": [
+				"lualib:Player_GetTeamList($1)"
+			],
+			"description": "语法:table Player_GetTeamList(string 玩家的GUID)\n例: lualib:Player_GetTeamList(player)\n详:取得玩家所有队友的GUID\n返:玩家队友的GUID列表,返回lua table\n"
+		},
+		"Player_GetCastleList":{
+			"prefix":"lualib:Player_GetCastleList",
+			"body": [
+				"lualib:Player_GetCastleList($1)"
+			],
+			"description": "语法:table Player_GetCastleList(string 玩家的GUID)\n例: lualib:Player_GetCastleList(player)\n详:取得玩家所属行会占领的所有城堡列表\n返:玩家队伍的GUID列表,返回lua table\n"
+		},
+		"BagItemList":{
+			"prefix":"lualib:BagItemList",
+			"body": [
+				"lualib:BagItemList($1)"
+			],
+			"description": "语法:table BagItemList(string 玩家的GUID,bool 背包,bool 仓库, bool 高仓)\n例: lualib:BagItemList(player,true,false,false,false)\n详:取得玩家包裹所有物品的GUID列表\n返:包裹所有物品的GUID列表,返回lua table\n"
+		},
+		"Player_HasTeam":{
+			"prefix":"lualib:Player_HasTeam",
+			"body": [
+				"lualib:Player_HasTeam($1)"
+			],
+			"description": "语法:bool Player_HasTeam(string 玩家的GUID)\n例: lualib:Player_HasTeam(player)\n详:判断玩家是否组队\n返:bool\n"
+		},
+		"Player_IsTeamLeader":{
+			"prefix":"lualib:Player_IsTeamLeader",
+			"body": [
+				"lualib:Player_IsTeamLeader($1)"
+			],
+			"description": "语法:bool Player_IsTeamLeader(string 玩家的GUID)\n例: lualib:Player_IsTeamLeader(player)\n详:判断玩家是否队长\n返:bool\n"
+		},
+		"Player_IsGuildLeader":{
+			"prefix":"lualib:Player_IsGuildLeader",
+			"body": [
+				"lualib:Player_IsGuildLeader($1)"
+			],
+			"description": "语法:bool Player_IsGuildLeader(string 玩家的GUID)\n例: lualib:Player_IsGuildLeader(player)\n详:判断玩家是否会长\n返:bool\n"
+		},
+		"Player_IsViceGuildLeader":{
+			"prefix":"lualib:Player_IsViceGuildLeader",
+			"body": [
+				"lualib:Player_IsViceGuildLeader($1)"
+			],
+			"description": "语法:bool Player_IsViceGuildLeader(string 玩家的GUID)\n例: lualib:Player_IsViceGuildLeader(player)\n详:判断玩家是否副会长\n返:bool\n"
+		},
+		"Player_IsGM":{
+			"prefix":"lualib:Player_IsGM",
+			"body": [
+				"lualib:Player_IsGM($1)"
+			],
+			"description": "语法:bool Player_IsGM(string 玩家的GUID)\n例: lualib:Player_IsGM(player)\n详:判断玩家是否GM\n返:bool\n"
+		},
+		"Player_ChangeAttackMode":{
+			"prefix":"lualib:Player_ChangeAttackMode",
+			"body": [
+				"lualib:Player_ChangeAttackMode($1)"
+			],
+			"description": "语法:bool Player_ChangeAttackMode(string 玩家的GUID,uint8 攻击模式)\n例: lualib:Player_ChangeAttackMode(player,0)\n详:设置角色攻击模式攻击模式, 0 = 全体 1 = 和平 2 = 编组 3 = 行会 4 = 善恶 5 = 联盟 6 = 阵营.\n返:bool\n"
+		},
+		"Player_AddGold":{
+			"prefix":"lualib:Player_AddGold",
+			"body": [
+				"lualib:Player_AddGold($1)"
+			],
+			"description": "语法:bool Player_AddGold(string 玩家的GUID,int32 金币数量, bool true,string 动作原因,string 动作的发起者)\n例: lualib:Player_AddGold(player,10,\"加金币:升级\",\"角色名\")\n详:添加角色金币\n返:bool\n"
+		},
+		"Player_AddGoldStr":{
+			"prefix":"lualib:Player_AddGoldStr",
+			"body": [
+				"lualib:Player_AddGoldStr($1)"
+			],
+			"description": "语法:bool Player_AddGoldStr(string 玩家的GUID,string 金币数量, bool true,string 动作原因,string 动作的发起者)\n例: lualib:Player_AddGoldStr(player,tostring(10),\"加金币:升级\",\"角色名\")\n详:添加角色金币字符串版\n返:bool\n"
+		},
+		"Player_SubGold":{
+			"prefix":"lualib:Player_SubGold",
+			"body": [
+				"lualib:Player_SubGold($1)"
+			],
+			"description": "语法:bool Player_SubGold(string 玩家的GUID,int32 金币数量, bool true,string 动作原因,string 动作的发起者)\n例: lualib:Player_SubGold(player,10,\"扣金币:升级\",\"角色名\")\n详:扣除角色金币\n返:bool\n"
+		},	
+		"Player_SubGoldStr":{
+			"prefix":"lualib:Player_SubGoldStr",
+			"body": [
+				"lualib:Player_SubGoldStr($1)"
+			],
+			"description": "语法:bool Player_SubGoldStr(string 玩家的GUID,string 金币数量, bool true,string 动作原因,string 动作的发起者)\n例: lualib:Player_SubGoldStr(player,tostring(10),\"扣金币:升级\",\"角色名\")\n详:扣除角色金币字符串版\n返:bool\n"
+		},
+		"Player_IsGoldEnough":{
+			"prefix":"lualib:Player_IsGoldEnough",
+			"body": [
+				"lualib:Player_IsGoldEnough($1)"
+			],
+			"description": "语法:bool Player_IsGoldEnough(string 玩家的GUID,int32 金币数量, bool 是否绑定)\n例: lualib:Player_IsGoldEnough(player,10,true)\n详:判断角色的金币是否足够\n返:bool\n"
+		},
+		"Player_AddIngot":{
+			"prefix":"lualib:Player_AddIngot",
+			"body": [
+				"lualib:Player_AddIngot($1)"
+			],
+			"description": "语法:bool Player_AddIngot(string 玩家的GUID,int32 金币数量, bool 是否绑定,string 动作原因,string 动作发起者)\n例: lualib:Player_AddIngot(player,10,true,\"加元宝:\",\"角色名\")\n详:添加角色元宝\n返:bool\n"
+		},
+		"Player_SubIngot":{
+			"prefix":"lualib:Player_SubIngot",
+			"body": [
+				"lualib:Player_SubIngot($1)"
+			],
+			"description": "语法:bool Player_SubIngot(string 玩家的GUID,int32 金币数量, bool 是否绑定,string 动作原因,string 动作发起者)\n例: lualib:Player_SubIngot(player,10,true,\"加元宝:\",\"角色名\")\n详:扣除角色元宝\n返:bool\n"
+		},	
+		"Player_IsIngotEnough":{
+			"prefix":"lualib:Player_IsIngotEnough",
+			"body": [
+				"lualib:Player_IsIngotEnough($1)"
+			],
+			"description": "语法:bool Player_IsIngotEnough(string 玩家的GUID,int32 金币数量, bool 是否绑定)\n例: lualib:Player_IsIngotEnough(player,10,true)\n详:判断角色的元宝是否足够\n返:bool\n"
+		},
+		"Player_AddExp":{
+			"prefix":"lualib:Player_AddExp",
+			"body": [
+				"lualib:Player_AddExp($1)"
+			],
+			"description": "语法:bool Player_AddExp(string 玩家的GUID,int32 经验数量,string 动作原因,string 动作发起者)\n例: lualib:Player_AddExp(player,10,\"加经验:\",\"角色名\")\n详:添加角色经验\n返:bool\n"
+		},
+		"Player_AddExpStr":{
+			"prefix":"lualib:Player_AddExpStr",
+			"body": [
+				"lualib:Player_AddExpStr($1)"
+			],
+			"description": "语法:bool Player_AddExpStr(string 玩家的GUID,string 经验数量,string 动作原因,string 动作发起者)\n例: lualib:Player_AddExpStr(player,10,\"加经验:\",\"角色名\")\n详:添加角色经验字符串版\n返:bool\n"
+		},	
+		"Player_SubExp":{
+			"prefix":"lualib:Player_SubExp",
+			"body": [
+				"lualib:Player_SubExp($1)"
+			],
+			"description": "语法:bool Player_SubExp(string 玩家的GUID,int32 经验数量,string 动作原因,string 动作发起者)\n例: lualib:Player_SubExp(player,10,\"加经验:\",\"角色名\")\n详:扣除角色经验\n返:bool\n"
+		},
+		"Player_SubExpStr":{
+			"prefix":"lualib:Player_SubExpStr",
+			"body": [
+				"lualib:Player_SubExpStr($1)"
+			],
+			"description": "语法:bool Player_SubExpStr(string 玩家的GUID,string 经验数量,string 动作原因,string 动作发起者)\n例: lualib:Player_SubExpStr(player,10,\"加经验:\",\"角色名\")\n详:扣除角色经验\n返:bool\n"
+		},
+		"Player_AddIntegral":{
+			"prefix":"lualib:Player_AddIntegral",
+			"body": [
+				"lualib:Player_AddIntegral($1)"
+			],
+			"description": "语法:bool Player_AddIntegral(string 玩家的GUID,int32 积分数量,string 动作原因,string 动作发起者)\n例: lualib:Player_AddIntegral(player,10,\"加积分:\",\"角色名\")\n详:添加角色积分\n返:bool\n"
+		},
+		"Player_SubIntegral":{
+			"prefix":"lualib:Player_SubIntegral",
+			"body": [
+				"lualib:Player_SubIntegral($1)"
+			],
+			"description": "语法:bool Player_SubIntegral(string 玩家的GUID,int32 积分数量,string 动作原因,string 动作发起者)\n例: lualib:Player_SubIntegral(player,10,\"扣积分:\",\"角色名\")\n详:添加角色积分\n返:bool\n"
+		},
+		"Player_IsIntegralEnough":{
+			"prefix":"lualib:Player_IsIntegralEnough",
+			"body": [
+				"lualib:Player_IsIntegralEnough($1)"
+			],
+			"description": "语法:bool Player_IsIntegralEnough(string 玩家的GUID,int32 积分数量)\n例: lualib:Player_IsIntegralEnough(player,10)\n详:判断角色的积分是否足够\n返:bool\n"
+		},
+		"Player_Relive":{
+			"prefix":"lualib:Player_Relive",
+			"body": [
+				"lualib:Player_Relive($1)"
+			],
+			"description": "语法:bool Player_Relive(string 玩家的GUID,string 地图GUID, uint16 X, uint16 Y, uint16 范围,uint16 复活血量百分比)\n例: lualib:Player_Relive(player, map_g, x, y, 12, 50)\n详:让玩家复活\n返:bool\n"
+		},
+		"Player_JumpToRole":{
+			"prefix":"lualib:Player_JumpToRole",
+			"body": [
+				"lualib:Player_JumpToRole($1)"
+			],
+			"description": "语法:bool Player_JumpToRole(string 玩家的GUID,string 目标玩家名)\n例: lualib:Player_JumpToRole(player, target)\n详:跳转到目标玩家面前\n返:bool\n"
+		},	
+		"Player_DragFromRole":{
+			"prefix":"lualib:Player_DragFromRole",
+			"body": [
+				"lualib:Player_DragFromRole($1)"
+			],
+			"description": "语法:bool Player_DragFromRole(string 玩家的GUID,string 目标玩家名)\n例: lualib:Player_DragFromRole(player, target)\n详:将目标玩家拉到自己面前\n返:bool\n"
+		},
+		"Player_FixEquip":{
+			"prefix":"lualib:Player_FixEquip",
+			"body": [
+				"lualib:Player_FixEquip($1)"
+			],
+			"description": "语法:bool Player_FixEquip(string 玩家的GUID,bool 是否特修)\n例: lualib:Player_FixEquip(player, true)\n详:修理玩家所有装备\n返:bool\n"
+		},
+		"Player_FixSingleEquip":{
+			"prefix":"lualib:Player_FixSingleEquip",
+			"body": [
+				"lualib:Player_FixSingleEquip($1)"
+			],
+			"description": "语法:bool Player_FixSingleEquip(string 玩家的GUID,string 装备GUID,bool 是否特修)\n例: lualib:Player_FixSingleEquip(player,item,true)\n详:修理玩家指定装备\n返:bool\n"
+		},
+		"AddItem":{
+			"prefix":"lualib:AddItem",
+			"body": [
+				"lualib:AddItem($1)"
+			],
+			"description": "语法:bool AddItem(string 玩家的GUID,string keyname,int32 数量,bool 绑定类型,string 动作原因,string 发起者)\n例: lualib:AddItem(player,key,1,\"原因\",\"发起者\")\n详:给予玩家物品.如果玩家背包满了,物品会掉到地上.绑定物品只有玩家自己才能拾取绑定类型\nfalse=不绑定 true=绑定\n返:bool\n"
+		},
+		"DelItem":{
+			"prefix":"lualib:DelItem",
+			"body": [
+				"lualib:DelItem($1)"
+			],
+			"description": "语法:bool DelItem(string 玩家的GUID,string keyname,int32 数量,bool 绑定类型,string 动作原因,string 发起者)\n例: lualib:DelItem(player,key,1,\"原因\",\"发起者\")\n详:删除玩家物品,只删除玩家背包里的道具\n绑定类型,0=非绑定,1=绑定 2=绑定/非绑定\n返:bool\n"
+		},
+		"DelItemEx":{
+			"prefix":"lualib:DelItemEx",
+			"body": [
+				"lualib:DelItemEx($1)"
+			],
+			"description": "语法:bool DelItemEx(string 玩家的GUID,string keyname,int32 数量,bool 绑定类型,bool 装备栏,bool 背包,bool 仓库,bool 高仓,string 动作原因,string 发起者)\n例: lualib:DelItemEx(player,key,1,true,true,true,true\"原因\",\"发起者\")\n详:删除玩家物品\n绑定类型,0=非绑定,1=绑定 2=绑定/非绑定\n返:bool\n"
+		},
+		"ClearBag":{
+			"prefix":"lualib:DelIteClearBagmEx",
+			"body": [
+				"lualib:ClearBag($1)"
+			],
+			"description": "语法:bool ClearBag(string 玩家的GUID,bool 装备栏,bool 背包,bool 仓库,bool 高仓,string 动作原因,string 发起者)\n例: lualib:ClearBag(player,true,true,true,true\"原因\",\"发起者\")\n详:清空玩家包裹\n返:bool\n"
+		},
+		"ApplyEquip":{
+			"prefix":"lualib:ApplyEquip",
+			"body": [
+				"lualib:ApplyEquip($1)"
+			],
+			"description": "语法:bool ApplyEquip(string 玩家的GUID,string keyname)\n例: lualib:ApplyEquip(player,keyname)\n详:让玩家穿装备,只能穿玩家背包中的装备 过期\n返:bool\n"
+		},
+		"ApplyEquipEx":{
+			"prefix":"lualib:ApplyEquipEx",
+			"body": [
+				"lualib:ApplyEquipEx($1)"
+			],
+			"description": "语法:bool ApplyEquipEx(string 玩家的GUID,string keyname)\n例: lualib:ApplyEquipEx(player,keyname)\n详:让玩家穿装备,只能穿玩家背包中的装备\n返:bool\n"
+		},
+		"DisableEquip":{
+			"prefix":"lualib:DisableEquip",
+			"body": [
+				"lualib:DisableEquip($1)"
+			],
+			"description": "语法:bool DisableEquip(string 玩家的GUID,string keyname)\n例: lualib:DisableEquip(player,keyname)\n详:让玩家脱装备\n返:bool\n"
+		},
+		"Player_MapMove":{
+			"prefix":"lualib:Player_MapMove",
+			"body": [
+				"lualib:Player_MapMove($1)"
+			],
+			"description": "语法:bool Player_MapMove(string 玩家的GUID,string mapk)\n例: lualib:Player_MapMove(player,mapk)\n详:让玩家跳转到指定地图随机坐标 地图为\"\",玩家当前地图\n返:bool\n"
+		},
+		"Player_MapMoveXY":{
+			"prefix":"lualib:Player_MapMoveXY",
+			"body": [
+				"lualib:Player_MapMoveXY($1)"
+			],
+			"description": "语法:bool Player_MapMoveXY(string 玩家的GUID,string mapk,uint16 X,uint16 Y, uint16 R)\n例: lualib:Player_MapMoveXY(player,mapk,x,y,r)\n详:让玩家跳转到指定地图指定坐标 地图为\"\",玩家当前地图\n返:bool\n"
+		},
+		"ApplyItem":{
+			"prefix":"lualib:ApplyItem",
+			"body": [
+				"lualib:ApplyItem($1)"
+			],
+			"description": "语法:bool ApplyItem(string 玩家的GUID,string keyname或guid, bool 类型)\n例: lualib:ApplyItem(player,mapk,true)\n详:让玩家使用道具 类型:true=GUID,false=keyname\n返:bool\n"
+		},
+		"ApplyItemXY":{
+			"prefix":"lualib:ApplyItemXY",
+			"body": [
+				"lualib:ApplyItemXY($1)"
+			],
+			"description": "语法:bool ApplyItemXY(string 玩家的GUID,string keyname或guid, bool 类型,uint X uint Y)\n例: lualib:ApplyItemXY(player,mapk,true,10,10)\n详:让玩家对附近某坐标使用道具 类型:true=GUID,false=keyname\n返:bool\n"
+		},
+		"ApplyItemTarget":{
+			"prefix":"lualib:ApplyItemTarget",
+			"body": [
+				"lualib:ApplyItemTarget($1)"
+			],
+			"description": "语法:bool ApplyItemTarget(string 玩家的GUID,string keyname或guid, bool 类型,string 目标GUID)\n例: lualib:ApplyItemTarget(player,mapk,true,target)\n详:让玩家对某目标使用道具 类型:true=GUID,false=keyname\n返:bool\n"
+		},
+		"DropItem":{
+			"prefix":"lualib:DropItem",
+			"body": [
+				"lualib:DropItem($1)"
+			],
+			"description": "语法:bool DropItem(string 玩家的GUID,string keyname或guid, bool 类型)\n例: lualib:DropItem(player,mapk,true)\n详:玩家丢弃物品.只能丢弃玩家背包中的物品 类型:true=GUID,false=keyname\n返:bool\n"
+		},
+		"Player_RunScript":{
+			"prefix":"lualib:Player_RunScript",
+			"body": [
+				"lualib:Player_RunScript($1)"
+			],
+			"description": "语法:bool Player_RunScript(string 玩家的GUID,string 执行的函数,string 参数)\n例: lualib:Player_RunScript(player,\"函数名\",\"参数\")\n详:让玩家执行一段脚本.回调函数格式:void fnCallback(strPlayer, strParam)\n格式, 1 = \"文件名:函数名\" 2 = \"文件名\"\n返:bool\n备:该接口是异步的.接口返回成功并不代表脚本执行成功\n"
+		},
+		"Player_TeamRunScript":{
+			"prefix":"lualib:Player_TeamRunScript",
+			"body": [
+				"lualib:Player_TeamRunScript($1)"
+			],
+			"description": "语法:bool Player_TeamRunScript(string 玩家的GUID,string 执行的函数,string 参数)\n例: lualib:Player_TeamRunScript(player\"函数名\",\"参数\")\n详:让玩家队伍里所有人执行一段脚本.回调函数格式:void fnCallback(strPlayer, strParam)\n格式, 1 = \"文件名:函数名\" 2 = \"文件名\"\n返:bool\n备:该接口是异步的.接口返回成功并不代表脚本执行成功\n"
+		},
+		"Player_GuildRunScript":{
+			"prefix":"lualib:Player_GuildRunScript",
+			"body": [
+				"lualib:Player_GuildRunScript($1)"
+			],
+			"description": "语法:bool Player_GuildRunScript(string 玩家的GUID,string 执行的函数,string 参数)\n例: lualib:Player_GuildRunScript(player,\"函数名\",\"参数\")\n详:让玩家行会里所有人执行一段脚本.回调函数格式:void fnCallback(strPlayer, strParam)\n格式, 1 = \"文件名:函数名\" 2 = \"文件名\"\n返:bool\n备:该接口是异步的.接口返回成功并不代表脚本执行成功\n"
+		},
+		"Player_IsPlayer":{
+			"prefix":"lualib:Player_IsPlayer",
+			"body": [
+				"lualib:Player_IsPlayer($1)"
+			],
+			"description": "语法:bool Player_IsPlayer(string 对象的GUID)\n例: lualib:Player_IsPlayer(guid)\n详:判断GUID是不是玩家\n返:bool\n备:无\n"
+		},
+		"Player_GetItemGuid":{
+			"prefix":"lualib:Player_GetItemGuid",
+			"body": [
+				"lualib:Player_GetItemGuid($1)"
+			],
+			"description": "语法:string Player_GetItemGuid(string 对象的GUID,uint16 装备位)\n例: lualib:Player_GetItemGuid(guid,1)\n详:获得玩家某装备位的物品GUID,装备位包括装备栏、背包、仓库、高级仓库\n装备位:lua_logic_define.lua\n返:对应位置物品的GUID\n备:无\n"
+		},
+		"Player_GetExpLimit":{
+			"prefix":"lualib:Player_GetExpLimit",
+			"body": [
+				"lualib:Player_GetExpLimit($1)"
+			],
+			"description": "语法:double Player_GetExpLimit(string 玩家GUID)\n例: lualib:Player_GetExpLimit(player)\n详:获得玩家当前等级经验上限\n返:double 当前等级经验上限\n备:无\n"
+		},
+		"Player_GetAntiIndulge":{
+			"prefix":"lualib:Player_GetAntiIndulge",
+			"body": [
+				"lualib:Player_GetAntiIndulge($1)"
+			],
+			"description": "语法:double Player_GetAntiIndulge(string 玩家GUID)\n例: lualib:Player_GetAntiIndulge(player)\n详:取得玩家的防沉迷状态\n返:int32 0= 无收益 1=经验减半 2=全收益\n备:无\n"
+		},
+		"Player_SetForbidTalk":{
+			"prefix":"lualib:Player_SetForbidTalk",
+			"body": [
+				"lualib:Player_SetForbidTalk($1)"
+			],
+			"description": "语法:bool Player_SetForbidTalk(string 玩家GUID,string 禁方原因, uint32 禁言时间 秒)\n例: lualib:Player_SetForbidTalk(player, \"辱骂GM, 禁言10分钟\", 600)\n详:将玩家禁言\n返:bool\n备:该函数是异步的,返回成功并不代表禁言成功\n"
+		},
+		"Player_Kick":{
+			"prefix":"lualib:Player_Kick",
+			"body": [
+				"lualib:Player_Kick($1)"
+			],
+			"description": "语法:bool Player_Kick(string 玩家GUID,string 禁方原因, uint32 禁言时间 秒)\n例: lualib:Player_Kick(player)\n详:踢玩家下线.该接口已过期,使用KickByName代替.过期\n返:bool\n备:该函数是异步的,返回成功并不代表踢人成功\n替:KickByName"
+		},
+		"Player_Catch":{
+			"prefix":"lualib:Player_Catch",
+			"body": [
+				"lualib:Player_Catch($1)"
+			],
+			"description": "语法:string Player_Catch(string 玩家GUID,string 宝宝KEYNAME)\n例: lualib:Player_Catch(player,\"宝宝\")\n详:玩家捕捉宝宝.对应法师的召唤\n宝宝的GUID,出错返回\"\"\n返:string\n备:\n"
+		},
+		"Player_Summon":{
+			"prefix":"lualib:Player_Summon",
+			"body": [
+				"lualib:Player_Summon($1)"
+			],
+			"description": "语法:string Player_Summon(string 玩家GUID,string 宝宝KEYNAME,uint8 宝宝等级)\n例: lualib:Player_Summon(player,\"宝宝\",1)\n详:玩家召唤宝宝.对应道士的召唤\n宝宝的GUID,出错返回\"\"\n返:string\n备:\n"
+		},
+		"Player_SetGhost":{
+			"prefix":"lualib:Player_SetGhost",
+			"body": [
+				"lualib:Player_SetGhost($1)"
+			],
+			"description": "语法:bool Player_SetGhost(string 玩家GUID,bool true=设置 false=取消)\n例: lualib:Player_SetGhost(player,true)\n详:设置/取消玩家幽灵模式\n返:bool\n备:\n"
+		},
+		"Player_SetInvincible":{
+			"prefix":"lualib:Player_SetInvincible",
+			"body": [
+				"lualib:Player_SetInvincible($1)"
+			],
+			"description": "语法:bool Player_SetInvincible(string 玩家GUID,bool true=设置 false=取消)\n例: lualib:Player_SetInvincible(player,true)\n详:设置/取消玩家无敌模式\n返:bool\n备:\n"
+		},
+		"Player_RunGMCmd":{
+			"prefix":"lualib:Player_RunGMCmd",
+			"body": [
+				"lualib:Player_RunGMCmd($1)"
+			],
+			"description": "语法:bool Player_RunGMCmd(string 玩家GUID,string gm指令名,string gm指令参数)\n例: lualib:Player_RunGMCmd(player,\"sa\",\"0 60\")\n详:让玩家执行GM指令\n返:bool\n备:\n"
+		},
+		"ProgressBarStart":{
+			"prefix":"lualib:ProgressBarStart",
+			"body": [
+				"lualib:ProgressBarStart($1)"
+			],
+			"description": "语法:bool ProgressBarStart(string 玩家GUID,uint32 持续时间,string 描述文字,string 回调函数,string 打断函数,string 参数)\n例: lualib:ProgressBarStart(player, catch_wait_time, \"抓捕\", \"catch_complete\", \"catch_abort\", monster) \n详:让玩家开启进度条\n返:bool\n备:\n"
+		},
+		"LoginTime":{
+			"prefix":"lualib:LoginTime",
+			"body": [
+				"lualib:LoginTime($1)"
+			],
+			"description": "语法:uint32 LoginTime(string 玩家GUID)\n例: lualib:LoginTime(player)\n详:取得玩家的登陆时间\n返:uint32 登陆时间,出错返回0\n备:\n"
+		},
+		"OnlineTime":{
+			"prefix":"lualib:OnlineTime",
+			"body": [
+				"lualib:OnlineTime($1)"
+			],
+			"description": "语法:uint32 OnlineTime(string 玩家GUID)\n例: lualib:OnlineTime(player)\n详:取得玩家的本次登陆在线时间\n返:uint32 本次登陆在线时间,出错返回0\n备:\n"
+		},
+		"OnlineTimeEx":{
+			"prefix":"lualib:OnlineTimeEx",
+			"body": [
+				"lualib:OnlineTimeEx($1)"
+			],
+			"description": "语法:uint32 OnlineTimeEx(string 玩家GUID)\n例: lualib:OnlineTimeEx(player)\n详:取得玩家的本次登陆的当天在线时间.\n返:uint32 当天在线时间,出错返回0\n备:\n"
+		},
+		"LastLogoutTime":{
+			"prefix":"lualib:LastLogoutTime",
+			"body": [
+				"lualib:LastLogoutTime($1)"
+			],
+			"description": "语法:uint32 LastLogoutTime(string 玩家GUID)\n例: lualib:LastLogoutTime(player)\n详:取得玩家的最后退出时间,存数据库.\n返:uint32 最后退出时间,出错返回0\n备:\n"
+		},
+		"TotalTime":{
+			"prefix":"lualib:TotalTime",
+			"body": [
+				"lualib:TotalTime($1)"
+			],
+			"description": "语法:uint32 TotalTime(string 玩家GUID)\n例: lualib:TotalTime(player)\n详:取得玩家的总计在线时间,存数据库\n返:uint32 总计在线时间,出错返回0\n备:\n"
+		},
+		"GenTeam":{
+			"prefix":"lualib:GenTeam",
+			"body": [
+				"lualib:GenTeam($1)"
+			],
+			"description": "语法:bool GenTeam(string 队长名,table 成员name)\n例: lualib:GenTeam(lualib:Name(player), players)\n详:创建队伍\n返:bool 异步调用,返回值忽略\n备:\n"
+		},
+		"SetAutoReply":{
+			"prefix":"lualib:SetAutoReply",
+			"body": [
+				"lualib:SetAutoReply($1)"
+			],
+			"description": "语法:bool SetAutoReply(string 玩家GUID,string 自动回复内容)\n例: lualib:SetAutoReply(player,\"自动回复内容\")\n详:设置玩家自动回复\n返:bool 异步调用,返回值忽略\n备:\n"
+		},
+		"DisableAutoReply":{
+			"prefix":"lualib:DisableAutoReply",
+			"body": [
+				"lualib:DisableAutoReply($1)"
+			],
+			"description": "语法:bool DisableAutoReply(string 玩家GUID)\n例: lualib:DisableAutoReply(player)\n详:取消玩家自动回复\n返:bool 异步调用,返回值忽略\n备:\n"
+		},
+		"SetOffline":{
+			"prefix":"lualib:SetOffline",
+			"body": [
+				"lualib:SetOffline($1)"
+			],
+			"description": "语法:void SetOffline(string 玩家GUID,uint32 挂机时间)\n例: lualib:SetOffline(player,7200)\n详:设置玩家离线挂机\n返:无\n备:单位:秒(最大不能超过4233600000也就是49天)\n"
+		},
+		"IsOffline":{
+			"prefix":"lualib:IsOffline",
+			"body": [
+				"lualib:IsOffline($1)"
+			],
+			"description": "语法:bool IsOffline(string 玩家GUID)\n例: lualib:IsOffline(player)\n详:判断玩家是否在离线挂机\n返:bool\n备:无\n"
+		},
+		"HardwareCode":{
+			"prefix":"lualib:HardwareCode",
+			"body": [
+				"lualib:HardwareCode($1)"
+			],
+			"description": "语法:string HardwareCode(string 玩家GUID)\n例: lualib:HardwareCode(player)\n详:取得玩家的硬件码\n返:string 玩家的硬件码,出错返回\"\"\n备:无\n"
+		},
+		"DelayCall":{
+			"prefix":"lualib:DelayCall",
+			"body": [
+				"lualib:DelayCall($1)"
+			],
+			"description": "语法:bool DelayCall(string 玩家GUID,uint32 延时(毫秒),string 回调函数,string 参数)\n例:lualib:DelayCall(player, 300, \"mvtx\", guid)\n详:给对象添加延时回调.回调函数格式:void callback(string strObject, string& strParam1,...,strParamn)\n返:bool\n备:对象可以为玩家、怪物、NPC、地图、物品、系统.\n函数格式: 1 = 函数名 2 = 文件名:函数名\n"
+		},
+		"GiveItem":{
+			"prefix":"lualib:GiveItem",
+			"body": [
+				"lualib:GiveItem($1)"
+			],
+			"description": "语法:bool GiveItem(string 玩家GUID,string 物品keyname,int32 数量,string 动作原因,string 发起者)\n例:lualib:GiveItem(player, \"灵元珠\", 999, \"给予道具:原因\", \"发起人\")\n详:给予玩家非绑定物品.如果玩家背包满了,物品会掉到地上\n返:bool\n备:\n"
+		},
+		"GiveBindItem":{
+			"prefix":"lualib:GiveBindItem",
+			"body": [
+				"lualib:GiveBindItem($1)"
+			],
+			"description": "语法:bool GiveBindItem(string 玩家GUID,string 物品keyname,int32 数量,string 动作原因,string 发起者)\n例:lualib:GiveBindItem(player, \"灵元珠\", 999, \"给予道具:原因\", \"发起人\")\n详:给予玩家绑定物品.如果玩家背包满了,物品会掉到地上.绑定物品只有玩家自己才能拾取.\n返:bool\n备:\n"
+		},
+		"TakeItem":{
+			"prefix":"lualib:TakeItem",
+			"body": [
+				"lualib:TakeItem($1)"
+			],
+			"description": "语法:bool TakeItem(string 玩家GUID,string 物品keyname,int32 数量,string 动作原因,string 发起者)\n例:lualib:TakeItem(player, \"灵元珠\", 999, \"删除道具:原因\", \"发起人\")\n详:删除玩家物品,默认忽略绑定类型,只删除玩家背包里的道具\n返:bool\n备:\n"
+		},
+		"TakeItemEx":{
+			"prefix":"lualib:TakeItemEx",
+			"body": [
+				"lualib:TakeItemEx($1)"
+			],
+			"description": "语法:bool TakeItemEx(string 玩家GUID,string 物品keyname,int32 数量,uint8 绑定类型,bool 装备栏,bool 背包,bool 仓库,bool 高仓,string 动作原因,string 发起者)\n例:lualib:TakeItemEx(player,\"灵元珠\",999,2,false,true,false,false,\"删除道具:原因\",\"发起人\")\n详:删除玩家物品\n返:bool\n备: 绑定类型, 0 = 非绑定 1 = 绑定 2 = 绑定/非绑定\n"
+		},
+		"TakeOff":{
+			"prefix":"lualib:TakeOff",
+			"body": [
+				"lualib:TakeOff($1)"
+			],
+			"description": "语法:bool TakeOff(string 玩家GUID,string 物品keyname)\n例:lualib:TakeOff(player,keyname)\n详:删让玩家脱装备\n返:bool\n备:无\n"
+		},
+		"TakeOffEx":{
+			"prefix":"lualib:TakeOffEx",
+			"body": [
+				"lualib:TakeOffEx($1)"
+			],
+			"description": "语法:bool TakeOffEx(string 玩家GUID,string 装备的GUID或KeyName)\n例:lualib:TakeOffEx(player,keyname)\n详:删让玩家脱装备\n返:bool\n备:无\n"
+		},
+		"TakeOn":{
+			"prefix":"lualib:TakeOn",
+			"body": [
+				"lualib:TakeOn($1)"
+			],
+			"description": "语法:bool TakeOn(string 玩家GUID,string KeyName)\n例:lualib:TakeOn(player,keyname)\n详:让玩家穿装备,只能穿玩家背包中的装备\n返:bool\n备:无\n"
+		},
+		"TakeOnEx":{
+			"prefix":"lualib:TakeOnEx",
+			"body": [
+				"lualib:TakeOnEx($1)"
+			],
+			"description": "语法:bool TakeOnEx(string 玩家GUID,string GUID或KeyName,int 装备位置)\n例:lualib:TakeOnEx(player,guid,1)\n详:让玩家穿装备,只能穿玩家背包中的装备\n返:bool\n备:装备位置,仅当物品为护腕或戒指时,该参数才生效\n"
+		},
+		"GiveOneItem":{
+			"prefix":"lualib:GiveOneItem",
+			"body": [
+				"lualib:GiveOneItem($1)"
+			],
+			"description": "语法:string GiveOneItem(string 玩家GUID,string KeyName,int32 数量,string 原因,string 发起者)\n例:lualib:GiveOneItem(player,keyname,1,\"给物品:原因\",\"发起者\")\n详:给予玩家单个非绑定物品.必须保证背包有一个空格,否则给予失败\n返:string 新物品的GUID,出错返回\"\"\n备:给予数量.不能超过该物品的最大堆叠数,否则给予失败\n"
+		},
+		"GiveOneBindItem":{
+			"prefix":"lualib:GiveOneBindItem",
+			"body": [
+				"lualib:GiveOneBindItem($1)"
+			],
+			"description": "语法:string GiveOneBindItem(string 玩家GUID,string KeyName,int32 数量,string 原因,string 发起者)\n例:lualib:GiveOneBindItem(player,keyname,1,\"给物品:原因\",\"发起者\")\n详:给予玩家单个绑定物品.必须保证背包有一个空格,否则给予失败\n返:string 新物品的GUID,出错返回\"\"\n备:给予数量.不能超过该物品的最大堆叠数,否则给予失败\n"
+		},	
+		"Monster_SetSeeker":{
+			"prefix":"lualib:Monster_SetSeeker",
+			"body": [
+				"lualib:Monster_SetSeeker($1)"
+			],
+			"description": "语法:bool Monster_SetSeeker(string 玩家GUID,table 路径表,uint8 行走类型,bool 是否强制寻路)\n例:lualib:Monster_SetSeeker(player,keyname,1,\"给物品:原因\",\"发起者\")\n详:将该怪物设为自动行走怪\n返:bool\n备:路径表,按X坐标,Y坐标顺序填写.如:{1, 1, 1, 3},第一步坐标(1, 1),第二步坐标(1, 3)\n行走类型, 0 = 普通行走 1 = 反复寻走\ntrue = 强制寻路,不主动攻击也不回击 false = 根据怪物类型决定\n"
+		},
+		"Monster_GetMaster":{
+			"prefix":"lualib:Monster_GetMaster",
+			"body": [
+				"lualib:Monster_GetMaster($1)"
+			],
+			"description": "语法:string Monster_GetMaster(string 怪物GUID)\n例:lualib:Monster_GetMaster(monster)\n详:取得怪物主人的Name\n返:string 怪物主人的Name,如果对象不存在返回\"\"\n备:无\n"
+		},	
+		"MonsterKey2ID":{
+			"prefix":"lualib:MonsterKey2ID",
+			"body": [
+				"lualib:MonsterKey2ID($1)"
+			],
+			"description": "语法:string MonsterKey2ID(string 怪物keyname)\n例:lualib:MonsterKey2ID(mon_k)\n详:根据怪物的KeyName取得怪物的ID\n返:uint32 怪物的ID,出错返回0\n备:无\n"
+		},
+		"Monster_IsExist":{
+			"prefix":"lualib:Monster_IsExist",
+			"body": [
+				"lualib:Monster_IsExist($1)"
+			],
+			"description": "语法:bool Monster_IsExist(string 怪物GUID)\n例:lualib:Monster_IsExist(monster)\n详:判断怪物是否存在\n返:bool\n备:无\n"
+		},
+		"Monster_IsMonster":{
+			"prefix":"lualib:Monster_IsMonster",
+			"body": [
+				"lualib:Monster_IsMonster($1)"
+			],
+			"description": "语法:bool Monster_IsMonster(string 怪物GUID)\n例:lualib:Monster_IsMonster(monster)\n详:判断对象是否为怪物\n返:bool\n备:无\n"
+		},	
+		"Monster_IsDie":{
+			"prefix":"lualib:Monster_IsDie",
+			"body": [
+				"lualib:Monster_IsDie($1)"
+			],
+			"description": "语法:bool Monster_IsDie(string 怪物GUID)\n例:lualib:Monster_IsDie(monster)\n详:判断怪物是否死亡\n返:bool\n备:无\n"
+		},
+		"Monster_Remove":{
+			"prefix":"lualib:Monster_Remove",
+			"body": [
+				"lualib:Monster_Remove($1)"
+			],
+			"description": "语法:bool Monster_Remove(string 怪物GUID)\n例:lualib:Monster_Remove(monster)\n详:移除怪物\n返:bool\n备:无\n"
+		},
+		"Monster_GetEscapePoint":{
+			"prefix":"lualib:Monster_GetEscapePoint",
+			"body": [
+				"lualib:Monster_GetEscapePoint($1)"
+			],
+			"description": "语法:table Monster_GetEscapePoint(string 怪物GUID,uint16 X, uint16 Y,uint16 距离)\n例:lualib:Monster_GetEscapePoint(monstert,x,y,16)\n详:计算怪物的逃跑点\n返:table 逃跑点坐标,返回lua table. 例:tPos = lualib:Monster_GenEscapePoint(XXXXX, 10, 203, 16); local x, y = tPos[\"x\"], tPos[\"y\"];\n备:无\n"
+		},
+		"Monster_Escape":{
+			"prefix":"lualib:Monster_Escape",
+			"body": [
+				"lualib:Monster_Escape($1)"
+			],
+			"description": "语法:bool Monster_Escape(string 怪物GUID,uint16 X, uint16 Y)\n例:lualib:Monster_Escape(monstert,x,y)\n详:让怪物行走到某点\n返:bool\n备:无\n"
+		},	
+		"Monster_SpellTarget":{
+			"prefix":"lualib:Monster_SpellTarget",
+			"body": [
+				"lualib:Monster_SpellTarget($1)"
+			],
+			"description": "语法:bool Monster_SpellTarget(string 怪物GUID,uint16 技能ID,string 技能目标)\n例:lualib:Monster_SpellTarget(monstert,1,player)\n详:让怪物施放技能\n返:bool\n备:技能目标,可以是怪物、玩家、英雄\n"
+		},
+		"Monster_SpellTargetEx":{
+			"prefix":"lualib:Monster_SpellTargetEx",
+			"body": [
+				"lualib:Monster_SpellTargetEx($1)"
+			],
+			"description": "语法:bool Monster_SpellTargetEx(string 怪物GUID,uint16 技能ID,string 技能目标)\n例:lualib:Monster_SpellTargetEx(monstert,1,player)\n详:让怪物施放技能\n返:bool\n备:技能目标,可以是怪物、玩家、英雄\n"
+		},
+		"Monster_GetAttackTarget":{
+			"prefix":"lualib:Monster_GetAttackTarget",
+			"body": [
+				"lualib:Monster_GetAttackTarget($1)"
+			],
+			"description": "语法:string Monster_GetAttackTarget(string 怪物GUID)\n例:lualib:Monster_GetAttackTarget(monstert)\n详:取得怪物的攻击目标\n返:string 攻击目标的GUID,出错返回\"\"\n备:无\n"
+		},
+		"Monster_GetCurTarget":{
+			"prefix":"lualib:Monster_GetCurTarget",
+			"body": [
+				"lualib:Monster_GetCurTarget($1)"
+			],
+			"description": "语法:string Monster_GetCurTarget(string 怪物GUID)\n例:lualib:Monster_GetCurTarget(monstert)\n详:取得怪物的攻击目标.接口Monster_GetAttackTarget的别名\n返:string 攻击目标的GUID,出错返回\"\"\n备:无\n"
+		},
+		"Monster_SetAttackTarget":{
+			"prefix":"lualib:Monster_SetAttackTarget",
+			"body": [
+				"lualib:Monster_SetAttackTarget($1)"
+			],
+			"description": "语法:bool Monster_SetAttackTarget(string 怪物GUID,string 怪物目标)\n例:lualib:Monster_SetAttackTarget(monstert)\n详:设置怪物的攻击目标\n返:bool\n备:怪物的目标如果为\"\"表示清除上次调用此接口设定的目标\n"
+		},
+		"Monster_GetSpecial":{
+			"prefix":"lualib:Monster_GetSpecial",
+			"body": [
+				"lualib:Monster_GetSpecial($1)"
+			],
+			"description": "语法:table Monster_GetSpecial(uint16 最大等级,uint16 最小等级)\n例:lualib:Monster_GetSpecial(10,100)\n详:取得相应等级的抽取类型怪\n返:table 符合条件的抽取怪KeyName列表,返回lua table\n备:无\n"
+		},
+		"Npc_Remove":{
+			"prefix":"lualib:Npc_Remove",
+			"body": [
+				"lualib:Npc_Remove($1)"
+			],
+			"description": "语法:bool Npc_Remove(string NPC的GUID)\n例:lualib:Npc_Remove(npc)\n详:移除NPC\n返:bool\n备:无\n"
+		},
+		"Npc_ChangeName":{
+			"prefix":"lualib:Npc_ChangeName",
+			"body": [
+				"lualib:Npc_ChangeName($1)"
+			],
+			"description": "语法:bool Npc_ChangeName(string NPC的GUID,string npc名字)\n例:lualib:Npc_ChangeName(npc,\"无天\")\n详:改变NPC的名字\n返:bool\n备:无\n"
+		},
+		"Npc_IsExist":{
+			"prefix":"lualib:Npc_IsExist",
+			"body": [
+				"lualib:Npc_IsExist($1)"
+			],
+			"description": "语法:bool Npc_IsExist(string NPC的GUID)\n例:lualib:Npc_IsExist(npc)\n详:判断NPC是否存在\n返:bool\n备:无\n"
+		},
+		"AddShop":{
+			"prefix":"lualib:AddShop",
+			"body": [
+				"lualib:AddShop($1)"
+			],
+			"description": "语法:bool AddShop(string NPC的GUID,uint16 商店ID)\n例:lualib:AddShop(npc,10)\n详:将NPC与指定商店关联起来\n返:bool\n备:无\n"
+		},
+		"OpenShop":{
+			"prefix":"lualib:OpenShop",
+			"body": [
+				"lualib:OpenShop($1)"
+			],
+			"description": "语法:void OpenShop(string NPC的GUID,string 玩家GUID,uint16 商店ID)\n例:lualib:OpenShop(npc,player,10)\n详:打开与NPC关联过的商店.\n返:void\n备:无\n"
+		},
+		"OpenShopEx":{
+			"prefix":"lualib:OpenShopEx",
+			"body": [
+				"lualib:OpenShopEx($1)"
+			],
+			"description": "语法:void OpenShopEx(string NPC的GUID,int16 商店ID)\n例:lualib:OpenShopEx(npc,10)\n详:打开随身商店.\n返:void\n备:无\n"
+		},
+		"OpenWarehouse":{
+			"prefix":"lualib:OpenWarehouse",
+			"body": [
+				"lualib:OpenWarehouse($1)"
+			],
+			"description": "语法:void OpenWarehouse(string NPC的GUID,string 玩家GUID)\n例:lualib:OpenWarehouse(npc,player)\n详:打开玩家仓库\n返:void\n备:无\n"
+		},	
+		"OpenWarehouseAdv":{
+			"prefix":"lualib:OpenWarehouseAdv",
+			"body": [
+				"lualib:OpenWarehouseAdv($1)"
+			],
+			"description": "语法:void OpenWarehouseAdv(string NPC的GUID,string 玩家GUID)\n例:lualib:OpenWarehouseAdv(npc,player)\n详:打开玩家高级仓库\n返:void\n备:无\n"
+		},
+		"OpenWarehouseEx":{
+			"prefix":"lualib:OpenWarehouseEx",
+			"body": [
+				"lualib:OpenWarehouseEx($1)"
+			],
+			"description": "语法:void OpenWarehouseEx(string 玩家GUID)\n例:lualib:OpenWarehouseEx(player)\n详:打开随身仓库\n返:void\n备:无\n"
+		},
+		"OpenWarehouseAdvEx":{
+			"prefix":"lualib:OpenWarehouseAdvEx",
+			"body": [
+				"lualib:OpenWarehouseAdvEx($1)"
+			],
+			"description": "语法:void OpenWarehouseAdvEx(string 玩家GUID)\n例:lualib:OpenWarehouseAdvEx(player)\n详:打开随身高级仓库\n返:void\n备:无\n"
+		},	
+		"NPCTalk":{
+			"prefix":"lualib:NPCTalk",
+			"body": [
+				"lualib:NPCTalk($1)"
+			],
+			"description": "语法:void NPCTalk(string 玩家GUID,string 对话框内容)\n例:lualib:NPCTalk(player,msg)\n详:打开物品的对话框\n返:void\n备:无\n"
+		},
+		"NPCTalkEx":{
+			"prefix":"lualib:NPCTalkEx",
+			"body": [
+				"lualib:NPCTalkEx($1)"
+			],
+			"description": "语法:void NPCTalkEx(string NPC的GUID,string 玩家GUID,string 对话框内容)\n例:lualib:NPCTalkEx(npc,player,msg)\n详:打开NPC的对话框\n返:void\n备:无\n"
+		},
+		"NPCTalkDetail":{
+			"prefix":"lualib:NPCTalkDetail",
+			"body": [
+				"lualib:NPCTalkDetail($1)"
+			],
+			"description": "语法:void NPCTalkDetail(string 玩家GUID,string 对话框内容,uint16 width,uint16 height)\n例:lualib:NPCTalkDetail(player,msg,100,80)\n详:打开物品的对话框\n返:void\n备:无\n"
+		},
+		"NPCTalkDetailEx":{
+			"prefix":"lualib:NPCTalkDetailEx",
+			"body": [
+				"lualib:NPCTalkDetailEx($1)"
+			],
+			"description": "语法:void NPCTalkDetailEx(string NPC的GUID,string 玩家GUID,string 对话框内容,uint16 width,uint16 height)\n例:lualib:NPCTalkDetailEx(npc,player,msg)\n详:打开NPC的对话框\n返:void\n备:无\n"
+		},
+		"Item_GetRole":{
+			"prefix":"lualib:Item_GetRole",
+			"body": [
+				"lualib:Item_GetRole($1)"
+			],
+			"description": "语法:string Item_GetRole(string 物品GUID)\n例:lualib:Item_GetRole(item)\n详:取得物品所在包裹的玩家GUID\n返:string 拥有者的GUID,出错返回\"\"\n备:无\n"
+		},
+		"Item_GetType":{
+			"prefix":"lualib:Item_GetType",
+			"body": [
+				"lualib:Item_GetType($1)"
+			],
+			"description": "语法:uint8 Item_GetType(\"\",item)\n例:lualib:Item_GetType(\"\",item)\n详:取得物品的类型\n返:uint8 物品类型,具体类型请参考策划Item表.出错返回0\n备:无\n"
+		},
+		"Item_GetSubType":{
+			"prefix":"lualib:Item_GetSubType",
+			"body": [
+				"lualib:Item_GetSubType($1)"
+			],
+			"description": "语法:uint8 Item_GetSubType(\"\",item)\n例:lualib:Item_GetSubType(\"\",item)\n详:取得物品的子类型\n返:uint8 物品类型,具体类型请参考策划Item表.出错返回0\n备:无\n"
+		},
+		"Item_GetSite":{
+			"prefix":"lualib:Item_GetSite",
+			"body": [
+				"lualib:Item_GetSite($1)"
+			],
+			"description": "语法:uint32 Item_GetSite(\"\",item)\n例:lualib:Item_GetSite(\"\",item)\n详:根据物品GUID取得该物品的包裹位\n返:uint32 返回包裹位置,如果物品不存在返回0\n备:无\n"
+		},
+		"Item_GetAmount":{
+			"prefix":"lualib:Item_GetAmount",
+			"body": [
+				"lualib:Item_GetAmount($1)"
+			],
+			"description": "语法:int32 Item_GetAmount(\"\",item)\n例:lualib:Item_GetAmount(\"\",item)\n详:根据物品GUID取得该物品的堆叠数量\n返:int32 返回堆叠数量\n备:无\n"
+		},
+		"Item_SetAmount":{
+			"prefix":"lualib:Item_SetAmount",
+			"body": [
+				"lualib:Item_SetAmount($1)"
+			],
+			"description": "语法:bool Item_SetAmount(\"\",item,int32 堆叠数)\n例:lualib:Item_SetAmount(\"\",item,10)\n详:根据物品GUID设置该物品的堆叠数量\n返:int32 返回堆叠数量\n备:堆叠数,不能超过该物品的最大堆叠数量\n"
+		},
+		"Item_GetStack":{
+			"prefix":"lualib:Item_GetStack",
+			"body": [
+				"lualib:Item_GetStack($1)"
+			],
+			"description": "语法:int32 Item_GetStack(string 物品keyname)\n例:lualib:Item_GetStack(keyname)\n详:根据物品KeyName取得该物品的最大堆叠数量\n返:int32 返回最大堆叠数量\n备:无\n"
+		},	
+		"Item_GetDurability":{
+			"prefix":"lualib:Item_GetDurability",
+			"body": [
+				"lualib:Item_GetDurability($1)"
+			],
+			"description": "语法:int32 Item_GetDurability(\"\",string 物品GUID)\n例:lualib:Item_GetDurability(\"\",item)\n详:根据物品GUID取得该物品的当前耐久\n返:int32 物品的耐久,出错返回-1\n备:无\n"
+		},	
+		"Item_GetMaxDurability":{
+			"prefix":"lualib:Item_GetMaxDurability",
+			"body": [
+				"lualib:Item_GetMaxDurability($1)"
+			],
+			"description": "语法:int32 Item_GetMaxDurability(\"\",string 物品GUID)\n例:lualib:Item_GetMaxDurability(\"\",item)\n详:根据物品GUID取得该物品的最大耐久\n返:int32 物品的耐久,出错返回-1\n备:无\n"
+		},	
+		"Item_SetDurability":{
+			"prefix":"lualib:Item_SetDurability",
+			"body": [
+				"lualib:Item_SetDurability($1)"
+			],
+			"description": "语法:bool Item_SetDurability(\"\",string 物品GUID,int32 耐久值)\n例:lualib:Item_SetDurability(\"\",item,10)\n详:根据物品GUID设置该物品的当前耐久\n返:bool\n备:无\n"
+		},	
+		"Item_SetMaxDurability":{
+			"prefix":"lualib:Item_SetMaxDurability",
+			"body": [
+				"lualib:Item_SetMaxDurability($1)"
+			],
+			"description": "语法:bool Item_SetMaxDurability(\"\",string 物品GUID,int32 耐久值)\n例:lualib:Item_SetMaxDurability(\"\",item,10)\n详:根据物品GUID设置该物品的最大耐久\n返:bool\n备:无\n"
+		},
+		"Item_GetRepairCharge":{
+			"prefix":"lualib:Item_GetRepairCharge",
+			"body": [
+				"lualib:Item_GetRepairCharge($1)"
+			],
+			"description": "语法:int Item_GetRepairCharge(\"\",string 物品GUID,int 修理类型)\n例:lualib:Item_GetRepairCharge(\"\",item,1)\n详:根据物品GUID查询该物品的修理价格\n返:int 物品修理价格\n备:修理类型 1 = 普修 2 = 特修\n"
+		},
+		"Item_GetUsesCount":{
+			"prefix":"lualib:Item_GetUsesCount",
+			"body": [
+				"lualib:Item_GetUsesCount($1)"
+			],
+			"description": "语法:int16 Item_GetUsesCount(\"\",string 物品GUID)\n例:lualib:Item_GetUsesCount(\"\",item,1)\n详:根据物品GUID取得该物品的剩余使用次数\n返:int 物品的使用次数,出错返回-1.\n备:无\n"
+		},
+		"Item_SetUsesCount":{
+			"prefix":"lualib:Item_SetUsesCount",
+			"body": [
+				"lualib:Item_SetUsesCount($1)"
+			],
+			"description": "语法:bool Item_SetUsesCount(\"\",string 物品GUID,int16 次数)\n例:lualib:Item_SetUsesCount(\"\",item,1)\n详:根据物品GUID设置该物品的剩余使用次数\n返:bool\n备:无\n"
+		},
+		"Item_IsBind":{
+			"prefix":"lualib:Item_IsBind",
+			"body": [
+				"lualib:Item_IsBind($1)"
+			],
+			"description": "语法:bool Item_IsBind(\"\",string 物品GUID,int16 次数)\n例:lualib:Item_IsBind(\"\",item,1)\n详:根据物品GUID判断该物品是否绑定\n返:bool\n备:无\n"
+		},
+		"Item_SetBind":{
+			"prefix":"lualib:Item_SetBind",
+			"body": [
+				"lualib:Item_SetBind($1)"
+			],
+			"description": "语法:bool Item_SetBind(\"\",string 物品GUID,bool 是否绑定)\n例:lualib:Item_SetBind(\"\",item,true)\n详:根据物品GUID设置该物品是否绑定\n返:bool\n备:无\n"
+		},
+		"Item_NotifyUpdate":{
+			"prefix":"lualib:Item_NotifyUpdate",
+			"body": [
+				"lualib:Item_NotifyUpdate($1)"
+			],
+			"description": "语法:void Item_NotifyUpdate(\"\",string 物品GUID)\n例:lualib:Item_NotifyUpdate(\"\",item,true)\n详:向物品的主人通知物品属性更新\n返:void\n备:无\n"
+		},
+		"Equip_GetIdentifyNum":{
+			"prefix":"lualib:Equip_GetIdentifyNum",
+			"body": [
+				"lualib:Equip_GetIdentifyNum($1)"
+			],
+			"description": "语法:int Equip_GetIdentifyNum(string 玩家GUID,string 物品GUID)\n例:lualib:Equip_GetIdentifyNum(player,item)\n详:取得装备当前鉴定条目数\n返:int 取得装备当前鉴定条目数\n备:只有装备有此属性\n"
+		},
+		"Equip_GetIdentifyProp":{
+			"prefix":"lualib:Equip_GetIdentifyProp",
+			"body": [
+				"lualib:Equip_GetIdentifyProp($1)"
+			],
+			"description": "语法:int Equip_GetIdentifyProp(string 玩家GUID,string 物品GUID,uint16 属性索引)\n例:lualib:Equip_GetIdentifyProp(player,item,10)\n详:获取装备的某条鉴定属性\n返:table 成功返回lua_table包括两个数据,0存储属性,1存储数据.\n备:属性索引,取值范围[0-2],共三条\n"
+		},
+		"Equip_SetIdentifyProp":{
+			"prefix":"lualib:Equip_SetIdentifyProp",
+			"body": [
+				"lualib:Equip_SetIdentifyProp($1)"
+			],
+			"description": "语法:int Equip_SetIdentifyProp(string 玩家GUID,string 物品GUID,uint8 属性名0,uint16 值0,uint8 属性名1,uint16 值1,uint8 属性名2,uint16 值2)\n例:lualib:Equip_GetIdentifyProp(\"\",item,true)\n详:设置装备的鉴定属性\n返:bool\n备:无\n"
+		},
+		"Equip_GetRefineLevel":{
+			"prefix":"lualib:Equip_GetRefineLevel",
+			"body": [
+				"lualib:Equip_GetRefineLevel($1)"
+			],
+			"description": "语法:uint8 Equip_GetRefineLevel(string 玩家GUID,string 物品GUID)\n例:lualib:Equip_GetRefineLevel(player,item)\n详:只有装备由此属性\n返:uint8 取得装备精炼等级\n备:无\n"
+		},
+		"Equip_SetRefineLevel":{
+			"prefix":"lualib:Equip_SetRefineLevel",
+			"body": [
+				"lualib:Equip_SetRefineLevel($1)"
+			],
+			"description": "语法:bool Equip_SetRefineLevel(string 玩家GUID,string 物品GUID,uint8 精炼等级)\n例:lualib:Equip_SetRefineLevel(player,item,8)\n详:设置装备的精炼等级\n返:bool\n备:无\n"
+		},
+		"Equip_GetRefineProp":{
+			"prefix":"lualib:Equip_GetRefineProp",
+			"body": [
+				"lualib:Equip_GetRefineProp($1)"
+			],
+			"description": "语法:table Equip_GetRefineProp(string 玩家GUID,string 物品GUID)\n例:lualib:Equip_GetRefineProp(player,item)\n详:只有装备由此属性\n返:table 成功返回lua_table包括两个数据,key存储属性,value存储数据\n备:无\n"
+		},
+		"Equip_SetRefineProp":{
+			"prefix":"lualib:Equip_SetRefineProp",
+			"body": [
+				"lualib:Equip_SetRefineProp($1)"
+			],
+			"description": "语法:bool Equip_SetRefineProp(string 玩家GUID,string 物品GUID,uint16 属性名,int32 值)\n例:lualib:Equip_SetRefineProp(player,item,10,100)\n详:设置装备的精炼属性\n返:bool\n备:无\n"
+		},
+		"Equip_GetLuckCurse":{
+			"prefix":"lualib:Equip_GetLuckCurse",
+			"body": [
+				"lualib:Equip_GetLuckCurse($1)"
+			],
+			"description": "语法:int16 Equip_GetLuckCurse(string 玩家GUID,string 物品GUID)\n例:lualib:Equip_GetLuckCurse(player,item)\n详:根据物品GUID取得该物品的幸运诅咒值\n返:int16 幸运或诅咒值\n备:无\n"
+		},
+		"Equip_SetLuckCurse":{
+			"prefix":"lualib:Equip_SetLuckCurse",
+			"body": [
+				"lualib:Equip_SetLuckCurse($1)"
+			],
+			"description": "语法:bool Equip_SetLuckCurse(string 无意义默认\"\" string 物品GUID)\n例:lualib:Equip_SetLuckCurse(\"\",item)\n详:根据物品GUID设置该物品的幸运诅咒值.\n返:bool值\n备:幸运诅咒值.大于0为幸运,小于0为诅咒\n"
+		},
+		"Item_ChangeName":{
+			"prefix":"lualib:Item_ChangeName",
+			"body": [
+				"lualib:Item_ChangeName($1)"
+			],
+			"description": "语法:bool Item_ChangeName(string 无意义默认\"\" string 物品GUID,string 物品名)\n例:lualib:Item_ChangeName(\"\",item,\"开天\")\n详:根据物品GUID设置该物品的自定义名称\n返:bool值\n备:无\n"
+		},
+		"Item_Destroy":{
+			"prefix":"lualib:Item_Destroy",
+			"body": [
+				"lualib:Item_Destroy($1)"
+			],
+			"description": "语法:bool Item_Destroy(string 无意义默认\"\" string 物品GUID,string 原因,string 发起者)\n例:lualib:Item_Destroy(\"\",item,\"开天\",\"原因\",\"发起人\")\n详:根据物品GUID销毁该物品.只能删除玩家身上的.\n返:bool\n备:无\n"
+		},
+		"Equip_GetExtNum":{
+			"prefix":"lualib:Equip_GetExtNum",
+			"body": [
+				"lualib:Equip_GetExtNum($1)"
+			],
+			"description": "语法:int Equip_GetExtNum(string 玩家GUID string 物品GUID)\n例:lualib:Equip_GetExtNum(player,item)\n详:取得装备当前扩展条目数\n返:int 取得装备当前鉴定条目数, 取值范围[0, 10]\n备:只有装备由此属性\n"
+		},
+		"Equip_GetExtProp":{
+			"prefix":"lualib:Equip_GetExtProp",
+			"body": [
+				"lualib:Equip_GetExtProp($1)"
+			],
+			"description": "语法:table Equip_GetExtProp(string 玩家GUID string 物品GUID)\n例:lualib:Equip_GetExtProp(player,item)\n详:获取装备的某条扩展属性\n返:table 成功返回lua_table包括两个数据,0存储属性,1存储数据\n备:只有装备由此属性\n"
+		},
+		"Equip_SetExtProp":{
+			"prefix":"lualib:Equip_SetExtProp",
+			"body": [
+				"lualib:Equip_SetExtProp($1)"
+			],
+			"description": "语法:bool Equip_SetExtProp(string \"\" string 物品GUID,uint16 属性索引,uint8 属性名,int16 值)\n例:lualib:Equip_SetExtProp(player,item)\n详:设置装备的某条扩展属性\n返:bool\n备: 属性索引,取值范围[0-9],共十条\n只有装备由此属性\n"
+		},
+		"Equip_SetQualProp":{
+			"prefix":"lualib:Equip_SetQualProp",
+			"body": [
+				"lualib:Equip_SetQualProp($1)"
+			],
+			"description": "语法:bool Equip_SetQualProp(string 玩家GUID, string 物品GUID,uint16 属性索引,uint8 属性名,int16 值)\n例:lualib:Equip_SetQualProp(player,item)\n详:设置装备的某条品质属性\n返:bool\n备: 属性索引,取值范围[0-5],共十条\n只有装备由此属性\n"
+		},
+		"Equip_GetQualProp":{
+			"prefix":"lualib:Equip_GetQualProp",
+			"body": [
+				"lualib:Equip_GetQualProp($1)"
+			],
+			"description": "语法:table Equip_GetQualProp(string 玩家GUID string 物品GUID,uint16 品质属性索引)\n例:lualib:Equip_SetQualProp(player,item)\n详:获取装备的某条品质属性\n返:table 成功返回lua_table包括两个数据,0存储属性,1存储数据\n备: 品质属性索引,取值范围[0-5],共六条\n只有装备由此属性\n"
+		},
+		"ItemsByType":{
+			"prefix":"lualib:ItemsByType",
+			"body": [
+				"lualib:ItemsByType($1)"
+			],
+			"description": "语法:table ItemsByType(string 玩家GUID int 类型,int 子类,bool 装备栏,bool 背包,bool,仓库,bool,高仓)\n例:lualib:ItemsByType(player,1,1,true,false,false,false)\n详:玩家根据道具类型找物品\n返:table 符合条件的物品列表,返回lua table\n备: 无\n"
+		},
+		"Item_GetLife":{
+			"prefix":"lualib:Item_GetLife",
+			"body": [
+				"lualib:Item_GetLife($1)"
+			],
+			"description": "语法:int32 Item_GetLife(string 无意义默认\"\",string 物品GUID)\n例:lualib:Item_GetLife(player,item)\n详:根据物品GUID取得该物品的剩余存在时间.物品必须是时效道具才有意义\n返:int32 物品的剩余存在时间,出错返回-1.秒位:秒.\n备: \n"
+		},		
+		"Item_SetLife":{
+			"prefix":"lualib:Item_SetLife",
+			"body": [
+				"lualib:Item_SetLife($1)"
+			],
+			"description": "语法:int32 Item_SetLife(string 无意义默认\"\",string 物品GUID,int 剩余存在时间)\n例:lualib:Item_GetLife(player,item,3600)\n详:根据物品GUID设置该物品的剩余存在时间.物品必须是时效道具才有意义\n返:bool\n备:无 \n"
+		},
+		"Item2Json":{
+			"prefix":"lualib:Item2Json",
+			"body": [
+				"lualib:Item2Json($1)"
+			],
+			"description": "语法:string Item2Json(string 无意义默认\"\",string 物品GUID,int 剩余存在时间)\n例:lualib:Item2Json(player,item,3600)\n详:根据物品实体信息生成物品的JSON信息\n返:string 物品的JSON信息,出错返回\"\"\n备:无 \n"
+		},
+		"Json2Item":{
+			"prefix":"lualib:Json2Item",
+			"body": [
+				"lualib:Json2Item($1)"
+			],
+			"description": "语法:string Json2Item(string 玩家GUID,string 物品JSON)\n例:lualib:Json2Item(player,JSON)\n详:根据物品的JSON信息生成物品的实体\n返:string 物品的GUID,出错返回\"\"\n备:无 \n"
+		},
+		"Json2ItemEx":{
+			"prefix":"lualib:Json2ItemEx",
+			"body": [
+				"lualib:Json2ItemEx($1)"
+			],
+			"description": "语法:string Json2ItemEx(string 玩家GUID,string 物品JSON,bool 是否重新生成GUID)\n例:lualib:Json2ItemEx(player,JSON)\n详:根据物品的JSON信息生成物品的实体\n返:string 物品的GUID,出错返回\"\"\n备:无 \n"
+		},
+		"CanFixEquip":{
+			"prefix":"lualib:CanFixEquip",
+			"body": [
+				"lualib:CanFixEquip($1)"
+			],
+			"description": "语法:bool CanFixEquip(string 装备GUID,int32 修理类型)\n例:lualib:CanFixEquip(player,1)\n详:判断某件装备能否被修理\n返:bool\n备:修理类型,1 = 普修 2 = 特修. \n"
+		},
+		"Item_GetLevel":{
+			"prefix":"lualib:Item_GetLevel",
+			"body": [
+				"lualib:Item_GetLevel($1)"
+			],
+			"description": "语法:bool Item_GetLevel(string 物品GUID)\n例:lualib:Item_GetLevel(player,1)\n详:根据物品GUID取得该物品的使用等级.物品必须是可使用道具才有意义\n返:int32 物品的使用等级,出错返回0\n备:无 \n"
+		},
+		"Item_GetIcon":{
+			"prefix":"lualib:Item_GetIcon",
+			"body": [
+				"lualib:Item_GetIcon($1)"
+			],
+			"description": "语法:uint32 Item_GetIcon(string 物品GUID)\n例:lualib:Item_GetIcon(item)\n详:根据物品GUID取得该物品的图标\n返:int32 物品的使用等级,出错返回0\n备:无 \n"
+		},
+		"ItemKey2ID":{
+			"prefix":"lualib:ItemKey2ID",
+			"body": [
+				"lualib:ItemKey2ID($1)"
+			],
+			"description": "语法:uint32 ItemKey2ID(string 物品keyname)\n例:lualib:ItemKey2ID(item_k)\n详:根据物品的KeyName取得物品的ID\n返:int32 物品的使用等级,出错返回0\n备:无 \n"
+		},	
+		"Item_DataRow":{
+			"prefix":"lualib:Item_DataRow",
+			"body": [
+				"lualib:Item_DataRow($1)"
+			],
+			"description": "语法:table Item_DataRow(string 物品keyname)\n例:lualib:Item_DataRow(item_k)\n详:根据物品KeyName取得该物品的配置表结构\n返:table 物品的配置表结构\n备:无 \n"
+		},	
+		"SendMail":{
+			"prefix":"lualib:SendMail",
+			"body": [
+				"lualib:SendMail($1)"
+			],
+			"description": "语法:bool SendMail(string 名称,string,玩家姓名,string,内容)\n例:lualib:SendMail(\"精炼系统\",\"小小\",\"内容\")\n详:给某个玩家发送一封文本邮件\n返:bool\n备:无 \n"
+		},
+		"Map_GetMapGuid":{
+			"prefix":"lualib:Map_GetMapGuid",
+			"body": [
+				"lualib:Map_GetMapGuid($1)"
+			],
+			"description": "语法:string Map_GetMapGuid(string 地图的KeyName)\n例:lualib:Map_GetMapGuid(map_k)\n详:取得地图的GUID.必须是公共地图\n返:string 地图的GUID,出错返回\"\"\n备:无 \n"
+		},
+		"MapKey2ID":{
+			"prefix":"lualib:MapKey2ID",
+			"body": [
+				"lualib:MapKey2ID($1)"
+			],
+			"description": "语法:uint32 MapKey2ID(string 地图的KeyName)\n例:lualib:MapKey2ID(map_k)\n详:根据地图的KeyName取得地图的ID\n返:uint32 地图的ID,出错返回0\"\"\n备:无 \n"
+		},
+		"Map_GetWidth":{
+			"prefix":"lualib:Map_GetWidth",
+			"body": [
+				"lualib:Map_GetWidth($1)"
+			],
+			"description": "语法:uint16 Map_GetWidth(string 地图的GUID)\n例:lualib:Map_GetWidth(map_g)\n详:取得地图的宽度\n返:uint16 地图的宽度,出错返回0\"\"\n备:无 \n"
+		},
+		"Map_GetHeight":{
+			"prefix":"lualib:Map_GetHeight",
+			"body": [
+				"lualib:Map_GetHeight($1)"
+			],
+			"description": "语法:uint16 Map_GetHeight(string 地图的GUID)\n例:lualib:Map_GetHeight(map_g)\n详:取得地图的高度\n返:uint16 地图的宽度,出错返回0\"\"\n备:无 \n"
+		},
+		"Map_GetPlayerCount":{
+			"prefix":"lualib:Map_GetPlayerCount",
+			"body": [
+				"lualib:Map_GetPlayerCount($1)"
+			],
+			"description": "语法:int32 Map_GetPlayerCount(string 地图的GUID,bool 是否忽略死亡角色)\n例:lualib:Map_GetPlayerCount(map_g,true)\n详:取得地图上玩家的数量\n返:int32 玩家数量,出错返回-1\"\"\n备:无 \n"
+		},
+		"Map_GetMonsterCount":{
+			"prefix":"lualib:Map_GetMonsterCount",
+			"body": [
+				"lualib:Map_GetMonsterCount($1)"
+			],
+			"description": "语法:int32 Map_GetMonsterCount(string 地图的GUID,string 怪物keyname,bool 是否忽略死亡角色,bool 是否忽略宠物)\n例:lualib:Map_GetMonsterCount(map_g,mon_k,true,true)\n详:取得地图上怪物的数量\n返:int32 怪物数量,出错返回-1\"\"\n备:怪物的KeyName.如果为\"\",则代表所有怪\n"
+		},
+		"Map_GetRegionPlayers":{
+			"prefix":"lualib:Map_GetRegionPlayers",
+			"body": [
+				"lualib:Map_GetRegionPlayers($1)"
+			],
+			"description": "语法:table Map_GetRegionPlayers(string 地图的GUID,uint16 X,uint16 Y,uint16,R,bool 是否忽略死亡角色)\n例:lualib:Map_GetRegionPlayers(map_g,x,y,r,false)\n详:获取地图区域内的对象列表,返回GUID列表.该接口已过期,使用Map_GetRegionPlayersEx代替\n返:table 区域内玩家列表,返回lua table\"\"\n备:无\n"
+		},
+		"Map_GetRegionPlayersEx":{
+			"prefix":"lualib:Map_GetRegionPlayersEx",
+			"body": [
+				"lualib:Map_GetRegionPlayersEx($1)"
+			],
+			"description": "语法:table Map_GetRegionPlayersEx(string 地图的GUID,table 创建tRange表)\n例:lualib:Map_GetRegionPlayersEx(map_g,tRange)\n详:获取地图区域内获取地图区域内的对象列表,返回GUID列表\n返:table 区域内玩家列表,返回lua table\n备:tRange[1]=0时,tRange[2]为区域中心点X坐标,tRange[3]为区域中心点Y坐标,tRange[4]为区域中心X半径,tRange[5]为区域中心Y半径\ntRange[1] = 1时,tRange[2]为区域左上角X坐标,tRange[3]为区域左上角Y坐标,tRange[4]为区域宽度,tRange[5]为区域高度\n"
+		},
+		"Map_GetRegionItems":{
+			"prefix":"lualib:Map_GetRegionItems",
+			"body": [
+				"lualib:Map_GetRegionItems($1)"
+			],
+			"description": "语法:table Map_GetRegionItems(string 地图的GUID,string 物品keyname,uint16 X,uint16 Y,uint16,R)\n例:lualib:Map_GetRegionItems(map_g,x,y,r,false)\n详:获取地图区域内的物品列表,返回GUID列表.该接口已过期,使用Map_GetRegionItemsEx代替\n返:table 区域内物品列表,返回lua table\n备:物品的KeyName.如果该参数为\"\",则匹配所有物品\n"
+		},
+		"Map_GetRegionItemsEx":{
+			"prefix":"lualib:Map_GetRegionItemsEx",
+			"body": [
+				"lualib:Map_GetRegionItemsEx($1)"
+			],
+			"description": "语法:table Map_GetRegionItemsEx(string 地图的GUID,string 物品keyname,table 创建tRange表)\n例:lualib:Map_GetRegionItems(map_g,\"\",tRange)\n详:获取地图区域内的物品列表,返回GUID列表\n返:table 区域内物品列表,返回lua table\n备:tRange[1]=0时,tRange[2]为区域中心点X坐标,tRange[3]为区域中心点Y坐标,tRange[4]为区域中心X半径,tRange[5]为区域中心Y半径\ntRange[1] = 1时,tRange[2]为区域左上角X坐标,tRange[3]为区域左上角Y坐标,tRange[4]为区域宽度,tRange[5]为区域高度\n"
+		},
+		"Map_GenItem":{
+			"prefix":"lualib:Map_GenItem",
+			"body": [
+				"lualib:Map_GenItem($1)"
+			],
+			"description": "语法:string Map_GenItem(string 地图的GUID,uint16 X,uint16 Y,string 物品keyname,uint16 数量,bool,是否空格,uint32 拒绝时间秒)\n例:lualib:Map_GenItem(map_g,x,y,k,num,true,120)\n详:在地图上指定位置刷出物品\n返:string 物品的GUID,失败返回\"\"\n备:无\n"
+		},
+		"Map_GenItemRnd":{
+			"prefix":"lualib:Map_GenItemRnd",
+			"body": [
+				"lualib:Map_GenItemRnd($1)"
+			],
+			"description": "语法:string Map_GenItemRnd(string 地图的GUID,uint16 X,uint16 Y,uint16 范围,string 物品keyname,uint16 数量,bool,是否空格,uint32 拒绝时间秒)\n例:lualib:Map_GenItemRnd(map_g,x,y,r,k,num,true,120)\n详:在地图上随机位置刷出物品\n返:string 物品的GUID,失败返回\"\"\n备:无\n"
+		},
+		"Map_GenItemEx":{
+			"prefix":"lualib:Map_GenItemEx",
+			"body": [
+				"lualib:Map_GenItemEx($1)"
+			],
+			"description": "语法:string Map_GenItemEx(string 地图的GUID,uint16 X,uint16 Y,string 物品keyname,uint16 数量,bool 是否空格,uint32 拒绝时间秒,string 可直接拾取玩家)\n例:lualib:Map_GenItemRnd(map_g,x,y,r,k,num,true,120,player)\n详:在地图上指定位置刷出物品\n返:string 物品的GUID,失败返回\"\"\n备:无\n"
+		},
+		"Map_BatchGenMonster":{
+			"prefix":"lualib:Map_BatchGenMonster",
+			"body": [
+				"lualib:Map_BatchGenMonster($1)"
+			],
+			"description": "语法:bool Map_BatchGenMonster(string 地图的GUID,string 怪物keyname,uint16 数量,bool 是否可复活)\n例:lualib:Map_BatchGenMonster(map_g,mon_k,num,false)\n详:在地图中随机刷怪\n返:bool\n备:无\n"
+		},
+		"Map_GenMonster":{
+			"prefix":"lualib:Map_GenMonster",
+			"body": [
+				"lualib:Map_GenMonster($1)"
+			],
+			"description": "语法:bool Map_GenMonster(string 地图的GUID,uint16 X, uint16 Y, uint16 R, uint8 方向,string 怪物keyname,int16 数量,bool 可否复活)\n例:lualib:Map_GenMonster(map_g,x,y,r,1,mon_k,num,false)\n详:在地图中指定范围刷怪\n返:bool\n备:无\n"
+		},
+		"Map_GenSingleMonster":{
+			"prefix":"lualib:Map_GenSingleMonster",
+			"body": [
+				"lualib:Map_GenSingleMonster($1)"
+			],
+			"description": "语法:string Map_GenSingleMonster(string 地图的GUID,uint16 X, uint16 Y, uint16 R, uint8 方向,string 怪物keyname,bool 可否复活)\n例:lualib:Map_GenSingleMonster(map_g,x,y,r,1,mon_k,false)\n详:在地图中指定范围刷单只怪\n返:string 怪物GUID\n备:无\n"
+		},
+		"Map_GenNpc":{
+			"prefix":"lualib:Map_GenNpc",
+			"body": [
+				"lualib:Map_GenNpc($1)"
+			],
+			"description": "语法:string Map_GenNpc(string 地图的GUID,string NPC的keyname,uint16 X uint16 Y, uint16 R, uint8 方向)\n例:lualib:Map_GenNpc(map_g,keyname,x,y,r,1)\n详:在地图中指定范围刷NPC\n返:string NPC的GUID\n备:无\n"
+		},
+		"Map_GenNpcRnd":{
+			"prefix":"lualib:Map_GenNpcRnd",
+			"body": [
+				"lualib:Map_GenNpcRnd($1)"
+			],
+			"description": "语法:string Map_GenNpcRnd(string 地图的GUID,string NPC的keyname)\n例:lualib:Map_GenNpcRnd(map_g,keyname)\n详:在地图中随机位置刷NPC\n返:string NPC的GUID\n备:无\n"
+		},
+		"Map_ClearMonster":{
+			"prefix":"lualib:Map_ClearMonster",
+			"body": [
+				"lualib:Map_ClearMonster($1)"
+			],
+			"description": "语法:bool Map_ClearMonster(string 地图的GUID,uint16 X,uint16 Y,uint16 R,string keyname,bool 忽略死亡怪,bool 忽略玩家随从)\n例:lualib:Map_ClearMonster(map_g,x,y,r,keyanem,true,true)\n详:清理地图指定范围中的怪物\n返:bool\n备:无\n"
+		},
+		"Map_ClearItem":{
+			"prefix":"lualib:Map_ClearItem",
+			"body": [
+				"lualib:Map_ClearItem($1)"
+			],
+			"description": "语法:void Map_ClearItem(string 地图的GUID,uint16 X,uint16 Y,uint16 R,string keyname)\n例:lualib:Map_ClearItem(map_g,x,y,r,keyanem)\n详:清理地图指定范围中的物品\n返:void\n备:无\n"
+		},
+		"Map_ClearNpc":{
+			"prefix":"lualib:Map_ClearNpc",
+			"body": [
+				"lualib:Map_ClearNpc($1)"
+			],
+			"description": "语法:bool Map_ClearNpc(string 地图的GUID,uint16 X,uint16 Y,uint16 R,string keyname)\n例:lualib:Map_ClearNpc(map_g,x,y,r,keyanem)\n详:清理地图指定范围中的NPC\n返:bool\n备:NPC的KeyName,如果为\"\"则清所有NPC.\n"
+		},
+		"Map_AddEffect":{
+			"prefix":"lualib:Map_AddEffect",
+			"body": [
+				"lualib:Map_AddEffect($1)"
+			],
+			"description": "语法:bool Map_AddEffect(string 地图的GUID,uint16 X,uint16 Y,uint32 特效ID,uint32 时间:秒)\n例:lualib:Map_AddEffect(map_g,x,y,id,10)\n详::在地图指定位置播放特效\n返:bool\n备:\n"
+		},	
+		"Map_IsInGS":{
+			"prefix":"lualib:Map_IsInGS",
+			"body": [
+				"lualib:Map_IsInGS($1)"
+			],
+			"description": "语法:bool Map_IsInGS(string 地图的keyname)\n例:lualib:Map_IsInGS(map_k)\n详::判断某地图是否在本GS上\n返:bool\n备:\n"
+		},	
+		"Map_AddJumpPoint":{
+			"prefix":"lualib:Map_AddJumpPoint",
+			"body": [
+				"lualib:Map_AddJumpPoint($1)"
+			],
+			"description": "语法:bool Map_AddJumpPoint(string 源地图的guid,string 目标地图GUID,uint16 源X uint16 源Y,uint16 目标X, uint16 目标Y)\n例:lualib:Map_AddJumpPoint(map_g1,map_g2,x1,y1,x2,y2)\n详::在地图上添加跳转点\n返:bool\n备:\n"
+		},	
+		"Map_DelJumpPoint":{
+			"prefix":"lualib:Map_DelJumpPoint",
+			"body": [
+				"lualib:Map_DelJumpPoint($1)"
+			],
+			"description": "语法:bool Map_DelJumpPoint(string 地图的guid,uint16 源X,uint16 源Y)\n例:lualib:Map_DelJumpPoint(map_g,x,y)\n详::删除地图上的跳转点\n返:bool\n备:\n"
+		},
+		"Map_GetRegionNpcs":{
+			"prefix":"lualib:Map_GetRegionNpcs",
+			"body": [
+				"lualib:Map_GetRegionNpcs($1)"
+			],
+			"description": "语法:table Map_GetRegionNpcs(string 地图的guid,uint16 X,uint16 Y,uint16 R,string keyname)\n例:lualib:Map_GetRegionNpcs(map_g,x,y,r,npc_k)\n详:获取地图区域内的NPC列表,返回GUID列表.该接口已过期,使用Map_GetRegionNpcsEx代替\n返:table 区域内NPC列表\n备:NPC的KeyName.如果参数为\"\",则匹配所有NPC\n"
+		},	
+		"Map_GetRegionNpcsEx":{
+			"prefix":"lualib:Map_GetRegionNpcsEx",
+			"body": [
+				"lualib:Map_GetRegionNpcsEx($1)"
+			],
+			"description": "语法:table Map_GetRegionNpcsEx(string 地图的guid,table tRange,string NPC的KEYNAME)\n例:lualib:Map_GetRegionNpcsEx(map_g,tRange,npc_k)\n详:获取地图区域内的NPC列表,返回GUID列表\n返:table 区域内NPC列表\n备:NPC的KeyName.如果参数为\"\",则匹配所有NPC\n"
+		},	
+		"Map_JumpXY":{
+			"prefix":"lualib:Map_JumpXY",
+			"body": [
+				"lualib:Map_JumpXY($1)"
+			],
+			"description": "语法:void Map_JumpXY(string 副本GUID,string 地图的guid,uint16 X,uint16 Y, uint16 R)\n例:lualib:Map_JumpXY(dgnguid,player,x,y,r)\n详:玩家跳地图\n返:void\n备:\n"
+		},	
+		"Map_JumpRnd":{
+			"prefix":"lualib:Map_JumpRnd",
+			"body": [
+				"lualib:Map_JumpRnd($1)"
+			],
+			"description": "语法:void Map_JumpRnd(string 副本GUID,string 地图的guid)\n例:lualib:Map_JumpRnd(dgnguid,player)\n详:玩家随机跳地图\n返:void\n备:\n"
+		},
+		"Map_CreateDgn":{
+			"prefix":"lualib:Map_CreateDgn",
+			"body": [
+				"lualib:Map_CreateDgn($1)"
+			],
+			"description": "语法:string Map_CreateDgn(string 地图的key,bool,是否加载格式,uint32 生存时间:秒)\n例:lualib:Map_CreateDgn(map_g,true,600)\n详:创建副本地图\n返:string 副本GUID\n备:\n"
+		},	
+		"Map_DestroyDgn":{
+			"prefix":"lualib:Map_DestroyDgn",
+			"body": [
+				"lualib:Map_DestroyDgn($1)"
+			],
+			"description": "语法:void Map_DestroyDgn(string 副本地图GUID)\n例:lualib:Map_DestroyDgn(dgn_g)\n详:销毁副本地图\n返:void\n备:\n"
+		},
+		"Player_SetDgnTicket":{
+			"prefix":"lualib:Player_SetDgnTicket",
+			"body": [
+				"lualib:Player_SetDgnTicket($1)"
+			],
+			"description": "语法:bool Player_SetDgnTicket(string 玩家GUID,string 副本地图GUID)\n例:lualib:Player_SetDgnTicket(player,dgn_g)\n详:给玩家设置副本门票\n返:bool\n备:\n"
+		},
+		"Player_HasDgnTicket":{
+			"prefix":"lualib:Player_HasDgnTicket",
+			"body": [
+				"lualib:Player_HasDgnTicket($1)"
+			],
+			"description": "语法:bool Player_HasDgnTicket(string 玩家GUID,string 副本地图key)\n例:lualib:Player_HasDgnTicket(player,dgn_k)\n详:判断玩家是否拥有副本门票\n返:bool\n备:\n"
+		},	
+		"Player_EnterDgn":{
+			"prefix":"lualib:Player_EnterDgn",
+			"body": [
+				"lualib:Player_EnterDgn($1)"
+			],
+			"description": "语法:bool Player_EnterDgn(string 玩家GUID,string 副本地图key,uint16 X,uint16 Y,uint16 R)\n例:lualib:Player_EnterDgn(player,dgn_k,x,y,r)\n详:让玩家进入副本.进入副本之前,必须先打副本门票\n返:bool\n备:多GS情况下,调用该接口后不能再对玩家进行任何操作\n"
+		},	
+		"Player_GetDgnByTicket":{
+			"prefix":"lualib:Player_GetDgnByTicket",
+			"body": [
+				"lualib:Player_GetDgnByTicket($1)"
+			],
+			"description": "语法:string Player_GetDgnByTicket(string 玩家GUID,string 副本地图key)\n例:lualib:Player_GetDgnByTicket(player,dgn_k)\n详:根据玩家的副本KeyName找到副本的GUID.必须事先打过副本门票\n返:string\n备:\n"
+		},	
+		"Map_ClearDgnPlayer":{
+			"prefix":"lualib:Map_ClearDgnPlayer",
+			"body": [
+				"lualib:Map_ClearDgnPlayer($1)"
+			],
+			"description": "语法:bool Map_ClearDgnPlayer(string 副本地图guid)\n例:lualib:Map_ClearDgnPlayer(dgn_g)\n详:清理副本中所有的玩家\n返:bool\n备:\n"
+		},
+		"Map_ClearDgnMonster":{
+			"prefix":"lualib:Map_ClearDgnMonster",
+			"body": [
+				"lualib:Map_ClearDgnMonster($1)"
+			],
+			"description": "语法:bool Map_ClearDgnMonster(string 副本地图guid)\n例:lualib:Map_ClearDgnMonster(dgn_g)\n详:清理副本中所有的怪物\n返:bool\n备:只清理普通怪,玩家的随从、守护怪不清理\n"
+		},
+		"Map_ClearDgnItem":{
+			"prefix":"lualib:Map_ClearDgnItem",
+			"body": [
+				"lualib:Map_ClearDgnItem($1)"
+			],
+			"description": "语法:bool Map_ClearDgnItem(string 副本地图guid)\n例:lualib:Map_ClearDgnItem(dgn_g)\n详:清理副本中所有的物品\n返:bool\n备:\n"
+		},
+		"Map_ClearDgnNpc":{
+			"prefix":"lualib:Map_ClearDgnNpc",
+			"body": [
+				"lualib:Map_ClearDgnNpc($1)"
+			],
+			"description": "语法:bool Map_ClearDgnNpc(string 副本地图guid)\n例:lualib:Map_ClearDgnNpc(dgn_g)\n详:清理副本中所有的NPC\n返:bool\n备:只\n"
+		},
+		"Map_IsDgnExist":{
+			"prefix":"lualib:Map_IsDgnExist",
+			"body": [
+				"lualib:Map_IsDgnExist($1)"
+			],
+			"description": "语法:bool Map_IsDgnExist(string 副本地图guid)\n例:lualib:Map_IsDgnExist(dgn_g)\n详:判断副本是否存在\n返:bool\n备:\n"
+		},
+		"IsFamilyAlly":{
+			"prefix":"lualib:IsFamilyAlly",
+			"body": [
+				"lualib:IsFamilyAlly($1)"
+			],
+			"description": "语法:bool IsFamilyAlly(string 玩家的GUID,string 同盟公会的名字)\n例:lualib:IsFamilyAlly(player,name)\n详:判断玩家的公会与指定的公会是否为同盟\n返:bool\n备:\n"
+		},
+		"IsInFamily":{
+			"prefix":"lualib:IsInFamily",
+			"body": [
+				"lualib:IsInFamily($1)"
+			],
+			"description": "语法:bool IsInFamily(string 玩家的GUID,string 公会的名字)\n例:lualib:IsInFamily(player,name)\n详:判断玩家是否在指定的公会中\n返:bool\n备:\n"
+		},	
+		"HasFamilyWar":{
+			"prefix":"lualib:HasFamilyWar",
+			"body": [
+				"lualib:HasFamilyWar($1)"
+			],
+			"description": "语法:bool HasFamilyWar(string 第一行会名,string 第二行会名)\n例:lualib:HasFamilyWar(name1,name2)\n详:判断两个行会是否处于战争状态\n返:bool\n备:\n"
+		},
+		"GetRunningFamilyWar":{
+			"prefix":"lualib:GetRunningFamilyWar",
+			"body": [
+				"lualib:GetRunningFamilyWar($1)"
+			],
+			"description": "语法:table GetRunningFamilyWar(string 玩家GUID)\n例:lualib:GetRunningFamilyWar(player)\n详:取得正在与玩家行会作战的行会列表\n返:table 作战行会列表\n备:服务器功能的扩展,脚本作者不应该使用\n"
+		},
+		"CreateFamily":{
+			"prefix":"lualib:CreateFamily",
+			"body": [
+				"lualib:CreateFamily($1)"
+			],
+			"description": "语法:int32 CreateFamily(string 玩家GUID,string 行会名字)\n例:lualib:CreateFamily(player,name)\n详:验证是否能创建行会\n返:int32 返回0可以创建,返回-1代表失败\n备:\n"
+		},	
+		"GetAllFamilys":{
+			"prefix":"lualib:GetAllFamilys",
+			"body": [
+				"lualib:GetAllFamilys()"
+			],
+			"description": "语法:table GetAllFamilys(void)\n例:lualib:GetAllFamilys()\n详:取得服务器上所有行会的名字列表\n返:table 行会名列表\n备:\n"
+		},
+		"GetFamilyJoinList":{
+			"prefix":"lualib:GetFamilyJoinList",
+			"body": [
+				"lualib:GetFamilyJoinList($1)"
+			],
+			"description": "语法:int32 GetFamilyJoinList(string 玩家GUID)\n例:lualib:GetFamilyJoinList(player)\n详:发送行会列表到客户端\n返:int32 返回0成功,返回-1代表失败\n备:\n"
+		},	
+		"GetFamilyName":{
+			"prefix":"lualib:GetFamilyName",
+			"body": [
+				"lualib:GetFamilyName($1)"
+			],
+			"description": "语法:string GetFamilyName(string 玩家GUID)\n例:lualib:GetFamilyName(player)\n详:获取玩家的行会名\n返:string 行会名,没有则返回\"\"\n备:\n"
+		},
+		"GetFamilyTitle":{
+			"prefix":"lualib:GetFamilyTitle",
+			"body": [
+				"lualib:GetFamilyTitle($1)"
+			],
+			"description": "语法:string GetFamilyTitle(string 玩家GUID)\n例:lualib:GetFamilyTitle(player)\n详:获取玩家的行会封号\n返:string 行会封号,没有则返回\"\"\n备:\n"
+		},
+		"StartFamilyWar":{
+			"prefix":"lualib:StartFamilyWar",
+			"body": [
+				"lualib:StartFamilyWar($1)"
+			],
+			"description": "语法:bool StartFamilyWar(string 行会名1,string 行会名2)\n例:lualib:StartFamilyWar(行会名1,行会名2)\n详:通知CS二个行会开始交战\n返:bool\n备:该接口用来扩展服务器的功能,脚本作者不要使用\n"
+		},
+		"GetAllCastle":{
+			"prefix":"lualib:GetAllCastle",
+			"body": [
+				"lualib:GetAllCastle()"
+			],
+			"description": "语法:table GetAllCastle(void)\n例:lualib:GetAllCastle()\n详:取得服务器里的所有城堡\n返:table 服务器城堡列表\n备:\n"
+		},
+		"HasCastle":{
+			"prefix":"lualib:HasCastle",
+			"body": [
+				"lualib:HasCastle($1)"
+			],
+			"description": "语法:bool HasCastle(string 城堡名)\n例:lualib:HasCastle(城堡名)\n详:判断某城堡是否存在\n返:bool\n备:\n"
+		},
+		"HasCastleWar":{
+			"prefix":"lualib:HasCastleWar",
+			"body": [
+				"lualib:HasCastleWar($1)"
+			],
+			"description": "语法:bool HasCastleWar(string 城堡名,string 行会名)\n例:lualib:HasCastleWar(城堡名,行会名)\n详:判断某行会是否在某城堡的攻击者列表中\n返:bool\n备:\n"
+		},	
+		"IsCastleWarStart":{
+			"prefix":"lualib:IsCastleWarStart",
+			"body": [
+				"lualib:IsCastleWarStart($1)"
+			],
+			"description": "语法:bool IsCastleWarStart(string 城堡名)\n例:lualib:IsCastleWarStart(城堡名)\n详:判断某城堡战是否开启\n返:bool\n备:\n"
+		},
+		"StartCastleWar":{
+			"prefix":"lualib:StartCastleWar",
+			"body": [
+				"lualib:StartCastleWar($1)"
+			],
+			"description": "语法:bool StartCastleWar(string 城堡名,攻城所有行会,攻城时间,持续时间:秒)\n例:lualib:StartCastleWar(城堡名,\"行会1&行会2&行会3\",\"2019-01-01\",7200)\n详:开启城堡战\n返:bool\n备:\n"
+		},
+		"StartCastleWarEx":{
+			"prefix":"lualib:StartCastleWarEx",
+			"body": [
+				"lualib:StartCastleWarEx($1)"
+			],
+			"description": "语法:bool StartCastleWarEx(string 城堡名,攻城所有行会,攻城时间,持续时间:秒)\n例:lualib:StartCastleWarEx(城堡名,\"行会1&行会2&行会3\",\"2019-01-01\",7200)\n详:开启城堡战\n返:bool\n备:\n"
+		},	
+		"StopCastleWar":{
+			"prefix":"lualib:StopCastleWar",
+			"body": [
+				"lualib:StopCastleWar($1)"
+			],
+			"description": "语法:bool StopCastleWar(string 城堡名)\n例:lualib:StopCastleWar(城堡名)\n详:停止城堡战\n返:bool\n备:\n"
+		},
+		"GetCastleOwnFamily":{
+			"prefix":"lualib:GetCastleOwnFamily",
+			"body": [
+				"lualib:GetCastleOwnFamily($1)"
+			],
+			"description": "语法:string GetCastleOwnFamily(string 城堡名)\n例:lualib:GetCastleOwnFamily(城堡名)\n详:获取某城堡的拥有者行会\n返:string 行会名\n备:\n"
+		},
+		"SetCastleOwnFamily":{
+			"prefix":"lualib:SetCastleOwnFamily",
+			"body": [
+				"lualib:SetCastleOwnFamily($1)"
+			],
+			"description": "语法:void SetCastleOwnFamily(string 城堡名,string 行会名)\n例:lualib:SetCastleOwnFamily(城堡名,行会名)\n详:设置某城堡的拥有者行会\n返:void\n备:\n"
+		},
+		"GetCastleAttackFamily":{
+			"prefix":"lualib:GetCastleAttackFamily",
+			"body": [
+				"lualib:GetCastleAttackFamily($1)"
+			],
+			"description": "语法:string GetCastleAttackFamily(string 城堡名)\n例:lualib:GetCastleAttackFamily(城堡名)\n详:获取某城堡的所有攻击者行会\n返:string 所有的攻击者行会,多个行会间用&隔开.如:行会1&行会2&行会3&...&行会n\n备:\n"
+		},
+		"GetCastleTempFamily":{
+			"prefix":"lualib:GetCastleTempFamily",
+			"body": [
+				"lualib:GetCastleTempFamily($1)"
+			],
+			"description": "语法:string GetCastleTempFamily(string 城堡名)\n例:lualib:GetCastleTempFamily(城堡名)\n详:获取某城堡的临时占有行会\n返:string 临时占有行会的名字\n备:\n"
+		},
+		"SetCastleTempFamily":{
+			"prefix":"lualib:SetCastleTempFamily",
+			"body": [
+				"lualib:SetCastleTempFamily($1)"
+			],
+			"description": "语法:void SetCastleTempFamily(string 城堡名,string 临时占有行会名)\n例:lualib:SetCastleTempFamily(城堡名,临时占有行会名)\n详:设置某城堡的临时占有行会\n返:void\n备:\n"
+		},
+		"SetCastleCustomVarInt":{
+			"prefix":"lualib:SetCastleCustomVarInt",
+			"body": [
+				"lualib:SetCastleCustomVarInt($1)"
+			],
+			"description": "语法:void SetCastleCustomVarInt(string 城堡名,string 变量名,int32 变量值)\n例:lualib:SetCastleCustomVarInt(城堡名,变量名,变量值)\n详:设置某城堡的数值型自定义变量\n返:void\n备:\n"
+		},
+		"GetCastleCustomVarInt":{
+			"prefix":"lualib:GetCastleCustomVarInt",
+			"body": [
+				"lualib:GetCastleCustomVarInt($1)"
+			],
+			"description": "语法:int32 GetCastleCustomVarInt(string 城堡名,string 变量名)\n例:lualib:GetCastleCustomVarInt(城堡名,变量名)\n详:取得某城堡的数值型自定义变量\n返:int32\n备:\n"
+		},
+		"SetCastleCustomVarStr":{
+			"prefix":"lualib:SetCastleCustomVarInt",
+			"body": [
+				"lualib:SetCastleCustomVarStr($1)"
+			],
+			"description": "语法:void SetCastleCustomVarStr(string 城堡名,string 变量名,string 变量值)\n例:lualib:SetCastleCustomVarStr(城堡名,变量名,变量值)\n详:设置某城堡的字符型自定义变量\n返:void\n备:\n"
+		},
+		"GetCastleCustomVarStr":{
+			"prefix":"lualib:GetCastleCustomVarStr",
+			"body": [
+				"lualib:GetCastleCustomVarStr($1)"
+			],
+			"description": "语法:string GetCastleCustomVarStr(string 城堡名,string 变量名)\n例:lualib:GetCastleCustomVarStr(城堡名,变量名)\n详:取得某城堡的字符型自定义变量\n返:string\n备:\n"
+		},
+		"GetCastleMapGuid":{
+			"prefix":"lualib:GetCastleMapGuid",
+			"body": [
+				"lualib:GetCastleMapGuid($1)"
+			],
+			"description": "语法:string GetCastleMapGuid(string 城堡名)\n例:lualib:GetCastleMapGuid(城堡名)\n详:取得某城堡的攻城地图GUID\n返:string 攻城地图的GUID\n备:\n"
+		},
+		"GetCastleBasiGuid":{
+			"prefix":"lualib:GetCastleBasiGuid",
+			"body": [
+				"lualib:GetCastleBasiGuid($1)"
+			],
+			"description": "语法:string GetCastleBasiGuid(string 城堡名)\n例:lualib:GetCastleBasiGuid(城堡名)\n详:取得某城堡的皇宫地图GUID\n返:string 皇宫地图的GUID\n备:\n"
+		},
+		"AddTitle":{
+			"prefix":"lualib:AddTitle",
+			"body": [
+				"lualib:AddTitle($1)"
+			],
+			"description": "语法:void AddTitle(string 玩家GUID,uint16 称号ID)\n例:lualib:AddTitle(player,1)\n详:给玩家添加称号\n返:void\n备:\n"
+		},	
+		"AddTitleEx":{
+			"prefix":"lualib:AddTitleEx",
+			"body": [
+				"lualib:AddTitleEx($1)"
+			],
+			"description": "语法:void AddTitleEx(string 玩家GUID,uint16 称号ID,uint32 持续时间:秒)\n例:lualib:AddTitleEx(player,1,7200)\n详:给玩家添加称号,允许设置称号时间\n返:void\n备:如持继时间设为0,则使用配置表时间\n"
+		},
+		"HasTitle":{
+			"prefix":"lualib:HasTitle",
+			"body": [
+				"lualib:HasTitle($1)"
+			],
+			"description": "语法:bool HasTitle(string 玩家GUID,uint16 称号ID)\n例:lualib:HasTitle(player,1)\n详:判断玩家是否拥有添加称号\n返:bool\n备:\n"
+		},	
+		"RemoveTitle":{
+			"prefix":"lualib:RemoveTitle",
+			"body": [
+				"lualib:RemoveTitle($1)"
+			],
+			"description": "语法:void RemoveTitle(string 玩家GUID,uint16 称号ID)\n例:lualib:RemoveTitle(player,1)\n详:移除玩家称号\n返:void\n备:\n"
+		},	
+		"ApplyTitle":{
+			"prefix":"lualib:ApplyTitle",
+			"body": [
+				"lualib:ApplyTitle($1)"
+			],
+			"description": "语法:void ApplyTitle(string 玩家GUID,uint16 称号ID)\n例:lualib:ApplyTitle(player,1)\n详:给玩家应用称号\n返:void\n备:如果称号在使用中,则会取消该称号\n"
+		},	
+		"CanAcceptQuest":{
+			"prefix":"lualib:CanAcceptQuest",
+			"body": [
+				"lualib:CanAcceptQuest($1)"
+			],
+			"description": "语法:bool CanAcceptQuest(string 玩家GUID,uint16 任务ID)\n例:lualib:CanAcceptQuest(player,1)\n详:判断某任务是否可接\n返:bool\n备:\n"
+		},
+		"CanAccomplishQuest":{
+			"prefix":"lualib:CanAccomplishQuest",
+			"body": [
+				"lualib:CanAccomplishQuest($1)"
+			],
+			"description": "语法:bool CanAccomplishQuest(string 玩家GUID,uint16 任务ID)\n例:lualib:CanAccomplishQuest(player,1)\n详:判断某任务是否可提交\n返:bool\n备:\n"
+		},
+		"AcceptQuest":{
+			"prefix":"lualib:AcceptQuest",
+			"body": [
+				"lualib:AcceptQuest($1)"
+			],
+			"description": "语法:bool AcceptQuest(string 玩家GUID,uint16 任务ID)\n例:lualib:AcceptQuest(player,1)\n详:玩家接受任务\n返:bool\n备:\n"
+		},	
+		"AccomplishQuest":{
+			"prefix":"lualib:AccomplishQuest",
+			"body": [
+				"lualib:AccomplishQuest($1)"
+			],
+			"description": "语法:bool AccomplishQuest(string 玩家GUID,uint16 任务ID,uint16 选择项:默认0)\n例:lualib:AccomplishQuest(player,1,0)\n详:玩家提交任务\n返:bool\n备:\n"
+		},
+		"HasQuest":{
+			"prefix":"lualib:HasQuest",
+			"body": [
+				"lualib:HasQuest($1)"
+			],
+			"description": "语法:bool HasQuest(string 玩家GUID,uint16 任务ID)\n例:lualib:HasQuest(player,1)\n详:判断玩家是否拥有某个任务\n返:bool\n备:\n"
+		},
+		"DropQuest":{
+			"prefix":"lualib:DropQuest",
+			"body": [
+				"lualib:DropQuest($1)"
+			],
+			"description": "语法:bool DropQuest(string 玩家GUID,uint16 任务ID)\n例:lualib:DropQuest(player,1)\n详:玩家放弃任务\n返:bool\n备:\n"
+		},
+		"ForceAcceptQuest":{
+			"prefix":"lualib:ForceAcceptQuest",
+			"body": [
+				"lualib:ForceAcceptQuest($1)"
+			],
+			"description": "语法:bool ForceAcceptQuest(string 玩家GUID,uint16 任务ID)\n例:lualib:ForceAcceptQuest(player,1)\n详:强制玩家接受任务\n返:bool\n备:\n"
+		},
+		"ForceQuestReady":{
+			"prefix":"lualib:ForceQuestReady",
+			"body": [
+				"lualib:ForceQuestReady($1)"
+			],
+			"description": "语法:bool ForceQuestReady(string 玩家GUID,uint16 任务ID)\n例:lualib:ForceQuestReady(player,1)\n详:强制玩家完成任务\n返:bool\n备:\n"
+		},	
+		"QuestRemainCount":{
+			"prefix":"lualib:QuestRemainCount",
+			"body": [
+				"lualib:QuestRemainCount($1)"
+			],
+			"description": "语法:int32 QuestRemainCount(string 玩家GUID,uint16 任务ID)\n例:lualib:QuestRemainCount(player,1)\n详:查询玩家任务剩余次数\n返:int32 剩余次数\n备:\n"
+		},	
+		"GenEscorter":{
+			"prefix":"lualib:GenEscorter",
+			"body": [
+				"lualib:GenEscorter($1)"
+			],
+			"description": "语法:bool GenEscorter(string 玩家GUID,string 镖车keyname,uint32 镖车生存时间 秒)\n例:lualib:GenEscorter(player,镖车KEYNAME,3600)\n详:生成需要护送的镖车\n返:bool\n备:\n"
+		},	
+		"IsEscorterDied":{
+			"prefix":"lualib:IsEscorterDied",
+			"body": [
+				"lualib:IsEscorterDied($1)"
+			],
+			"description": "语法:bool IsEscorterDied(string 玩家GUID)\n例:lualib:IsEscorterDied(player)\n详:判断玩家镖车是否存活\n返:bool\n备:\n"
+		},
+		"RemoveEscorter":{
+			"prefix":"lualib:RemoveEscorter",
+			"body": [
+				"lualib:RemoveEscorter($1)"
+			],
+			"description": "语法:bool RemoveEscorter(string 玩家GUID)\n例:lualib:RemoveEscorter(player)\n详:移除玩家镖车,跨GS无效\n返:bool\n备:\n"
+		},	
+		"GetEscorter":{
+			"prefix":"lualib:GetEscorter",
+			"body": [
+				"lualib:GetEscorter($1)"
+			],
+			"description": "语法:string GetEscorter(string 玩家GUID)\n例:lualib:GetEscorter(player)\n详:取得玩家镖车GUID,跨GS返回\"\"\n返:string 镖车GUID,出错返回\"\"\n备:跨GS后镖车的GUID会变更\n"
+		},	
+		"AddScheduled":{
+			"prefix":"lualib:AddScheduled",
+			"body": [
+				"lualib:AddScheduled($1)"
+			],
+			"description": "语法:bool AddScheduled(uint32 任务ID大于10W,string 任务名,int16 类型,table 时间表,string 函数, string 参数)\n例:lualib:AddScheduled(详细查后台手册)\n详:给服务器添加计划任务.回调函数格式:void callback(UINT32 ID,string strParam)\n返:bool \n备:任务类型:1 = Y-m-d h:m:s 特定时间, 2 = m-d h:m:s 每年执行, 3 = d h:m:s 每月执行, 4 = w h:m:s 每周执行, 5 = h:m:s 每天执行\n{\"0 19:30:00\", \"3 19:30:00\"}，代表每周日19:30:00、周三19:30:00触发计划任务.每周的第一天从周日开始\n"
+		},	
+		"DisableScheduled":{
+			"prefix":"lualib:DisableScheduled",
+			"body": [
+				"lualib:DisableScheduled($1)"
+			],
+			"description": "语法:bool DisableScheduled(uint32 任务ID大于10W)\n例:lualib:AddScheduled(100001)\n详:清除服务器计划任务\n返:bool \n备:计划任务ID,通过脚本添加的计划任务ID必须大于100000\n"
+		},
+		"JoinCamp":{
+			"prefix":"lualib:JoinCamp",
+			"body": [
+				"lualib:JoinCamp($1)"
+			],
+			"description": "语法:bool JoinCamp(string 玩家GUID,uint32 活动ID, uint32 积分值)\n例:lualib:JoinCamp(player,1,10)\n详:加入活动\n返:bool \n备:\n"
+		},	
+		"CampCount":{
+			"prefix":"lualib:CampCount",
+			"body": [
+				"lualib:CampCount($1)"
+			],
+			"description": "语法:uint32 CampCount(string 玩家GUID,uint32 活动ID)\n例:lualib:CampCount(player,1)\n详:取得该活动当天参与次数\n返:uint32 当天参与活动次数\n备:\n"
+		},
+		"CampCounts":{
+			"prefix":"lualib:CampCounts",
+			"body": [
+				"lualib:CampCounts($1)"
+			],
+			"description": "语法:uint32 CampCounts(string 玩家GUID,uint32 活动ID)\n例:lualib:CampCounts(player,1)\n详:取得该活动总计参与次数\n返:uint32 总计参与活动次数\n备:\n"
+		},
+		"CampInteg":{
+			"prefix":"lualib:CampInteg",
+			"body": [
+				"lualib:CampInteg($1)"
+			],
+			"description": "语法:uint32 CampInteg(string 玩家GUID,uint32 活动ID)\n例:lualib:CampInteg(player,1)\n详:取得该活动当天积分\n返:uint32 当天活动积分\n备:\n"
+		},		
+		"CampIntegs":{
+			"prefix":"lualib:CampIntegs",
+			"body": [
+				"lualib:CampIntegs($1)"
+			],
+			"description": "语法:uint32 CampIntegs(string 玩家GUID,uint32 活动ID)\n例:lualib:CampIntegs(player,1)\n详:取得该活动总计积分\n返:uint32 总计活动积分\n备:\n"
+		},
+		"VerifyCampLevel":{
+			"prefix":"lualib:VerifyCampLevel",
+			"body": [
+				"lualib:VerifyCampLevel($1)"
+			],
+			"description": "语法:bool VerifyCampLevel(string 玩家GUID,uint32 活动ID)\n例:lualib:VerifyCampLevel(player,1)\n详:判断玩家是否满足活动等级\n返:bool\n备:\n"
+		},	
+		"VerifyCampCount":{
+			"prefix":"lualib:VerifyCampCount",
+			"body": [
+				"lualib:VerifyCampCount($1)"
+			],
+			"description": "语法:bool VerifyCampCount(string 玩家GUID,uint32 活动ID)\n例:lualib:VerifyCampCount(player,1)\n详:判断玩家是否被活动次数限制所允许\n返:bool\n备:\n"
+		},
+		"IO_FileExists":{
+			"prefix":"lualib:IO_FileExists",
+			"body": [
+				"lualib:IO_FileExists($1)"
+			],
+			"description": "语法:bool IO_FileExists(string 文件名)\n例:lualib:IO_FileExists(文件名)\n详:判断文件是否存在.文件接口是执行IO操作,效率低下.若非必要原因,不要使用文件接口\n返:bool\n备:如果要持久化存储数据,请用数据库变量SetDBNum、SetDBStr等.如要临时存储数据请用GS变量GetInt(用系统GUID)、SetStr(用系统GUID)等\n该接口在沙盒中运行,只能操作Data目录.大量使用文件接口会造成服务器卡机,后果自负\n"
+		},	
+		"IO_FileCTime":{
+			"prefix":"lualib:IO_FileCTime",
+			"body": [
+				"lualib:IO_FileCTime($1)"
+			],
+			"description": "语法:string IO_FileCTime(string 文件名)\n例:lualib:IO_FileCTime(文件名)\n详:返回文件创建时间.文件接口是执行IO操作,效率低下.若非必要原因,不要使用文件接口\n返:string 时间格式串\n备:如果要持久化存储数据,请用数据库变量SetDBNum、SetDBStr等.如要临时存储数据请用GS变量GetInt(用系统GUID)、SetStr(用系统GUID)等\n该接口在沙盒中运行,只能操作Data目录.大量使用文件接口会造成服务器卡机,后果自负\n"
+		},
+		"IO_FileMTime":{
+			"prefix":"lualib:IO_FileMTime",
+			"body": [
+				"lualib:IO_FileMTime($1)"
+			],
+			"description": "语法:string IO_FileMTime(string 文件名)\n例:lualib:IO_FileMTime(文件名)\n详:返回文件修改时间.文件接口是执行IO操作,效率低下.若非必要原因,不要使用文件接口\n返:string 时间格式串\n备:如果要持久化存储数据,请用数据库变量SetDBNum、SetDBStr等.如要临时存储数据请用GS变量GetInt(用系统GUID)、SetStr(用系统GUID)等\n该接口在沙盒中运行,只能操作Data目录.大量使用文件接口会造成服务器卡机,后果自负\n"
+		},
+		"IO_CreateTextFile":{
+			"prefix":"lualib:IO_CreateTextFile",
+			"body": [
+				"lualib:IO_CreateTextFile($1)"
+			],
+			"description": "语法:bool IO_CreateTextFile(string 文件名,bool 是否覆盖 false 文件存在时创建失败)\n例:lualib:IO_CreateTextFile(文件名,true)\n详:创建文本文件.文件接口是执行IO操作,效率低下.若非必要原因,不要使用文件接口\n返:bool\n备:如果要持久化存储数据,请用数据库变量SetDBNum、SetDBStr等.如要临时存储数据请用GS变量GetInt(用系统GUID)、SetStr(用系统GUID)等\n该接口在沙盒中运行,只能操作Data目录.大量使用文件接口会造成服务器卡机,后果自负\n"
+		},
+		"IO_EmptyTextFile":{
+			"prefix":"lualib:IO_EmptyTextFile",
+			"body": [
+				"lualib:IO_EmptyTextFile($1)"
+			],
+			"description": "语法:bool IO_EmptyTextFile(string 文件名)\n例:lualib:IO_EmptyTextFile(文件名)\n详:清空文本文件内容.文件接口是执行IO操作,效率低下.若非必要的原因,不要使用文件接口\n返:bool\n备:如果要持久化存储数据,请用数据库变量SetDBNum、SetDBStr等.如要临时存储数据请用GS变量GetInt(用系统GUID)、SetStr(用系统GUID)等\n该接口在沙盒中运行,只能操作Data目录.大量使用文件接口会造成服务器卡机,后果自负\n"
+		},
+		"IO_GetFileText":{
+			"prefix":"lualib:IO_GetFileText",
+			"body": [
+				"lualib:IO_GetFileText($1)"
+			],
+			"description": "语法:table IO_GetFileText(string 文件名)\n例:lualib:IO_GetFileText(文件名)\n详:读取文本文件内容,换行生成列表.文件接口是执行IO操作,效率低下.若非必要的原因,不要使用文件接口\n返:table 文件内容列表\n备:如果要持久化存储数据,请用数据库变量SetDBNum、SetDBStr等.如要临时存储数据请用GS变量GetInt(用系统GUID)、SetStr(用系统GUID)等\n该接口在沙盒中运行,只能操作Data目录.大量使用文件接口会造成服务器卡机,后果自负\n"
+		},	
+		"IO_SetFileText":{
+			"prefix":"lualib:IO_SetFileText",
+			"body": [
+				"lualib:IO_SetFileText($1)"
+			],
+			"description": "语法:bool IO_SetFileText(string 文件名,string 文本内容)\n例:lualib:IO_SetFileText(文件名,内容)\n详:设置文本文件内容.如果文件已存在,文件的内容会被清空后再写入.文件接口是执行IO操作,效率低下.若非必要的原因,不要使用文件接口\n返:bool\n备:如果要持久化存储数据,请用数据库变量SetDBNum、SetDBStr等.如要临时存储数据请用GS变量GetInt(用系统GUID)、SetStr(用系统GUID)等\n该接口在沙盒中运行,只能操作Data目录.大量使用文件接口会造成服务器卡机,后果自负\n"
+		},
+		"IO_AppendFile":{
+			"prefix":"lualib:IO_AppendFile",
+			"body": [
+				"lualib:IO_AppendFile($1)"
+			],
+			"description": "语法:bool IO_AppendFile(string 文件名,string 文本内容)\n例:lualib:IO_AppendFile(文件名,内容)\n详:追加文本内容到文本文件中.文件接口是执行IO操作,效率低下.若非必要的原因,不要使用文件接口\n返:bool\n备:如果要持久化存储数据,请用数据库变量SetDBNum、SetDBStr等.如要临时存储数据请用GS变量GetInt(用系统GUID)、SetStr(用系统GUID)等\n该接口在沙盒中运行,只能操作Data目录.大量使用文件接口会造成服务器卡机,后果自负\n"
+		},
+		"IO_CheckTextInFile":{
+			"prefix":"lualib:IO_CheckTextInFile",
+			"body": [
+				"lualib:IO_CheckTextInFile($1)"
+			],
+			"description": "语法:bool IO_CheckTextInFile(string 文件名,string 文本内容)\n例:lualib:IO_CheckTextInFile(文件名,内容)\n详:检查文本内容是否等于文本文件中的某一行.文件接口是执行IO操作,效率低下.若非必要的原因,不要使用文件接口\n返:bool\n备:如果要持久化存储数据,请用数据库变量SetDBNum、SetDBStr等.如要临时存储数据请用GS变量GetInt(用系统GUID)、SetStr(用系统GUID)等\n该接口在沙盒中运行,只能操作Data目录.大量使用文件接口会造成服务器卡机,后果自负\n"
+		},	
+		"IO_TextFileDeleteLineStr":{
+			"prefix":"lualib:IO_TextFileDeleteLineStr",
+			"body": [
+				"lualib:IO_TextFileDeleteLineStr($1)"
+			],
+			"description": "语法:bool IO_TextFileDeleteLineStr(string 文件名,string 文本内容 不能包含回车换行符)\n例:lualib:IO_TextFileDeleteLineStr(文件名,内容)\n详:从文本文件中删除行内容为指定字符串的行.文件接口是执行IO操作,效率低下.若非必要的原因,不要使用文件接口\n返:bool\n备:如果要持久化存储数据,请用数据库变量SetDBNum、SetDBStr等.如要临时存储数据请用GS变量GetInt(用系统GUID)、SetStr(用系统GUID)等\n该接口在沙盒中运行,只能操作Data目录.大量使用文件接口会造成服务器卡机,后果自负\n"
+		},
+		"IO_TextFileInsertLine":{
+			"prefix":"lualib:IO_TextFileInsertLine",
+			"body": [
+				"lualib:IO_TextFileInsertLine($1)"
+			],
+			"description": "语法:bool IO_TextFileInsertLine(string 文件名,uint32 前插行,最小为1,最大为真实行数,string 文本内容 不能包含回车换行符)\n例:lualib:IO_TextFileInsertLine(文件名,1,内容)\n详:在文本文件中插入内容.文件接口是执行IO操作,效率低下.若非必要的原因,不要使用文件接口\n返:bool\n备:如果要持久化存储数据,请用数据库变量SetDBNum、SetDBStr等.如要临时存储数据请用GS变量GetInt(用系统GUID)、SetStr(用系统GUID)等\n该接口在沙盒中运行,只能操作Data目录.大量使用文件接口会造成服务器卡机,后果自负\n"
+		},	
+		"IO_TextFileDeleteLine":{
+			"prefix":"lualib:IO_TextFileDeleteLine",
+			"body": [
+				"lualib:IO_TextFileDeleteLine($1)"
+			],
+			"description": "语法:bool IO_TextFileDeleteLine(string 文件名,uint32 前插行,最小为1,最大为真实行数)\n例:lualib:IO_TextFileDeleteLine(文件名,1)\n详:从文本文件中删除指定行.文件接口是执行IO操作,效率低下.若非必要的原因,不要使用文件接口.\n返:bool\n备:如果要持久化存储数据,请用数据库变量SetDBNum、SetDBStr等.如要临时存储数据请用GS变量GetInt(用系统GUID)、SetStr(用系统GUID)等\n该接口在沙盒中运行,只能操作Data目录.大量使用文件接口会造成服务器卡机,后果自负\n"
+		},
+		"IO_TextFileGetLine":{
+			"prefix":"lualib:IO_TextFileGetLine",
+			"body": [
+				"lualib:IO_TextFileGetLine($1)"
+			],
+			"description": "语法:string IO_TextFileGetLine(string 文件名,uint32 前插行,最小为1,最大为真实行数)\n例:lualib:IO_TextFileGetLine(文件名,1)\n详:从文本文件中取出指定行.文件接口是执行IO操作,效率低下.若非必要的原因,不要使用文件接口\n返:string 行内容\n备:如果要持久化存储数据,请用数据库变量SetDBNum、SetDBStr等.如要临时存储数据请用GS变量GetInt(用系统GUID)、SetStr(用系统GUID)等\n该接口在沙盒中运行,只能操作Data目录.大量使用文件接口会造成服务器卡机,后果自负\n"
+		},
+		"IO_TextFileRndGetLine":{
+			"prefix":"lualib:IO_TextFileRndGetLine",
+			"body": [
+				"lualib:IO_TextFileRndGetLine($1)"
+			],
+			"description": "语法:string IO_TextFileRndGetLine(string 文件名)\n例:lualib:IO_TextFileRndGetLine(文件名)\n详:从文本文件中取出随机行.文件接口是执行IO操作,效率低下.若非必要的原因,不要使用文件接口\n返:string 行内容\n备:如果要持久化存储数据,请用数据库变量SetDBNum、SetDBStr等.如要临时存储数据请用GS变量GetInt(用系统GUID)、SetStr(用系统GUID)等\n该接口在沙盒中运行,只能操作Data目录.大量使用文件接口会造成服务器卡机,后果自负\n"
+		},	
+		"IO_TextFileCheckLine":{
+			"prefix":"lualib:IO_TextFileCheckLine",
+			"body": [
+				"lualib:IO_TextFileCheckLine($1)"
+			],
+			"description": "语法:int32 IO_TextFileCheckLine(string 文件名,string 文本内容,不能包含回车换行符)\n例:lualib:IO_TextFileCheckLine(文件名,内容)\n详:检查文本内容是否等于文本文件中的某一行,并返回行号.文件接口是执行IO操作,效率低下.若非必要的原因,不要使用文件接口\n返:int32 行号,返之-1\n备:如果要持久化存储数据,请用数据库变量SetDBNum、SetDBStr等.如要临时存储数据请用GS变量GetInt(用系统GUID)、SetStr(用系统GUID)等\n该接口在沙盒中运行,只能操作Data目录.大量使用文件接口会造成服务器卡机,后果自负\n"
+		},	
+		"IO_DirExists":{
+			"prefix":"lualib:IO_DirExists",
+			"body": [
+				"lualib:IO_DirExists($1)"
+			],
+			"description": "语法:bool IO_DirExists(string 文件目录名)\n例:lualib:IO_DirExists(文件目录名)\n详:判断文件目录是否存在.文件接口是执行IO操作,效率低下.若非必要的原因,不要使用文件接口\n返:bool\n备:如果要持久化存储数据,请用数据库变量SetDBNum、SetDBStr等.如要临时存储数据请用GS变量GetInt(用系统GUID)、SetStr(用系统GUID)等\n该接口在沙盒中运行,只能操作Data目录.大量使用文件接口会造成服务器卡机,后果自负\n"
+		},	
+		"IO_ForceDir":{
+			"prefix":"lualib:IO_ForceDir",
+			"body": [
+				"lualib:IO_ForceDir($1)"
+			],
+			"description": "语法:bool IO_ForceDir(string 文件目录名.支持多级,如:aa/bb/cc,会依次创建三个目录)\n例:lualib:IO_ForceDir(文件目录名)\n详:创建文件目录.文件接口是执行IO操作,效率低下.若非必要的原因,不要使用文件接口\n返:bool\n备:如果要持久化存储数据,请用数据库变量SetDBNum、SetDBStr等.如要临时存储数据请用GS变量GetInt(用系统GUID)、SetStr(用系统GUID)等\n该接口在沙盒中运行,只能操作Data目录.大量使用文件接口会造成服务器卡机,后果自负\n"
+		},
+		"IO_GetLuaPath":{
+			"prefix":"lualib:IO_GetLuaPath",
+			"body": [
+				"lualib:IO_GetLuaPath($1)"
+			],
+			"description": "语法:string IO_GetLuaPath(void)\n例:lualib:IO_GetLuaPath(文件目录名)\n详:返回服务器LUA文件夹的绝对路径\n返:string LUA文件夹路径\n备:\n"
+		},	
+		"on_item_appear":{
+			"prefix":"function on_item_appear",
+			"body": [
+				"--物品出现在地图时回调",
+				"function on_item_appear(mapGuid,itemGuid,itemId,itemKey,x,y)",
+				"$1",
+				"end"
+			],
+			"description": "语法:void on_item_appear(string 地图的GUID,string 物品GUID,uint16 物品ID,string 物品KEYANME,uint16 X坐标,uint16 Y坐标)\n例:on_item_appear(地图的GUID,物品GUID,物品ID,物品KEYANME,X坐标,Y坐标)\n详:物品出现在地图时回调.非系统级回调,需要手动添加触发器\n返:void\n备:\n"
+		},
+		"on_leave_map":{
+			"prefix":"function on_leave_map",
+			"body": [
+				"--玩家离开地图时回调",
+				"function on_leave_map(player)",
+				"$1",
+				"end"
+			],
+			"description": "语法:void on_leave_map(string 玩家的GUID)\n例:on_item_appear(玩家GUID)\n详:玩家离开地图时回调.非系统级回调,需要手动添加触发器\n返:void\n备:\n"
+		},	
+		"on_enter_map":{
+			"prefix":"function on_leave_map",
+			"body": [
+				"--玩家进入地图时回调",
+				"function on_enter_map(player)",
+				"$1",
+				"end"
+			],
+			"description": "语法:void on_enter_map(string 玩家的GUID)\n例:on_enter_map(玩家GUID)\n详:玩家进入地图时回调.非系统级回调,需要手动添加触发器\n返:void\n备:\n"
+		},
+		"on_monster_disappear":{
+			"prefix":"function on_monster_disappear",
+			"body": [
+				"--怪物消失在地图时回调",
+				"function on_monster_disappear(monGuid,monId,monkey,x,y)",
+				"$1",
+				"end"
+			],
+			"description": "语法:void on_monster_disappear(string 怪物guid,uint16 怪物ID,string 怪物key,uint16 x,uint16 y)\n例:on_monster_disappear(怪物guid,怪物ID,怪物key,x,y)\n详:怪物消失在地图时回调.非系统级回调,需要手动添加触发器\n返:void\n备:\n"
+		},	
+		"on_monster_appear":{
+			"prefix":"function on_monster_appear",
+			"body": [
+				"--怪物出现在地图时回调",
+				"function on_monster_appear(monGuid,monId,monkey,x,y)",
+				"$1",
+				"end"
+			],
+			"description": "语法:void on_monster_appear(string 怪物guid,uint16 怪物ID,string 怪物key,uint16 x,uint16 y)\n例:on_monster_disappear(怪物guid,怪物ID,怪物key,x,y)\n详:怪物出现在地图时回调.非系统级回调,需要手动添加触发器\n返:void\n备:\n"
+		},	
+		"on_map_destroy":{
+			"prefix":"function on_map_destroy",
+			"body": [
+				"--地图销毁时回调",
+				"function on_map_destroy(monGuid,monId,monkey,x,y)",
+				"$1",
+				"end"
+			],
+			"description": "语法:void on_map_destroy(string 地图GUID,string 地图keyname)\n例:on_map_destroy(mapGuid,mapKeyname)\n详:地图销毁时回调.系统级回调,不用手动添加触发器\n返:void\n备:\n"
+		},
+		"on_map_create":{
+			"prefix":"function on_map_create",
+			"body": [
+				"--地图生成时回调",
+				"function on_map_create(monGuid,monId,monkey,x,y)",
+				"$1",
+				"end"
+			],
+			"description": "语法:void on_map_create(string 地图GUID,string 地图keyname)\n例:on_map_create(mapGuid,mapKeyname)\n详:地图生成时回调.系统级回调,不用手动添加触发器\n返:void\n备:\n"
+		},	
+		"on_gp":{
+			"prefix":"function on_gp",
+			"body": [
+				"--玩家检测到外挂行为时回调",
+				"function on_gp(player,gpRuntime,gp,avg_tick)",
+				"$1",
+				"end"
+			],
+			"description": "语法:void on_gp(string 玩家GUID,int32 当前违规次数,int32 总次数,int32 违规差值)\n例:on_gp(player, gp_runtime, gp, diff_avg_tick)\n详:玩家检测到外挂行为时回调.非系统级回调,需要手动添加触发器\n返:void\n备:\n"
+		},
+		"on_castle_war_init":{
+			"prefix":"function on_castle_war_init",
+			"body": [
+				"--攻城战申请成功时回调",
+				"function on_castle_war_init(CastleName,castleGuid,BasilicaGuid)",
+				"$1",
+				"end"
+			],
+			"description": "语法:void on_castle_war_init(string 城堡名,string 城堡GUID,string 皇宫GUID)\n例:on_castle_war_init(城堡名, 城堡GUID, 皇宫GUID)\n详:攻城战申请成功时回调,如果攻城战申请成功后系统重启了,则系统重启后也会回调.非系统级回调,需要手动添加触发器\n返:void\n备:\n"
+		},
+		"on_castle_war_end":{
+			"prefix":"function on_castle_war_end",
+			"body": [
+				"--攻城战结束时回调",
+				"function on_castle_war_end(CastleName,castleGuid,BasilicaGuid)",
+				"$1",
+				"end"
+			],
+			"description": "语法:void on_castle_war_end(string 城堡名,string 城堡GUID,string 皇宫GUID)\n例:on_castle_war_end(城堡名, 城堡GUID, 皇宫GUID)\n详:攻城战关闭时回调.非系统级回调,需要手动添加触发器\n返:void\n备:\n"
+		},	
+		"on_castle_war_start":{
+			"prefix":"function on_castle_war_start",
+			"body": [
+				"--攻城战开启时回调",
+				"function on_castle_war_start(CastleName,castleGuid,BasilicaGuid)",
+				"$1",
+				"end"
+			],
+			"description": "语法:void on_castle_war_start(string 城堡名,string 城堡GUID,string 皇宫GUID)\n例:on_castle_war_start(城堡名, 城堡GUID, 皇宫GUID)\n详:攻城战开启时回调.非系统级回调,需要手动添加触发器\n返:void\n备:\n"
+		},		
+		"on_logout":{
+			"prefix":"function on_logout",
+			"body": [
+				"--玩家退出游戏时回调",
+				"function on_logout(player)",
+				"$1",
+				"end"
+			],
+			"description": "语法:void on_logout(string player)\n例:on_logout(player)\n详:玩家退出游戏时回调.非系统级回调,需要手动添加触发器\n返:void\n备:\n"
+		},	
+		"on_login":{
+			"prefix":"function on_login",
+			"body": [
+				"--玩家进入游戏时回调",
+				"function on_login(player)",
+				"$1",
+				"end"
+			],
+			"description": "语法:void on_login(string player)\n例:on_logout(player)\n详:玩家进入游戏时回调.非系统级回调,需要手动添加触发器\n返:void\n备:\n"
+		},		
+		"on_first_in_game":{
+			"prefix":"function on_first_in_game",
+			"body": [
+				"--新玩家第一次进入游戏时回调",
+				"function on_first_in_game(player)",
+				"$1",
+				"end"
+			],
+			"description": "语法:void on_first_in_game(string player)\n例:on_first_in_game(player)\n详:新玩家第一次进入游戏时回调.非系统级回调,需要手动添加触发器\n返:void\n备:\n"
+		},	
+		"on_system_start":{
+			"prefix":"function on_system_start",
+			"body": [
+				"--系统启动回调",
+				"function on_system_start()",
+				"$1",
+				"end"
+			],
+			"description": "语法:void on_system_start(void)\n例:on_system_start()\n详:系统启动回调.系统级回调,不用手动添加触发器\n返:void\n备:\n"
+		},		
+		"AddTrigger":{
+			"prefix":"lualib:AddTrigger",
+			"body": [
+				"lualib:AddTrigger($1)",
+			],
+			"description": "语法:void AddTrigger(string 对象GUID,int 对象的类型,string 回调函数)\n例:AddTrigger(\"0\",lua_trigger_leave_map,\"on_trigger_leave_map\")\n详:给对象添加触发器\n返:void\n备:对象的GUID,对角可以为玩家、怪物、NPC、地图、系统\n"
+		},
+		"HasTrigger":{
+			"prefix":"lualib:HasTrigger",
+			"body": [
+				"lualib:HasTrigger($1)",
+			],
+			"description": "语法:void HasTrigger(string 对象GUID,int 对象的类型,string 回调函数)\n例:HasTrigger(\"0\",lua_trigger_leave_map,\"on_trigger_leave_map\")\n详:判断对象是否拥有某触发器\n返:void\n备:对象的GUID,对角可以为玩家、怪物、NPC、地图、系统\n"
+		},
+		"RemoveTrigger":{
+			"prefix":"lualib:RemoveTrigger",
+			"body": [
+				"lualib:RemoveTrigger($1)",
+			],
+			"description": "语法:void RemoveTrigger(string 对象GUID,int 对象的类型,string 回调函数)\n例:RemoveTrigger(\"0\",lua_trigger_leave_map,\"on_trigger_leave_map\")\n详:移除对象拥有的某触发器\n返:void\n备:对象的GUID,对角可以为玩家、怪物、NPC、地图、系统\n"
+		},
+		"ClearTrigger":{
+			"prefix":"lualib:ClearTrigger",
+			"body": [
+				"lualib:ClearTrigger($1)",
+			],
+			"description": "语法:void ClearTrigger(string 对象GUID)\n例:ClearTrigger(player)\n详:移除对象拥有的所有触发器\n返:void\n备:对象的GUID,对角可以为玩家、怪物、NPC、地图、系统\n"
+		},
+		"SetTriggerFilters":{
+			"prefix":"lualib:SetTriggerFilters",
+			"body": [
+				"lualib:SetTriggerFilters($1)",
+			],
+			"description": "语法:void SetTriggerFilters( string  IDS)\n例:SetTriggerFilters(模板ID列表)\n详:SetTriggerFilters(对象GUID，触发器类型，过滤类型)\n返:void\n备:\n"
+		},
+		"AddTimerEx":{
+			"prefix":"lualib:AddTimerEx",
+			"body": [
+				"lualib:AddTimerEx($1)",
+			],
+			"description": "语法:bool AddTimerEx(string 对象GUID, uint32  定时器的ID,同一象对下ID必须唯一,int32 定时器的触发间隔,单位:毫秒,int32 定时器的触发次数.设为-1时无限触发,string  定时器触发时,回调该函数.函数格式: 1 = 函数名 2 = 文件名:函数名,string 定义参数,函数回调时自动传回)\n例:AddTimerEx(player,5466,1000,-1,\"on_time\",\"\")\n详:给对象添加定时器.回调函数格式:void callback(string strObject,int dwTimerID, string strParam1,...,strParamn)\n返:bool\n备:对象的GUID,对角可以为玩家、怪物、NPC、地图、系统\n"
+		},
+		"DisableTimer":{
+			"prefix":"lualib:DisableTimer",
+			"body": [
+				"lualib:DisableTimer($1)",
+			],
+			"description": "语法:bool DisableTimer(string 对象GUID, uint32  定时器的ID,同一象对下ID必须唯一)\n例:DisableTimer(player,TimerId)\n详:取消对象的定时器\n返:bool\n备:对象的GUID,对象可以为玩家、怪物、NPC、地图、物品、系统\n"
+		},
+		"GSRunScript":{
+			"prefix":"lualib:GSRunScript",
+			"body": [
+				"lualib:GSRunScript($1)",
+			],
+			"description": "语法:void GSRunScript(string 执行的函数.格式, 1 = 文件名:函数名 2 = 文件名, string 定义参数,函数回调时自动传回.方便脚本作者上下文切换)\n例:GSRunScript(player,TimerId)\n详:让GS里所有人执行一段脚本.回调函数格式:void fnCallback(strPlayer, strParam)\n返:void\n备:该接口是异步的.接口返回成功并不代表脚本执行成功\n"
+		},
+		"GSTriggerScript":{
+			"prefix":"lualib:GSTriggerScript",
+			"body": [
+				"lualib:GSTriggerScript($1)",
+			],
+			"description": "语法:void GSTriggerScript(string 执行的函数.格式, 1 = 文件名:函数名 2 = 文件名, string 定义参数,函数回调时自动传回.方便脚本作者上下文切换)\n例:GSTriggerScript(player,TimerId)\n详:让所有GS去执行一段脚本.回调函数格式:void fnCallback(strParam)\n返:void\n备:该接口是异步的.接口返回成功并不代表脚本执行成功\n"
+		},
+		"GenRandom":{
+			"prefix":"lualib:GenRandom",
+			"body": [
+				"lualib:GenRandom($1)",
+			],
+			"description": "语法:void GenRandom(int32 最小值,int32 最大值)\n例:GenRandom(1,100)\n详:成生随机数\n返:int32 返回随机数iRnd,取值范围:(iMin < iMax) (iMin <= iRnd <= iMax)\n备:\n"
+		},		
+		"GetConstVar":{
+			"prefix":"lualib:GetConstVar",
+			"body": [
+				"lualib:GetConstVar($1)",
+			],
+			"description": "语法:void GetConstVar(string 常量名)\n例:GetConstVar(\"CastleWar\")\n详:读取系统常量表\n返:string 常量值,出错返回\"\"\n备:\n"
+		},
+		"ReloadConfig":{
+			"prefix":"lualib:ReloadConfig",
+			"body": [
+				"lualib:ReloadConfig($1)",
+			],
+			"description": "语法:bool ReloadConfig(string 配置表名)\n例:ReloadConfig(table)\n详:重载系统表\n返:bool\n备:\n"
+		},
+		"ReloadGMList":{
+			"prefix":"lualib:ReloadGMList",
+			"body": [
+				"lualib:ReloadGMList($1)",
+			],
+			"description": "语法:void ReloadGMList(void)\n例:ReloadGMList()\n详:重载GM表\n返:void\n备:\n"
+		},
+		"ReloadScript":{
+			"prefix":"lualib:ReloadScript",
+			"body": [
+				"lualib:ReloadScript($1)",
+			],
+			"description": "语法:bool ReloadScript(int32 脚本类型)\n例:ReloadScript(objType_table[objType])\n详:重载GM表\n返:bool\n备:\n"
+		},
+		"StrSplit":{
+			"prefix":"lualib:StrSplit",
+			"body": [
+				"lualib:StrSplit($1)",
+			],
+			"description": "语法:table StrSplit(string 被分割串,string 分割符)\n例:StrSplit(params, \"#\")\n详:字符串分割函数\n返:table 分割后的子串列表,返回lua table.如: tSubStr = lualib:StrSplit(\"aa##bb##cc#d\", \"##\"); tSubStr = {\"aa\", \"bb\", \"cc#d\"}\n备:\n"
+		},
+		"IsInCollection":{
+			"prefix":"lualib:IsInCollection",
+			"body": [
+				"lualib:IsInCollection($1)",
+			],
+			"description": "语法:bool IsInCollection(string 被分割串,string 分割符,string 子字符串)\n例:IsInCollection(atk_familys, my_family_name, \"&amp;\")\n详:主字符串被分割后的列表中,是否存在子字符串\n返:bool 主字符串被分割后的列表中,是否存在子字符串\n备:\n"
+		},
+		"GetSvrId":{
+			"prefix":"lualib:GetSvrId",
+			"body": [
+				"lualib:GetSvrId($1)",
+			],
+			"description": "语法:uint32 GetSvrId(void)\n例:GetSvrId()\n详:获取服务器ID\n返:uint32 服务器ID\n备:\n"
+		},
+		"GetZoneId":{
+			"prefix":"lualib:GetZoneId",
+			"body": [
+				"lualib:GetZoneId($1)",
+			],
+			"description": "语法:uint32 GetZoneId(void)\n例:GetZoneId()\n详:获取区ID\n返:uint32 区ID\n备:\n"
+		},
+		"GetGroupId":{
+			"prefix":"lualib:GetGroupId",
+			"body": [
+				"lualib:GetGroupId($1)",
+			],
+			"description": "语法:uint32 GetGroupId(void)\n例:GetGroupId()\n详:获取组ID\n返:uint32 组ID\n备:\n"
+		},
+		"GetAgentId":{
+			"prefix":"lualib:GetAgentId",
+			"body": [
+				"lualib:GetAgentId($1)",
+			],
+			"description": "语法:uint32 GetAgentId(void)\n例:GetAgentId()\n详:获取代理ID\n返:uint32 代理ID\n备:\n"
+		},		
+		"GetZoneName":{
+			"prefix":"lualib:GetZoneName",
+			"body": [
+				"lualib:GetZoneName($1)",
+			],
+			"description": "语法:string GetZoneName(void)\n例:GetZoneName()\n详:获取区域名字\n返:string 区名字\n备:\n"
+		},
+		"SkillKey2ID":{
+			"prefix":"lualib:SkillKey2ID",
+			"body": [
+				"lualib:SkillKey2ID($1)",
+			],
+			"description": "语法:uint32 SkillKey2ID(string 技能的KeyName)\n例:SkillKey2ID(\"十步一杀4级\")\n详:根据技能的KeyName取得技能的ID\n返:uint32 技能的ID,出错返回0\n备:\n"
+		},
+		"BuffKey2ID":{
+			"prefix":"lualib:BuffKey2ID",
+			"body": [
+				"lualib:BuffKey2ID($1)",
+			],
+			"description": "语法:uint32 BuffKey2ID(string BUFF的KeyName)\n例:BuffKey2ID(\"狂暴之力\")\n详:根据BUFF的KeyName取得BUFF的ID\n返:uint32 BUFF的ID,出错返回0\n备:\n"
+		},
+		"Mod":{
+			"prefix":"lualib:Mod",
+			"body": [
+				"lualib:Mod($1)",
+			],
+			"description": "语法:uint32 Mod(int32 被除数,int32 除数)\n例:Mod(10,3)\n详:求模运算\n返:int32 求模值\n备:\n"
+		},
+		"GetAllPlayerCount":{
+			"prefix":"lualib:GetAllPlayerCount",
+			"body": [
+				"lualib:GetAllPlayerCount($1)",
+			],
+			"description": "语法:int GetAllPlayerCount(void)\n例:GetAllPlayerCount(10,3)\n详:取得服务器所有人数\n返:int 服务器人数\n备:\n"
+		},
+		"RunClientScript":{
+			"prefix":"lualib:RunClientScript",
+			"body": [
+				"lualib:RunClientScript($1)",
+			],
+			"description": "语法:bool RunClientScript(string 对象的GUID,string 客户端LUA文件名,string 客户端LUA函数名,string 自定义参数)\n例:RunClientScript(player, \"ItemEffect\", \"choujiang\", x..\"#\"..y)\n详:指定运行客户端脚本\n返:bool\n备:对象的GUID,对象可以为系统、玩家、队伍、行会、地图\n"
+		},		
+		"MapRndPos":{
+			"prefix":"lualib:MapRndPos",
+			"body": [
+				"lualib:MapRndPos($1)",
+			],
+			"description": "语法:table MapRndPos(string 地图的KeyName)\n例:MapRndPos(\"龙城\")\n详:取得地图随机点\n返:table 随机点坐标,返回lua table. 如:local tPos = lualib:MapRndPos(\"龙城\"); local x, y = tPos[\"x\"], tPos[\"y\"]\n备:\n"
+		},
+		"GetTotalBill":{
+			"prefix":"lualib:GetTotalBill",
+			"body": [
+				"lualib:GetTotalBill($1)",
+			],
+			"description": "语法:int32 GetTotalBill(string 玩家GUID)\n例:GetTotalBill(player)\n详:取得玩家充值元宝数\n返:int32 充值元宝数\n备:\n"
+		},
+		"SetFbdLogin":{
+			"prefix":"lualib:SetFbdLogin",
+			"body": [
+				"lualib:SetFbdLogin($1)",
+			],
+			"description": "语法:void SetFbdLogin(string 禁止登陆关键字,uint8 登陆类型,uint32 禁止持续时间,单位:秒,string 禁止原因)\n例:SetFbdLogin(\"过客\", 2, 600, \"测试封号\")\n详:禁止登陆\n返:void\n备:登陆类型,决定登陆关键字的含义.1 = IP 2 = 角色 3 = 帐号 4 = 硬件码\n"
+		},
+		"DisaFbdLogin":{
+			"prefix":"lualib:DisaFbdLogin",
+			"body": [
+				"lualib:DisaFbdLogin($1)",
+			],
+			"description": "语法:void DisaFbdLogin(string 禁止登陆关键字,uint8 登陆类型)\n例:DisaFbdLogin(\"过客\", 2)\n详:解除禁止登陆\n返:void\n备:登陆类型,决定登陆关键字的含义.1 = IP 2 = 角色 3 = 帐号 4 = 硬件码\n"
+		},
+		"IsBanString":{
+			"prefix":"lualib:IsBanString",
+			"body": [
+				"lualib:IsBanString($1)",
+			],
+			"description": "语法:bool IsBanString(string 字符串)\n例:IsBanString(\"骂人\")\n详:判断字符串是不是敏感词\n返:bool\n备:\n"
+		},
+		"IsBanItem":{
+			"prefix":"lualib:IsBanItem",
+			"body": [
+				"lualib:IsBanItem($1)",
+			],
+			"description": "语法:bool IsBanItem(string 物品GUID,string 地图GUID)\n例:IsBanItem(itemg,mapg)\n详:判断是不是地图禁止物品\n返:bool\n备:\n"
+		},
+		"MonstersByKey":{
+			"prefix":"lualib:MonstersByKey",
+			"body": [
+				"lualib:MonstersByKey($1)",
+			],
+			"description": "语法:table MonstersByKey(string 怪物的KeyName,int32 获取最大数量上限,bool 是否忽略死亡,bool 是否忽略随从)\n例:MonstersByKey(monk,100,true,true)\n详:取得当前GS上符合条件的怪物GUID列表\n返:table 怪物GUID列表\n备:\n"
+		},
+		"GetURL":{
+			"prefix":"lualib:GetURL",
+			"body": [
+				"lualib:GetURL($1)",
+			],
+			"description": "语法:bool GetURL(string http链接地址,string 获取内容后的回调函数,string 预设的回调参数,uint32 超时时间)\n例:GetURL(url,\"func\",\"\",30)\n详:获取一个URL的内容\n返:bool true表示投递请求成功（不表示获取内容成功）\n备:\n"
+		},
+		"Base64Encode":{
+			"prefix":"lualib:Base64Encode",
+			"body": [
+				"lualib:Base64Encode($1)",
+			],
+			"description": "语法:string Base64Encode(string 字符串)\n例:Base64Encode(string)\n详:将字符串进行BASE64编码\n返:string 编码后的字符串\n备:\n"
+		},
+		"Base64Decode":{
+			"prefix":"lualib:Base64Decode",
+			"body": [
+				"lualib:Base64Decode($1)",
+			],
+			"description": "语法:string Base64Decode(string 字符串)\n例:Base64Decode(string)\n详:将字符串进行BASE64解码\n返:string 解编码后的字符串\n备:\n"
+		},
+		"UrlEncode":{
+			"prefix":"lualib:UrlEncode",
+			"body": [
+				"lualib:UrlEncode($1)",
+			],
+			"description": "语法:string UrlEncode(string 字符串)\n例:UrlEncode(string)\n详:将字符串进行URL编码\n返:string 编码后的字符串\n备:\n"
+		},
+		"UrlDecode":{
+			"prefix":"lualib:UrlDecode",
+			"body": [
+				"lualib:UrlDecode($1)",
+			],
+			"description": "语法:string UrlDecode(string 字符串)\n例:UrlDecode(string)\n详:将字符串进行URL解码\n返:string 解编码后的字符串\n备:\n"
+		},		
+		"GenUniqueID":{
+			"prefix":"lualib:GenUniqueID",
+			"body": [
+				"lualib:GenUniqueID($1)",
+			],
+			"description": "语法:string UrlDecGenUniqueIDode(void)\n例:GenUniqueID()\n详:生成系统唯一标识符\n返:string 标识符字符串\n备:\n"
+		},
+		"GetPlayerCount":{
+			"prefix":"lualib:GetPlayerCount",
+			"body": [
+				"lualib:GetPlayerCount($1)",
+			],
+			"description": "语法:uint32 GetPlayerCount(bool 是否只取离线玩家数量)\n例:GetPlayerCount(true)\n详:取得服务器上所有玩家数量\n返:uint32 服务器上玩家数量\n备:\n"
+		},		
+		"GetVipRemain":{
+			"prefix":"lualib:GetVipRemain",
+			"body": [
+				"lualib:GetVipRemain($1)",
+			],
+			"description": "语法:uint32 GetVipRemain(string 玩家的GUID,int VIP功能ID)\n例:GetVipRemain(player,1)\n详:取得VIP功能剩余时间\n返:uint32 剩余时间,单位:秒\n备:\n"
+		},
+		"GetVipLevelRemain":{
+			"prefix":"lualib:GetVipLevelRemain",
+			"body": [
+				"lualib:GetVipLevelRemain($1)",
+			],
+			"description": "语法:uint32 GetVipLevelRemain(string 玩家的GUID,int VIP等级)\n例:GetVipLevelRemain(player,1)\n详:取得VIP等级剩余时间\n返:uint32 剩余时间,单位:秒\n备:\n"
+		},
+		"GetVipLevel":{
+			"prefix":"lualib:GetVipLevel",
+			"body": [
+				"lualib:GetVipLevel($1)",
+			],
+			"description": "语法:uint32 GetVipLevel(string 玩家的GUID)\n例:GetVipLevel(player)\n详:取得VIP等级\n返:uint32 玩家的VIP等级\n备:\n"
+		},		
+		"SetVipLevel":{
+			"prefix":"lualib:SetVipLevel",
+			"body": [
+				"lualib:SetVipLevel($1)",
+			],
+			"description": "语法:void SetVipLevel(string 玩家的GUID,int VIP等级)\n例:SetVipLevel(player,1)\n详:设置VIP等级\n返:void\n备:\n"
+		},
+		"ShowFormWithContent":{
+			"prefix":"lualib:ShowFormWithContent",
+			"body": [
+				"lualib:ShowFormWithContent($1)",
+			],
+			"description": "语法:void ShowFormWithContent(string 玩家的GUID,string 表单名字,string 提交的内容)\n例:ShowFormWithContent(player,\"form文件表单\",\"表单名\")\n详:通知客户端显示表单\n返:void\n备:\n"
+		},		
+		"Str2Time":{
+			"prefix":"lualib:Str2Time",
+			"body": [
+				"lualib:Str2Time($1)",
+			],
+			"description": "语法:uint32 Str2Time(字符串时间,时间格式:Y-m-d H:M:S或Y-m-d)\n例:Str2Time(\"2019-08-01\")\n详:将字符串时间转换成数值型时间(UTC)\n返:uint32 数值时间\n备:\n"
+		},
+		"SysMsg_SendWarnMsg":{
+			"prefix":"lualib:SysMsg_SendWarnMsg",
+			"body": [
+				"lualib:SysMsg_SendWarnMsg($1)",
+			],
+			"description": "语法:bool SysMsg_SendWarnMsg(string 玩家的GUID,string 消息内容)\n例:SysMsg_SendWarnMsg(player,\"消息内容\")\n详:发送客户端底部警告消息\n返:bool\n备:\n"
+		},
+		"SysWarnMsg":{
+			"prefix":"lualib:SysWarnMsg",
+			"body": [
+				"lualib:SysWarnMsg($1)",
+			],
+			"description": "语法:bool SysWarnMsg(string 玩家的GUID,string 消息内容)\n例:SysWarnMsg(player,\"消息内容\")\n详:发送客户端底部警告消息.可跨GS调用\n返:bool\n备:\n"
+		},
+		"SysMsg_SendPromptMsg":{
+			"prefix":"lualib:SysMsg_SendPromptMsg",
+			"body": [
+				"lualib:SysMsg_SendPromptMsg($1)",
+			],
+			"description": "语法:bool SysMsg_SendPromptMsg(string 玩家的GUID,string 消息内容)\n例:SysMsg_SendPromptMsg(player,\"消息内容\")\n详:发送客户端底部提示消息\n返:bool\n备:\n"
+		},		
+		"SysPromptMsg":{
+			"prefix":"lualib:SysPromptMsg",
+			"body": [
+				"lualib:SysPromptMsg($1)",
+			],
+			"description": "语法:bool SysPromptMsg(string 玩家的GUID,string 消息内容)\n例:SysPromptMsg(player,\"消息内容\")\n详:发送客户端底部警告消息.可跨GS调用\n返:bool\n备:\n"
+		},
+		"SysMsg_SendTriggerMsg":{
+			"prefix":"lualib:SysMsg_SendTriggerMsg",
+			"body": [
+				"lualib:SysMsg_SendTriggerMsg($1)",
+			],
+			"description": "语法:bool SysMsg_SendTriggerMsg(string 玩家的GUID,string 消息内容)\n例:SysMsg_SendTriggerMsg(player,\"消息内容\")\n详:发送客户端底部触发消息\n返:bool\n备:\n"
+		},
+		"SysTriggerMsg":{
+			"prefix":"lualib:SysTriggerMsg",
+			"body": [
+				"lualib:SysTriggerMsg($1)",
+			],
+			"description": "语法:bool SysTriggerMsg(string 玩家的GUID,string 消息内容)\n例:SysMsg_SendTriggerMsg(player,\"消息内容\")\n详:发送客户端底部触发消息.可跨GS调用\n返:bool\n备:\n"
+		},
+		"SysMsg_SendInputDlg":{
+			"prefix":"lualib:SysMsg_SendInputDlg",
+			"body": [
+				"lualib:SysMsg_SendInputDlg($1)",
+			],
+			"description": "语法:bool SysMsg_SendInputDlg(string 玩家的GUID,uint32 输入框ID,string 输入框内容,uint32 输入框超时时间,单位:秒,uint32 输入框最大输入长度,string 输入框回调函数名字,string 参数传回)\n例:SysMsg_SendInputDlg(player, 3, \"提示内容\", 45, 14, \"meiguihuazhixing\", \"\")\n详:通知客户端显示输入框.回调函数:void pfnCallBack(UINT32 dwDlgID,string strPlayer,string strInput, string strParam)\n返:bool\n备:\n"
+		},
+		"InputDlgEx":{
+			"prefix":"lualib:InputDlgEx",
+			"body": [
+				"lualib:InputDlgEx($1)",
+			],
+			"description": "语法:bool InputDlgEx(string 玩家的GUID,int 输入框ID,string 输入框内容,uint32 输入框超时时间,单位:秒,uint32 输入框最大输入长度,string 输入框回调函数名字,string 参数传回)\n例:InputDlgEx(player, 3, \"提示内容\", 45, 14, \"meiguihuazhixing\", \"\")\n详:发送显示通用输入框请求\n返:bool\n备:\n"
+		},
+		"SysMsg_SendMsgDlg":{
+			"prefix":"lualib:SysMsg_SendMsgDlg",
+			"body": [
+				"lualib:SysMsg_SendMsgDlg($1)",
+			],
+			"description": "语法:bool SysMsg_SendMsgDlg(string 玩家的GUID,int 输入框ID,string 输入框内容,uint32 输入框超时时间,单位:秒,uint32 输入框最大输入长度,string 输入框回调函数名字,string 参数传回)\n例:SysMsg_SendMsgDlg(player, 3, \"提示内容\", 45, 14, \"meiguihuazhixing\", \"\")\n详:发送显示通用输入框请求\n返:bool\n备:\n"
+		},		
+
+
+
+
+
+		// "MsgBoxEx",
+		// "SysMsg_SendWebMsg",
+		// "WebBoxEx",
+		// "SysMsg_SendWebPage",
+		// "WebBrowser",
+		// "Hp",
+		// "GUID",
+		// "Mp",
+		// "PhyAtk",
+		// "TaoAtk",
+		// "MagAtk",
+		// "on_item_disappear",
+		// "on_npc_appear",
+		// "on_npc_disappear",
+		// "on_level_up",
+		// "on_pre_equip",
+		// "on_post_equip",
+		// "on_pre_un_equip",
+		// "on_post_un_equip",
+		// "on_move",
+		// "on_pre_spell",
+		// "on_spell",
+		// "on_pre_mining",
+		// "on_mining",
+		// "on_pre_item_apply",
+		// "on_item_apply",
+		// "on_pre_item_pickup",
+		// "on_item_pickup",
+		// "on_pre_item_drop",
+		// "on_item_drop",
+		// "on_pre_die",
+		// "on_post_die",
+		// "on_kill",
+		// "on_attack",
+		// "on_damage_process",
+		// "on_restore_process",
+		// "on_teleport",
+		// "on_pre_catch",
+		// "on_catch",
+		// "on_pre_dig_meat",
+		// "on_add_buff",
+		// "on_remove_buff",
+		// "on_pre_drop",
+		// "on_post_drop",
+		// "on_pre_drop_one",
+		// "on_post_drop_one",
+		// "on_add_skill",
+		// "on_switch_skill",
+		// "on_summon",
+		// "on_pre_process_pk",
+		// "on_post_process_pk",
+		// "on_create",
+		// "on_destroy",
+		// "on_pre_enter_jump",
+		// "on_equip_suit",
+		// "on_un_equip_suit",
+		// "on_item_amount_zero",
+		// "on_item_use_zero",
+		// "on_item_dur_zero",
+		// "on_item_timeup",
+		// "on_add_exp",
+		// "on_player_relive",
+		// "on_dungeon_end",
+		// "SetDBNum",
+		// "GetDBNum",
+		// "SetDBStr",
+		// "GetDBStr",
+		// "SetDBNumEx",
+		// "SetDBStrEx",
+		// "GridAttr",
+		// "Player_SetServantLevel",
+		// "Player_IsAntiIndulge",
+		// "on_billin",
+		// "on_mall",
+		// "DelSkill",
+		// "DelAllSkill",
+		// "GenTimerId",
+		// "Map_BatchGenCampMonster",
+		// "Map_GenCampMonster",
+		// "Map_GenSingleCampMonster",
+		// "KickByName",
+		// "Achievement",
+		// "AddAvataBuff",
+		// "AddBindGold",
+		// "AddBindIngot",
+		// "AddExp",
+		// "AddGold",
+		// "AddIngot",
+		// "AddIntegral",
+		// "AddSingleItem",
+		// "AddTimer",
+		// "Amulet",
+		// "AntiIndulgeExpire",
+		// "Armor",
+		// "Attr",
+		// "Brawn",
+		// "ClearTimer",
+		// "CreateHeroForPlayer",
+		// "DeleteHeroForPlayer",
+		// "DelUnmatchedSkill",
+		// "DestroyDummy",
+		// "Dir",
+		// "Energy",
+		// "EquipWeight",
+		// "FindFirstBagFreeSlot",
+		// "Gem",
+		// "Gender",
+		// "GenDummy",
+		// "GenHeroForPlayer",
+		// "GetActiveCount",
+		// "GetActiveCountToday",
+		// "GetBagFree",
+		// "GetBagFreeEx",
+		// "GetBagSize",
+		// "GetBagSizeEx",
+		// "GetBindGold",
+		// "GetBindIngot",
+		// "GetBuffTime",
+		// "GetDayInt",
+		// "GetDayStr",
+		// "GetDynamicAttr",
+		// "GetExp",
+		// "GetFamilyCastles",
+		// "GetFamilyMembers",
+		// "GetGold",
+		// "GetIngot",
+		// "GetIntegral",
+		// "GetItemsByKeys",
+		// "GetLocalTime",
+		// "GetLuaPerformance",
+		// "GetPlayerCurrentHeroList",
+		// "GetPlayerHeroList",
+		// "GetQuestAccomplishing",
+		// "GetQuestProgressing",
+		// "GetTickCount",
+		// "GetTime",
+		// "GetTitle",
+		// "GetWeekInt",
+		// "GetWeekStr",
+		// "GMLevel",
+		// "God",
+		// "Hair",
+		// "HairColor",
+		// "HasFamily",
+		// "Head",
+		// "Helmet",
+		// "HpPoint",
+		// "IO_DeleteDir",
+		// "IO_DeleteFile",
+		// "IO_GetFileString",
+		// "IsAntiIndulge",
+		// "IsCastleWarNull",
+		// "IsInRegion",
+		// "Item_GetBySite",
+		// "Item_GetCustomVarInt",
+		// "Item_GetCustomVarStr",
+		// "Item_GetID",
+		// "Item_GetKeyName",
+		// "Item_GetName",
+		// "Item_GetPosX",
+		// "Item_GetPosY",
+		// "Item_IsTimeLimit",
+		// "Item_NotifyCustomParam",
+		// "Item_SetCustomVarInt",
+		// "Item_SetCustomVarStr",
+		// "ItemCount",
+		// "ItemCountEx",
+		// "ItemDropFreezeTime",
+		// "ItemDropHost",
+		// "ItemDropTime",
+		// "ItemDropType",
+		// "ItemKeyName",
+		// "ItemRole",
+		// "Job",
+		// "JuJu",
+		// "LastAtkTime",
+		// "LastMoveTime",
+		// "LastTalkTime",
+		// "LeaveTeam",
+		// "Level",
+		// "LockSwitch",
+		// "Log",
+		// "LogDetail",
+		// "LogDetailWithId",
+		// "LogWithId",
+		// "LuckCurse",
+		// "MagAtkPoint",
+		// "MagDef",
+		// "MagDefPoint",
+		// "Mail",
+		// "MailJsonItem",
+		// "MailToPlayer",
+		// "Map_GenGold",
+		// "Map_GenItemEx",
+		// "Map_GetCustomVarInt",
+		// "Map_GetCustomVarStr",
+		// "Map_GetDistance",
+		// "Map_GetGridObjList",
+		// "Map_GetMapKeyName",
+		// "Map_GetMapName",
+		// "Map_GetMapPlayers",
+		// "Map_RemoveMonster",
+		// "Map_RemoveNpc",
+		// "Map_SetCustomVarInt",
+		// "Map_SetCustomVarStr",
+		// "Map_SetOffTimer",
+		// "Map_SetOnTimer",
+		// "MapCanRide",
+		// "MapKeyName",
+		// "MD5",
+		// "Medal",
+		// "Meritor",
+		// "ModifyItemGold",
+		// "Monster_AddBuff",
+		// "Monster_DataRow",
+		// "Monster_DelBuff",
+		// "Monster_GetCurTarget",
+		// "Monster_GetCustomVarInt",
+		// "Monster_GetCustomVarStr",
+		// "Monster_GetDropOwner",
+		// "Monster_GetHateList",
+		// "Monster_GetIntProp",
+		// "Monster_GetKeyName",
+		// "Monster_GetMap",
+		// "Monster_GetPosX",
+		// "Monster_GetPosY",
+		// "Monster_IsHasBuff",
+		// "Monster_JumpXY",
+		// "Monster_Kill",
+		// "Monster_SetCustomVarInt",
+		// "Monster_SetCustomVarStr",
+		// "Monster_SetPanelSize",
+		// "Monster_SpellTargetEx",
+		// "Monster_Type",
+		// "Mount",
+		// "MpPoint",
+		// "Necklace",
+		// "Now",
+		// "Npc_GetCustomVar",
+		// "Npc_GetKeyName",
+		// "Npc_GetPosX",
+		// "Npc_GetPosY",
+		// "Npc_SetCustomVar",
+		// "Npc_SetPanelSize",
+		// "OnGloryTrigger",
+		// "PhyAtkPoint",
+		// "PhyDef",
+		// "PhyDefPoint",
+		// "Pk",
+		// "Player_AddBuff",
+		// "Player_AddSkill",
+		// "Player_ChangeGender",
+		// "Player_ChangeJob",
+		// "Player_ClearBag",
+		// "Player_DelBuff",
+		// "Player_DestroyItem",
+		// "Player_DestroyItemBind",
+		// "Player_DestroyItemUnbind",
+		// "Player_DropItem",
+		// "Player_DropItemEx",
+		// "Player_GetBagFree",
+		// "Player_GetBagItemList",
+		// "Player_GetBagSize",
+		// "Player_GetCustomVarInt",
+		// "Player_GetCustomVarStr",
+		// "Player_GetDir",
+		// "Player_GetDistance",
+		// "Player_GetEquipGuid",
+		// "Player_GetEquipName",
+		// "Player_GetGuid",
+		// "Player_GetGuidProp",
+		// "Player_GetIntProp",
+		// "Player_GetItemCount",
+		// "Player_GetItemCountBind",
+		// "Player_GetItemCountUnbind",
+		// "Player_GetPosX",
+		// "Player_GetPosY",
+		// "Player_GetStrProp",
+		// "Player_GetTimeProp",
+		// "Player_GetWarehouseFree",
+		// "Player_GetWarehouseItemCount",
+		// "Player_GetWarehouseItemCountBind",
+		// "Player_GetWarehouseItemCountUnbind",
+		// "Player_GetWarehouseSize",
+		// "Player_GiveItemBind",
+		// "Player_GiveItemUnbind",
+		// "Player_GiveSingleItem",
+		// "Player_GoHome",
+		// "Player_IsCanAttack",
+		// "Player_IsCanMove",
+		// "Player_IsCanNpcTalk",
+		// "Player_IsCanSpell",
+		// "Player_IsCanTalk",
+		// "Player_IsCanTurn",
+		// "Player_IsCanUseItem",
+		// "Player_IsDie",
+		// "Player_IsHasBuff",
+		// "Player_IsHasSkill",
+		// "Player_IsInGS",
+		// "Player_IsOnline",
+		// "Player_ItemRequest",
+		// "Player_Kill",
+		// "Player_KillServant",
+		// "Player_NotifyCustomParam",
+		// "Player_NpcMove",
+		// "Player_SetAlias",
+		// "Player_SetCustomVarInt",
+		// "Player_SetCustomVarStr",
+		// "Player_SetIntProp",
+		// "Player_UseItem",
+		// "Player_UseItemByID",
+		// "PostDBEvt",
+		// "PostURL",
+		// "Prestige",
+		// "Random",
+		// "RemainPoint",
+		// "Ride",
+		// "Ring",
+		// "ScriptFuncToPlayer",
+		// "ScriptTextToPlayer",
+		// "SetAchievement",
+		// "SetAutoOpt",
+		// "SetBrawn",
+		// "SetDayInt",
+		// "SetDayStr",
+		// "SetDir",
+		// "SetDynamicAttr",
+		// "SetEnergy",
+		// "SetEquipWeight",
+		// "SetGender",
+		// "SetHair",
+		// "SetHairColor",
+		// "SetHead",
+		// "SetHeroState",
+		// "SetHp",
+		// "SetHpPoint",
+		// "SetJob",
+		// "SetLevel",
+		// "SetLockSwitch",
+		// "SetLuckCurse",
+		// "SetMagAtk",
+		// "SetMagAtkPoint",
+		// "SetMagDef",
+		// "SetMagDefPoint",
+		// "SetMeritor",
+		// "SetMp",
+		// "SetMpPoint",
+		// "SetNetCheck",
+		// "SetPhyAtk",
+		// "SetPhyAtkPoint",
+		// "SetPhyDef",
+		// "SetPhyDefPoint",
+		// "SetPk",
+		// "SetPrestige",
+		// "SetRemainPoint",
+		// "SetTaoAtk",
+		// "SetTaoAtkPoint",
+		// "SetWeekInt",
+		// "SetWeekStr",
+		// "SetWeight",
+		// "Shoes",
+		// "Shoulder",
+		// "ShowForm",
+		// "StartAutoRun",
+		// "StartCastleWarEx",
+		// "StartStall",
+		// "StopAutoRun",
+		// "StopStall",
+		// "SubBindGold",
+		// "SubBindIngot",
+		// "SubExp",
+		// "SubGold",
+		// "SubIngot",
+		// "SubIngotEx",
+		// "SubIntegral",
+		// "SysCenterMsg",
+		// "SysGuildMsg",
+		// "SysMapMsg",
+		// "SysMsg_SendBoardMsg",
+		// "SysMsg_SendTipsMsg",
+		// "SysRoleTalk",
+		// "SysTipsMsg",
+		// "SysTopMsg",
+		// "TaoAtkPoint",
+		// "TimeDiff",
+		// "TitleName",
+		// "ToAttrName",
+		// "UnRide",
+		// "UserID",
+		// "VarList",
+		// "Weapon",
+		// "Weight",
+		// "Wings",
+		// "Wrist",
+		// "GetDeposit",
+		// "GUIDType",
+		// "ModifyCastleAttacks",
+		// "ModifyCastleStart",
+		// "QueryCastleStart",
+		// "AddDeposit",
+		// "SubDeposit",
+		// "SetFormAllowFunc",
+		// "GetRegionFree",
+		// "NotifyCSChannelMsg",
+		// "GetRegionFreeRnd",
+		// "on_add_exp_all",
+		// "on_attack_ex",
+		// "on_dig_meat",
+		// "on_monster_born",
+		// "on_pre_logout",
+		// "on_pre_mall",
+		// "on_ride_request",
+		// "on_system_stop",
+		// "on_timer_check",
+		// "on_unride_request",
+		// "post_die",
+		// "post_monster_die",
+		// "post_player_die",
+		// "post_process_pk",
+		// "pre_die",
+		// "pre_monster_die",
+		// "pre_player_die",
+		// "pre_player_relive",
+		// "pre_process_pk",
+		// "AllServantBetry",
+		// "GetRegionFreeEx",
+		// "GetRegionFreeRndEx",
+		// "GetTempInt",
+		// "GetTempStr",
+		// "HasItem",
+		// "InAdvWarehouse",
+		// "InBag",
+		// "InEquip",
+		// "InWarehouse",
+		// "Map_GetRegionItemsEx",
+		// "Map_GetRegionMonstersEx",
+		// "Map_GetRegionNpcsEx",
+		// "Map_GetRegionPlayersEx",
+		// "MoveItem",
+		// "SendSpeakerMsg",
+		// "ServantBetry",
+		// "SetTempInt",
+		// "SetTempStr",
+		// "eRoleAttr",
+		// "eRoleSite",
+		// "eTriggerType",
+		// "GetItemGold",
+		// "SetDummyDefaultSkillAI",
+		// "SetDummySkillAI",
+		// "GetZoneKey",
+		// "SetLog",
+		// "on_escorter_fail",
+		// "on_escorter_far",
+		// "GetCurScriptName",
+		// "GetSvrRunTime",
+		// "SetDBMerge",
+		// "SetScriptTimeout",
+		// "Player_SetNameColor",
+		// "AddTitleEx",
+		// "GetHeroRage",
+		// "MapOwnerFamily",
+		// "Player_GetServantLevel",
+		// "SetHeroRage",
+		// "on_monster_in_fight",
+		// "on_monster_out_fight",
+		// "on_post_monster_die",
+		// "on_post_player_die",
+		// "on_pre_monster_die",
+		// "on_pre_player_die",
+		// "on_pre_player_relive",
+		// "Item_IsExist",
+		// "Item_MapRemove",
+		// "Map_GetRegionDummys",
+		// "SetDummyAIOption",
+		// "SetDummyDefaultAIOption",
+		// "Str2Zip",
+		// "Zip2Str",
+		// "GetHeroLord",
+		// "Monster_ClearHateList",
+		// "Monster_SetHateList",
+		// "on_pre_curse",
+		// "on_pre_harm",
+		// "GetGroupName",
+		// "HasZhenshi",
+		// "RoleRankTop",
+		// "on_apply_buff",
+		// "SetNetCheckEx",
+		// "IsBagLock",
+		// "GetFamilyLeader",
+		// "GetFamilyMembersByTitleId",
+		// "UUIDToGUID",
+		// "GetCurrentHero",
+		// "ShowRoleHPRef",
+		// "GetFamilyByName",
+		// "Map_GetRegionMonstersCount",
+		// "SetBagLock",
+		// "CopyHero",
+		// "Player_SpellGrid",
+		// "Player_SpellTarget",
+		// "GetBuffAtt1",
+		// "ShowRoleHPRefEx",
+		// "FlushPlayerData",
+		// "GetCopyWho",
+		// "KillEx",
+		// "SetDummyState",
+		// "HasTimer",
+		// "AddFamilyMember",
+		// "ChangeFamilyTitle",
+		// "DelFamilyMember",
+		// "Player_SpellPosX",
+		// "Player_SpellPosY",
+		// "GetClientVer",
+		// "Map_AddJumpPointEx",
+		// "SetSkillExp",
+		// "SetServantMasterName",
+		// "Guid2Id",
+		// "Id2KeyName",
+		// "KeyName2Id",
+		// "KeyName2Name",
+		// "Player_SetAttackModeLoc",
+		// "Guid2Name",
+		// "DummyLockTarget",
+		// "DummyMove",
+		// "GetBuffList",
+		// "LastKeepPkgTime",
+		// "GetFamilyMemberAttr",
+		// "Player_AddEffect",
+		// "LoadPlayerEx",
+		// "TeamInvite",
+		// "NPCTalkDetailQuest",
+		// "Player_IsAttackModeLock",
+		// "GetGSClientVer",
+		// "GetClientVerEx",
+		// "RequestClientVer",
+		// "IO_TextFileTotalLine",
+		// "Player_CatchEx",
+		// "CanAttack",
+		// "SetIsBrust",
+		// "IO_FileList",
+		// "IO_FileSize",
+		// "GetEquipSuitCount",
+		// "SetServantPickItem",
+		// "SetServantPickList",
+		// "GetClientType",
+		// "GetServantState",
+		// "SetServantState",
+		// "GetClientCheckInfo",
+		// "Guid2Number",
+		// "Number2Guid",
+		// "number_arithmetic",
+		// "number_logic",
+		// "GetGSVer",
+		// "SetMD5CheckList",
+		// "Player_SetAttackModeLock",
+		// "SetFamilyMaxMember",
+	
+	
+		//自定义一些
+		"Invoke": {
+			"prefix": "Invoke",
+			"body": [
+				"Invoke($1)",
+			],
+			"description": "服务端:客户端执行函数"
+		},
+	
+		"Invoke()": {
+			"prefix": "Invoke",
+			"body": [
+				"Invoke(player,\"$1\")",
+			],
+			"description": "服务端:客户端执行函数有参"
+		},
+		"SendDataToClient": {
+			"prefix": "SendDataToClient",
+			"body": [
+				"SendDataToClient($1)",
+			],
+			"description": "服务端:发送数据到客户端"
+		},
+		"SendDataToClient()": {
+			"prefix": "SendDataToClient",
+			"body": [
+				"SendDataToClient(player,\"$1\")",
+			],
+			"description": "服务端:发送数据到客户端有参"
+		},
+		"GenFormByString": {
+			"prefix": "GenFormByString",
+			"body": [
+				"GenFormByString($1)",
+			],
+			"description": "客户端:发送数据到客户端有参"
+		},
+		//一些常用的语法
+		" tRange[0]":{
+			"prefix":"tRange",
+			"body": [
+				"local tRange = {0,100,100,100,100}"
+			],
+			"description": "语句:tRange\n例:local ranges = {0,100,100,100,100}\n详:tRange[1]=0时,tRange[2]为区域中心点X坐标,tRange[3]为区域中心点Y坐标,tRange[4]为区域中心X半径,tRange[5]为区域中心Y半径\n"
+		},
+		" tRange[1]":{
+			"prefix":"tRange",
+			"body": [
+				"local tRange = {1,0,0,200,200}"
+			],
+			"description": "语句:tRange\n例:local ranges = {1,0,0,200,200}\n详:,tRange[1]=1时,tRange[2]为区域左上角X坐标,tRange[3]为区域左上角Y坐标,tRange[4]为区域宽度,tRange[5]为区域高度\n"
+		},	
+		//SendDataToClient="自:void SendDataToClient(GUID player, string strmsg, var var_)\n发送数据到客户端\n参数1:var_默认player\n参数2:string_客户端接收的变量名\n参数3:var_服务端发送的变量名",
+		//ValScript="自:ValScript(val)\n变量脚本化\n参数:\n返回:无\n备注:无",
+		//AddSEIcon="自:void AddSEIcon(player, hang, dian, biaoshi, icon, biaodan, hanshu, canshu, tips)\n添加图标\n参数:行，点, 图标唯一的标识, 图标， 服务端文件名，服务端函数，参数\n返回:无\n备注:无",
+		//AddSETimeIcon="自:void AddSETimeIcon(player, hang, dian, biaoshi, icon, biaodan, hanshu, time, canshu, tips)\n函数说明\n参数:行，点, 图标唯一的标识, 图标， 服务端文件名，服务端函数，倒计时秒数，参数\n返回:无\n备注:无",
+		//AddIconMagic="自:void AddIconMagic(player, name, image, x, y, elapse)\n函数说明\n参数:添加：图标唯一的标识, 图标ID， x，y(相对该ICON的偏移)，特效两帧之间的时间间隔(毫秒)\n返回:无\n备注:无",
+		//DelIconMagic="自:void DelIconMagic(player, name)\n删除图标唯一的标识\n参数:\n返回:无\n备注:无",
+		//DelIcon="自:void DelIcon(player, file)\n函数说明\n参数:\n返回:无\n备注:无",
+		//ShowCampainPanel="自:ShowCampainPanel(player, title, level, icon, name, str, keyvalue, time)\n函数说明\n参数:\n返回:无\n备注:无",
+	
+	
+	}
